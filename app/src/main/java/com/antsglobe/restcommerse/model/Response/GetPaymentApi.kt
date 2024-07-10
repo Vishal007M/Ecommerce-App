@@ -1,0 +1,30 @@
+package com.antsglobe.restcommerse.model.Response
+
+data class GetPaymentApi(
+    val address: String?,
+    val address_type: String?,
+    val appartment: String?,
+    val city: String?,
+    val customer_mobno: String?,
+    val customer_name: String?,
+    val disamnt: Double?,
+    val email: String?,
+    val grandtotal: Double?,
+    val invoice_id: String?,
+    val is_success: Boolean?,
+    val landmark: String?,
+    val message: String?,
+    val order_id: String?,
+    val other_disc: Int?,
+    val pay_method: String?,
+    val payment_status: String?,
+    val pin: String?,
+    val promocode: String?,
+    val promodisc: Double?,
+    val shipcharge: Int?,
+    val state: String?,
+    val taxamt: Double?,
+    val taxper: Int?,
+    val total_price: String?,
+    val transaction_id: String?
+)

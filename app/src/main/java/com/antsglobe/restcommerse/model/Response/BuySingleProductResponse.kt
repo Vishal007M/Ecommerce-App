@@ -1,0 +1,31 @@
+package com.antsglobe.restcommerse.model.Response
+
+data class BuySingleProductResponse(
+    val address: String?,
+    val address_type: String?,
+    val appartment: String?,
+    val city: String?,
+    val customer_mobno: String?,
+    val customer_name: String?,
+    val disamnt: Int?,
+    val email: String?,
+    val grandtotal: Int?,
+    val invoice_id: String?,
+    val is_success: Boolean?,
+    val landmark: String?,
+    val message: String?,
+    val order_id: String?,
+    val other_disc: Int?,
+    val pay_method: String?,
+    val payment_status: String?,
+    val pin: String?,
+    val promocode: String?,
+    val promodisc: Int?,
+    val shipcharge: Int?,
+    val state: String?,
+    val total_price: String?,
+    val transaction_id: String?,
+    val taxamt: Int?,
+    val taxper: Int?,
+
+)
