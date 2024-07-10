@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/idRLSlider"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white">
+
+    <!--text view for displaying
+        our heading-->
+
+    <!--Image view for displaying
+        our slider image-->
+
+    <!--text view for displaying our
+        slider description-->
+
+    <LinearLayout
+        android:id="@+id/halfscreen"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/idIVSlider"
+            android:layout_width="match_parent"
+            android:layout_height="400dp"
+            android:padding="10dp"
+            android:scaleType="centerInside"
+            android:src="@drawable/sliderimg1" />
+
+
+        <TextView
+            android:id="@+id/idTVSliderTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginEnd="30dp"
+            android:gravity="center"
+            android:text="Find the item you’ve been looking for"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="30dp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/idTVSliderDescription"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="0dp"
+            android:layout_marginEnd="30dp"
+            android:gravity="center"
+            android:padding="10dp"
+            android:text="Here you’ll see rich varieties of goods, carefully classified for seamless browsing experience."
+            android:textAlignment="center"
+            android:textColor="@color/dark_grey"
+            android:textSize="14dp" />
+
+    </LinearLayout>
+
+</RelativeLayout>

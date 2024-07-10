@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="NavigationView">
+        <item name="android:textSize">16sp</item>
+        <!--<item name="android:fontFamily">@font/lato_regular</item>-->
+        <item name="android:listPreferredItemPaddingLeft">50dp</item>
+    </style>
+
+    <style name="work_sans">
+        <item name="endIconTint">@color/black</item>
+        <item name="android:textSize">16sp</item>
+
+        <item name="android:fontFamily">@font/worksans</item>
+        <item name="android:textStyle">normal</item>
+    </style>
+
+    <style name="Color1SwitchStyle">
+        <!-- Active thumb color & Active track color(30% transparency) -->
+        <item name="colorControlActivated">@color/orange</item>
+
+        <!-- inactive thumb color -->
+        <item name="colorSwitchThumbNormal">@color/orange</item>
+
+        <!-- Active thumb color & Active track color(30% transparency) -->
+        <item name="trackTint">#f1f1f1</item>
+
+    </style>
+
+    <style name="RatingBar" parent="Theme.AppCompat">
+        <item name="colorControlNormal">@color/deactive_star</item>
+        <item name="colorControlActivated">@color/active_star</item>
+    </style>
+
+    <style name="BottomNavigationTextInactive">
+        <item name="android:textSize">12dp</item> <!-- Adjust the text size as needed -->
+        <item name="android:fontFamily">@font/worksans</item>
+        <item name="android:textStyle">normal</item>
+    </style>
+
+    <style name="BottomNavigationTextActive">
+        <item name="android:textSize">12dp</item> <!-- Adjust the text size as needed -->
+        <item name="android:fontFamily">@font/worksans</item>
+        <item name="android:textStyle">normal</item>
+    </style>
+
+
+</resources>

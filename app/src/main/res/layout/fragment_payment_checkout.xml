@@ -1,0 +1,497 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.PaymentCheckout">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:id="@+id/rl_address_pin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:background="@color/address_background"
+            android:paddingHorizontal="10dp"
+            android:paddingVertical="4dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginStart="8dp"
+                    android:gravity="center_vertical"
+                    android:paddingVertical="4dp"
+                    android:text="Deliver to: "
+                    android:textColor="@color/hint"
+                    android:textSize="14dp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tv_deliver_pin"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginStart="8dp"
+                    android:gravity="center_vertical"
+                    android:paddingVertical="4dp"
+                    android:text="411006"
+                    android:textColor="@color/black"
+                    android:textSize="14dp"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/changeAddress"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_marginStart="5dp"
+                android:layout_marginEnd="10dp"
+                android:paddingHorizontal="6dp"
+                android:paddingVertical="4dp"
+                android:text="CHANGE"
+                android:textColor="@color/black"
+                android:textSize="14dp"
+                android:textStyle="bold" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_applied_coupon"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/rl_address_pin"
+            android:background="@color/review_text_color"
+            android:paddingHorizontal="10dp"
+            android:paddingVertical="4dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="8dp"
+                android:gravity="center_vertical"
+                android:paddingVertical="4dp"
+                android:text="Voucher is successfully applied."
+                android:textColor="@color/white"
+                android:textSize="14dp" />
+
+            <ImageView
+                android:id="@+id/iv_cross"
+                android:layout_width="14dp"
+                android:layout_height="14dp"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="10dp"
+                android:src="@drawable/close_button"
+                app:tint="@color/white" />
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:id="@+id/ll_coupon_code"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/rl_applied_coupon"
+            android:layout_marginHorizontal="18dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/coupon_dash_border"
+            android:orientation="horizontal"
+            android:padding="6dp">
+
+            <ImageView
+                android:id="@+id/iv_coupon"
+                android:layout_width="28dp"
+                android:layout_height="28dp"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="10dp"
+                android:src="@drawable/ic_coupon_icon" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_toEndOf="@+id/iv_coupon"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tv_coupon_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:text=""
+                    android:textColor="@color/orange"
+                    android:textSize="16dp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:text="Voucher applied on bill"
+                    android:textColor="@color/hint"
+                    android:textSize="14dp" />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tv_clear"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="5dp"
+                android:visibility="gone"
+                android:layout_marginEnd="10dp"
+                android:text="Clear"
+                android:textColor="@color/hint"
+                android:textSize="14dp" />
+
+        </RelativeLayout>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/ll_price_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/ll_coupon_code"
+            android:layout_marginHorizontal="16dp"
+            android:layout_marginTop="20dp"
+            android:elevation="4dp"
+            app:cardCornerRadius="10dp"
+            app:cardUseCompatPadding="true">
+
+            <LinearLayout
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingVertical="4dp">
+
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="6dp"
+                    android:paddingHorizontal="10dp">
+
+                    <TextView
+                        android:id="@+id/tvcartvalue"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginStart="8dp"
+                        android:gravity="center_vertical"
+                        android:paddingVertical="4dp"
+                        android:text="Cart Value"
+                        android:textColor="@color/black"
+                        android:textSize="14dp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/tv_total_price"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginEnd="10dp"
+                        android:paddingHorizontal="6dp"
+                        android:paddingVertical="4dp"
+                        android:text="₹ 1,560"
+                        android:textColor="@color/hint"
+                        android:textSize="14dp" />
+                </RelativeLayout>
+
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="6dp"
+                    android:paddingHorizontal="10dp">
+
+                    <TextView
+                        android:id="@+id/tvcoupondisc"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginStart="8dp"
+                        android:gravity="center_vertical"
+                        android:paddingVertical="4dp"
+                        android:text="Coupon Discount"
+                        android:textColor="@color/black"
+                        android:textSize="14dp" />
+
+                    <TextView
+                        android:id="@+id/tv_discount_price"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginEnd="10dp"
+                        android:paddingHorizontal="6dp"
+                        android:paddingVertical="4dp"
+                        android:text="-₹60"
+                        android:textColor="@color/orange"
+                        android:textSize="14dp" />
+                </RelativeLayout>
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="6dp"
+                    android:paddingHorizontal="10dp">
+
+                    <TextView
+                        android:id="@+id/tvtax"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginStart="8dp"
+                        android:gravity="center_vertical"
+                        android:paddingVertical="4dp"
+                        android:text="GST"
+                        android:textColor="@color/black"
+                        android:textSize="14dp" />
+
+                    <TextView
+                        android:id="@+id/tvTaxPerc"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"
+                        android:layout_toStartOf="@+id/Perc"
+                        android:paddingStart="6dp"
+                        android:paddingVertical="4dp"
+                        android:text="18"
+                        android:textColor="@color/black"
+                        android:textSize="14dp" />
+
+                    <TextView
+                        android:id="@+id/Perc"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toStartOf="@+id/tvTaxPrice"
+                        android:paddingVertical="4dp"
+                        android:text="%"
+                        android:textColor="@color/black"
+                        android:textSize="14dp" />
+
+                    <TextView
+                        android:id="@+id/tvTaxPrice"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginEnd="10dp"
+                        android:paddingHorizontal="6dp"
+                        android:paddingVertical="4dp"
+                        android:text="-₹60"
+                        android:textColor="@color/orange"
+                        android:textSize="14dp" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="6dp"
+                    android:paddingHorizontal="10dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginStart="8dp"
+                        android:gravity="center_vertical"
+                        android:paddingVertical="4dp"
+                        android:text="Delivery Chargesⓘ"
+                        android:textColor="@color/hint"
+                        android:textSize="14dp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/tv_devilery"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginEnd="10dp"
+                        android:paddingHorizontal="6dp"
+                        android:paddingVertical="4dp"
+                        android:text="FREE"
+                        android:textColor="@color/orange"
+                        android:textSize="14dp" />
+                </RelativeLayout>
+
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginVertical="10dp"
+                    android:background="@color/grey_font" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="6dp"
+                    android:paddingHorizontal="10dp">
+
+                    <TextView
+                        android:id="@+id/tvamountpayable"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginStart="8dp"
+                        android:gravity="center_vertical"
+                        android:paddingVertical="4dp"
+                        android:text="Total Amount Payable"
+                        android:textColor="@color/black"
+                        android:textSize="14dp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/tv_payable_amount"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginEnd="10dp"
+                        android:paddingHorizontal="6dp"
+                        android:paddingVertical="4dp"
+                        android:text="₹ 940"
+                        android:textColor="@color/black"
+                        android:textSize="14dp"
+                        android:textStyle="bold" />
+                </RelativeLayout>
+
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/ll_payment_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/ll_price_view"
+            android:layout_marginTop="20dp"
+            android:layout_marginHorizontal="16dp"
+            android:elevation="4dp"
+            app:cardCornerRadius="10dp"
+            app:cardUseCompatPadding="true">
+
+            <LinearLayout
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingVertical="4dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginStart="12dp"
+                        android:layout_marginTop="10dp"
+                        android:gravity="center_vertical"
+                        android:paddingVertical="4dp"
+                        android:text="Payment Method"
+                        android:textColor="@color/black"
+                        android:textStyle="bold" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="6dp"
+                    android:paddingHorizontal="10dp">
+
+
+
+
+                    <RadioGroup
+                        android:id="@+id/genderRB"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <com.google.android.material.radiobutton.MaterialRadioButton
+                            android:id="@+id/online"
+                            android:layout_width="250dp"
+                            android:layout_height="45dp"
+                            android:buttonTint="@color/orange"
+                            android:text="Online Payment"
+                            android:textColor="@color/black" />
+
+                        <com.google.android.material.radiobutton.MaterialRadioButton
+                            android:id="@+id/cashOnDelivery"
+                            android:layout_width="250dp"
+                            android:layout_height="45dp"
+                            android:buttonTint="@color/orange"
+                            android:text="Cash on delivery"
+                            android:textColor="@color/black"
+                            app:useMaterialThemeColors="true" />
+
+                        <com.google.android.material.radiobutton.MaterialRadioButton
+                            android:id="@+id/selfPickup"
+                            android:layout_width="250dp"
+                            android:layout_height="45dp"
+                            android:buttonTint="@color/orange"
+                            android:text="Self Pickup"
+                            android:visibility="gone"
+                            android:textColor="@color/black"
+                            app:useMaterialThemeColors="true" />
+
+                    </RadioGroup>
+                </RelativeLayout>
+
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_marginVertical="10dp"
+            android:background="@color/grey_font"
+            android:visibility="gone" />
+
+        <RelativeLayout
+            android:id="@+id/cl_submit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true">
+
+            <Button
+                android:id="@+id/next"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_alignParentEnd="true"
+                android:layout_marginHorizontal="20dp"
+                android:layout_marginBottom="20dp"
+                android:background="@drawable/round_corner"
+                android:backgroundTint="@color/orange"
+                android:text="Continue"
+                android:textAllCaps="false"
+                android:textColor="@color/white" />
+
+            <!--  <androidx.appcompat.widget.AppCompatButton
+                  android:id="@+id/back"
+                  android:layout_width="164dp"
+                  android:layout_height="45dp"
+                  android:layout_marginBottom="20dp"
+                  android:background="@drawable/round_corner"
+                  android:backgroundTint="@color/black"
+                  android:text="Back"
+                  android:textColor="@color/white"
+                  android:layout_marginStart="20dp"
+                  android:layout_alignParentStart="true"/>-->
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

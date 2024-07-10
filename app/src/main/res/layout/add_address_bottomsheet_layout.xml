@@ -1,0 +1,295 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/fullscreen"
+    android:layout_marginHorizontal="10dp"
+    android:layout_marginTop="10dp"
+    android:background="@drawable/rounded_top_corners_bottom_sheet"
+    android:orientation="vertical"
+    android:paddingLeft="10dp"
+    android:paddingTop="10dp"
+    android:paddingRight="10dp"
+    android:paddingBottom="10dp"
+    tools:context=".ui.AddressListFragment">
+
+    <LinearLayout
+        android:id="@+id/BusinessSettingsTB"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:elevation="3dp"
+        android:gravity="start"
+        android:orientation="horizontal"
+        android:paddingHorizontal="10dp"
+        android:paddingVertical="13dp">
+
+        <TextView
+            android:id="@+id/tvheadline"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start"
+            android:layout_marginStart="0dp"
+            android:layout_marginEnd="30dp"
+            android:text="Add New Address"
+            android:textColor="@color/orange"
+            android:textSize="20dp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:paddingHorizontal="10dp">
+
+                <TextView
+                    android:id="@+id/t1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="Name"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/tv_customer_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:layout_marginTop="6dp"
+                    android:background="@drawable/round_corner_bg"
+                    android:focusable="true"
+                    android:paddingHorizontal="10dp"
+                    android:singleLine="true" />
+
+                <TextView
+                    android:id="@+id/t2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:text="Mobile no."
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/tv_customer_number"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:layout_marginTop="6dp"
+                    android:background="@drawable/round_corner_bg"
+                    android:inputType="phone"
+                    android:maxLength="10"
+                    android:paddingHorizontal="10dp"
+                    android:singleLine="true" />
+
+                <TextView
+                    android:id="@+id/t3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:text="Apartment / House No."
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/tv_house_no"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:layout_marginTop="6dp"
+                    android:background="@drawable/round_corner_bg"
+                    android:paddingHorizontal="10dp"
+                    android:singleLine="true" />
+
+                <TextView
+                    android:id="@+id/t4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:text="Landmark"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/tv_landmark"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:layout_marginTop="6dp"
+                    android:background="@drawable/round_corner_bg"
+                    android:paddingHorizontal="10dp"
+                    android:singleLine="true" />
+
+                <LinearLayout
+                    android:id="@+id/ll_apartment_name_house_num"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
+
+                    <LinearLayout
+                        android:id="@+id/ll_apartment_name"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/t5"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="20dp"
+                            android:text="Town/ City"
+                            android:textStyle="bold" />
+
+                        <EditText
+                            android:id="@+id/tv_city"
+                            android:layout_width="match_parent"
+                            android:layout_height="45dp"
+                            android:layout_marginTop="6dp"
+                            android:background="@drawable/round_corner_bg"
+                            android:paddingHorizontal="10dp"
+                            android:singleLine="true" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/ll_house_number"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/t6"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginTop="20dp"
+                            android:text="Pin Code"
+                            android:textStyle="bold" />
+
+                        <EditText
+                            android:id="@+id/tv_pincode"
+                            android:layout_width="match_parent"
+                            android:layout_height="45dp"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginTop="6dp"
+                            android:background="@drawable/round_corner_bg"
+                            android:inputType="number"
+                            android:maxLength="6"
+                            android:paddingHorizontal="10dp"
+                            android:singleLine="true" />
+
+                    </LinearLayout>
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/t7"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:text="State"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/et_state"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:layout_marginTop="6dp"
+                    android:background="@drawable/round_corner_bg"
+                    android:paddingHorizontal="10dp"
+                    android:singleLine="true" />
+
+                <TextView
+                    android:id="@+id/t8"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:text="Address Type"
+                    android:textStyle="bold" />
+
+                <RadioGroup
+                    android:id="@+id/rg_addresses_type"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="20dp"
+                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal"
+                    android:weightSum="100"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_gender_text">
+
+                    <RadioButton
+                        android:id="@+id/rb_home"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="33"
+                        android:buttonTint="@color/orange"
+                        android:checked="true"
+                        android:paddingStart="6dp"
+                        android:text="Home"
+                        android:textSize="14dp"
+                        app:useMaterialThemeColors="false"
+                        tools:ignore="RtlSymmetry" />
+
+                    <RadioButton
+                        android:id="@+id/rb_office"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="33"
+                        android:buttonTint="@color/orange"
+                        android:paddingStart="6dp"
+                        android:text="Office"
+                        android:textSize="14dp"
+                        app:useMaterialThemeColors="false"
+                        tools:ignore="RtlSymmetry" />
+
+                    <RadioButton
+                        android:id="@+id/rb_other"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="33"
+                        android:buttonTint="@color/orange"
+                        android:paddingStart="6dp"
+                        android:text="Other"
+                        android:textSize="14dp"
+                        app:useMaterialThemeColors="false"
+                        tools:ignore="RtlSymmetry" />
+
+                </RadioGroup>
+
+                <CheckBox
+                    android:id="@+id/cb_default"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:buttonTint="@color/orange"
+                    android:text="Set as default address" />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btn_add_address"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="10dp"
+                    android:layout_marginTop="20dp"
+                    android:background="@drawable/round_corner"
+                    android:backgroundTint="@color/orange"
+                    android:text="Add Address"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white" />
+            </LinearLayout>
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</LinearLayout>

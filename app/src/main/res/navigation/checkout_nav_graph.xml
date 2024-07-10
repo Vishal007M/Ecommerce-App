@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/checkout_nav_graph.xml"
+    app:startDestination="@id/shippingCheckout">
+    <fragment
+        android:id="@+id/shippingCheckout"
+        android:name="com.antsglobe.restcommerse.ui.ShippingCheckout"
+        android:label="fragment_shipping_checkout"
+        tools:layout="@layout/fragment_shipping_checkout">
+        <action
+            android:id="@+id/action_shippingCheckout_to_paymentCheckout"
+            app:destination="@id/paymentCheckout"
+            app:enterAnim="@anim/fade_in"
+            app:exitAnim="@anim/fade_out"
+            app:launchSingleTop="true"
+            app:popUpToInclusive="true" />
+
+    </fragment>
+
+    <action
+        android:id="@+id/action_paymentCheckout_to_shippingCheckout"
+        app:destination="@id/shippingCheckout"
+        app:enterAnim="@anim/fade_in"
+        app:exitAnim="@anim/fade_out"
+        app:launchSingleTop="true"
+        app:popUpToInclusive="true" />
+
+    <fragment
+        android:id="@+id/paymentCheckout"
+        android:name="com.antsglobe.restcommerse.ui.PaymentCheckout"
+        android:label="fragment_payment_checkout"
+        tools:layout="@layout/fragment_payment_checkout">
+        <action
+            android:id="@+id/action_paymentCheckout_to_shippingCheckout"
+            app:destination="@id/shippingCheckout"
+            app:enterAnim="@anim/fade_in"
+            app:exitAnim="@anim/fade_out"
+            app:launchSingleTop="true"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_paymentCheckout_to_donepayment"
+            app:destination="@id/donepayment"
+            app:enterAnim="@anim/fade_in"
+            app:exitAnim="@anim/fade_out"
+            app:launchSingleTop="true"
+            app:popUpToInclusive="true" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/donepayment"
+        android:name="com.antsglobe.restcommerse.ui.donepayment"
+        android:label="fragment_donepayment"
+        tools:layout="@layout/fragment_donepayment" />
+
+    <fragment
+        android:id="@+id/maps_fragment"
+        android:name="com.antsglobe.restcommerse.ui.GoogleMaps.MapsFragment"
+        android:label="Maps fragment"
+        tools:layout="@layout/fragment_maps" />
+
+    <action
+        android:id="@+id/action_shippingCheckout_to_maps_fragment"
+        app:destination="@id/maps_fragment"
+        app:enterAnim="@anim/fade_in"
+        app:exitAnim="@anim/fade_out"
+        app:launchSingleTop="true"
+        app:popUpToInclusive="true" />
+
+    <action
+        android:id="@+id/action_maps_fragment_to_shippingCheckout"
+        app:destination="@id/shippingCheckout"
+        app:enterAnim="@anim/fade_in"
+        app:exitAnim="@anim/fade_out"
+        app:launchSingleTop="true"
+        app:popUpToInclusive="true" />
+</navigation>

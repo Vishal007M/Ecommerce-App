@@ -1,0 +1,49 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="110dp"
+    android:layout_height="wrap_content"
+    android:layout_marginHorizontal="5dp"
+    android:layout_marginVertical="5dp"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:paddingHorizontal="10dp"
+        android:paddingTop="15dp"
+        android:paddingBottom="12dp">
+
+        <LinearLayout
+            android:id="@+id/background"
+            android:layout_width="90dp"
+            android:gravity="center"
+            android:layout_height="90dp"
+            android:background="@drawable/background_circle"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/iv_category_image"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:src="@drawable/burger_img" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/Tv_CategoryItem"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:maxLines="2"
+            android:paddingHorizontal="4dp"
+            android:text="Burger"
+            android:textColor="@color/black" />
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,64 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.RestCommerse" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <!-- Customize your light theme here. -->
+        <item name="colorPrimary">@color/orange</item>
+        <item name="android:statusBarColor" tools:targetApi="lollipop">@color/orange</item>
+
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">16dp</item>
+        <item name="fontFamily">@font/worksans</item>
+        <item name="bottomSheetDialogTheme">@style/AppBottomSheetDialogTheme</item>
+
+    </style>
+
+    <style name="Theme.RestCommerse" parent="Base.Theme.RestCommerse" />
+
+    <style name="MyDatePickerDialogTheme" parent="ThemeOverlay.MaterialComponents.Dialog">
+        <!-- Customize dialog background color -->
+        <item name="android:background">@color/blackfordark</item>
+        <!-- Customize text color -->
+        <item name="android:textColorPrimary">@color/orange</item>
+        <!-- Customize other attributes as needed -->
+    </style>
+
+    <style name="popup_dialog" parent="Theme.AppCompat.Dialog">
+        <item name="android:windowMinWidthMajor">100%</item>
+        <item name="android:windowMinWidthMinor">100%</item>
+        <item name="android:windowAnimationStyle">@style/BottomDialogAnimation</item>>
+    </style>
+
+    <style name="BottomDialogAnimation" parent="@android:style/Animation.Dialog">
+        <item name="android:windowEnterAnimation">@anim/slide_in_bottom</item>
+        <item name="android:windowExitAnimation">@anim/slide_out_bottom</item>
+    </style>
+
+    <!--Bottom sheet -->
+    <style name="AppBottomSheetDialogTheme" parent="Theme.Design.Light.BottomSheetDialog">
+        <item name="bottomSheetStyle">@style/AppModalStyle</item>
+        <item name="android:windowSoftInputMode">adjustResize|stateVisible</item>
+
+    </style>
+
+    <style name="AppModalStyle" parent="Widget.Design.BottomSheet.Modal">
+        <item name="android:background">@drawable/rounded_top_corners_bottom_sheet</item>
+    </style>
+
+    <!--dark mode-->
+    <!--Background color of the screen -->
+    <style name="SCREEN">
+        <item name="android:background">@android:color/black</item>
+    </style>
+
+    <!--text color of the screen -->
+    <style name="TEXT">
+        <item name="android:textColor">@android:color/white</item>
+    </style>
+
+    <!--text color of the screen -->
+    <style name="BUTTON">
+        <item name="android:background">@android:color/holo_orange_dark</item>
+        <item name="android:textColor">@android:color/white</item>
+    </style>
+</resources>

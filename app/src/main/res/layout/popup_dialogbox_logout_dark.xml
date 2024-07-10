@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="140dp"
+    android:background="@drawable/with_border_drop_box_dark"
+    android:paddingHorizontal="15dp"
+    android:paddingVertical="10dp">
+
+
+    <TextView
+        android:id="@+id/productName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:text="Logout"
+        android:textColor="@color/whitefordark"
+        android:textStyle="bold" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/productName"
+        android:layout_marginTop="5dp"
+        android:text="Are you sure you want to logout?"
+        android:textColor="@color/whitefordark" />
+
+    <ImageView
+        android:id="@+id/cart"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:src="@drawable/login_dark" />
+
+    <TextView
+        android:id="@+id/no"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="20dp"
+        android:layout_toStartOf="@+id/yes"
+        android:background="@drawable/round_white_with_border"
+        android:backgroundTint="@color/orange"
+        android:gravity="center"
+        android:paddingHorizontal="15dp"
+        android:text="No"
+        android:textColor="@color/blackfordark" />
+
+    <TextView
+        android:id="@+id/yes"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/round_white_with_border"
+        android:backgroundTint="@color/orange"
+        android:gravity="center"
+        android:paddingHorizontal="15dp"
+        android:text="Yes"
+        android:textColor="@color/blackfordark" />
+
+</RelativeLayout>

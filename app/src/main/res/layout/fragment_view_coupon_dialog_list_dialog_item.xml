@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/background"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center_horizontal"
+    android:layout_marginHorizontal="12dp"
+    android:layout_marginBottom="12dp"
+    android:background="@drawable/round_corner_bg"
+    android:orientation="vertical"
+    android:padding="10dp"
+    app:cardCornerRadius="20dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:paddingStart="12dp"
+        android:paddingTop="12dp"
+        android:paddingEnd="12dp">
+
+        <TextView
+            android:id="@+id/couponCode"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="AF25-NZ1JX-CZCB5"
+            android:textFontWeight="1000"
+            android:textSize="20dp" />
+
+        <TextView
+            android:id="@+id/couponName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="save 20% with this coupon"
+            android:textColor="#63ABAA"
+            android:textFontWeight="500" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/from"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="from:-2024-02-17" />
+
+            <TextView
+                android:id="@+id/to"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="end"
+                android:text="to:-2024-02-17" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/comment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="50dp"
+            android:text="Test Coupon" />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/tap"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_gravity="bottom"
+        android:background="@color/orange">
+
+        <TextView
+            android:id="@+id/taptext"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="tap to apply"
+            android:textAllCaps="true" />
+    </LinearLayout>
+</androidx.cardview.widget.CardView>
+
+
+
+

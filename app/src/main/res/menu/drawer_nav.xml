@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tool="http://schemas.android.com/tools"
+    tool:showIn="navigation_view">
+
+    <item
+        android:id="@+id/my_account"
+        android:title="My Account"
+        android:visible="true"
+        app:showAsAction="ifRoom" />
+
+
+    <item
+        android:id="@+id/my_order"
+        android:title="My Order" />
+
+    <item
+        android:id="@+id/bottom_menu_profile"
+        android:title="My Profile" />
+
+    <item
+        android:id="@+id/pay_now"
+        android:title="Pay Now" />
+
+
+    <item
+        android:id="@+id/shop_by_category"
+        android:title="Shop By Category" />
+
+    <item
+        android:id="@+id/ViewOfferFragment"
+        android:title="View Offer" />
+
+    <item
+        android:id="@+id/Setting"
+        android:title="Settings" />
+
+    <item
+        android:id="@+id/menu_share"
+        android:title="Share App" />
+
+    <item
+        android:id="@+id/menu_logOut"
+        android:title="Logout" />
+
+</menu>

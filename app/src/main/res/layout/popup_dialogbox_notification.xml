@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="180dp"
+    android:paddingHorizontal="20dp"
+    android:paddingVertical="20dp">
+
+    <TextView
+        android:id="@+id/productName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:text="Notification Permission Required"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/productName"
+        android:layout_marginTop="10dp"
+        android:text="Allow permission to RestCommerce App to send you notifications."
+        android:textSize="14dp" />
+
+
+    <TextView
+        android:id="@+id/doneCart"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_below="@+id/textView"
+        android:layout_marginTop="25dp"
+        android:layout_marginEnd="20dp"
+        android:layout_toStartOf="@+id/checkoutCart"
+        android:gravity="center"
+        android:paddingHorizontal="15dp"
+        android:text="Deny"
+        android:textStyle="bold"
+        android:textColor="@color/orange" />
+
+    <TextView
+        android:id="@+id/checkoutCart"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_below="@+id/textView"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="25dp"
+        android:gravity="center"
+        android:paddingHorizontal="15dp"
+        android:text="Allow"
+        android:textStyle="bold"
+        android:textColor="@color/orange" />
+
+</RelativeLayout>

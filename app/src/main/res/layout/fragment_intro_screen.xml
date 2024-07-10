@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ui.IntroScreenFragment">
+
+    <!--view pager for displaying our slides-->
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/idViewPager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <!--on below line we are creating
+        a simple linear layout-->
+
+    <LinearLayout
+        android:id="@+id/linearLayout8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true">
+
+        <TextView
+            android:id="@+id/skip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:layout_marginEnd="40dp"
+            android:singleLine="true"
+            android:text="Skip" />
+    </LinearLayout>
+
+
+    <include
+        layout="@layout/intro_screen_viewer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:layout_below="@+id/linearLayout8" />
+
+    <LinearLayout
+        android:id="@+id/llnext"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@android:color/transparent"
+        android:gravity="center"
+        android:orientation="vertical">
+
+
+        <!--adding linear layout for
+            creating dots view-->
+        <LinearLayout
+            android:id="@+id/idLLDots"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal"
+            android:weightSum="3">
+
+            <!--on below line we are creating a text view
+                for displaying our dots-->
+            <TextView
+                android:id="@+id/idTVSlideOne"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="3dp"
+                android:layout_weight="1"
+                android:text="•"
+                android:textAlignment="center"
+                android:textColor="@color/orange"
+                android:textSize="40dp"
+                android:textStyle="bold" />
+
+            <!--on below line we are creating a text view
+                for displaying our dots-->
+            <TextView
+                android:id="@+id/idTVSlideTwo"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="3dp"
+                android:layout_weight="1"
+                android:text="•"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:textSize="40dp"
+                android:textStyle="bold" />
+
+            <!--on below line we are creating a text view
+                for displaying our dots-->
+            <TextView
+                android:id="@+id/idTVSlideThree"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="3dp"
+                android:layout_weight="1"
+                android:text="•"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:textSize="40dp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/idBtnSkip"
+            android:layout_width="350dp"
+            android:layout_height="56dp"
+            android:layout_margin="10dp"
+            android:layout_weight="2"
+            android:background="@drawable/round_corner"
+            android:backgroundTint="@color/orange"
+            android:padding="4dp"
+            android:text="Next"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="23dp" />
+
+
+        <!--<Button-->
+
+
+    </LinearLayout>
+
+</RelativeLayout>
+
+

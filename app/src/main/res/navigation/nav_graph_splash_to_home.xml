@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/IntroScreenFragment">
+
+    <fragment
+        android:id="@+id/IntroScreenFragment"
+        android:name="com.antsglobe.restcommerse.ui.IntroScreenFragment"
+        android:label="IntroFragment"
+        tools:layout="@layout/intro_screen_viewer">
+
+        <action
+            android:id="@+id/action_IntroScreenFragment_to_LoginFragment"
+            app:destination="@id/LoginFragment"
+            app:enterAnim="@anim/fade_in"
+            app:exitAnim="@anim/fade_out"
+            app:launchSingleTop="true"
+            app:popUpToInclusive="true" />
+    </fragment>
+
+
+    <fragment
+        android:id="@+id/LoginFragment"
+        android:name="com.antsglobe.restcommerse.ui.LoginFragment"
+        android:label="LoginFragment"
+        tools:layout="@layout/fragment_login">
+
+        <action
+            android:id="@+id/action_LoginFragment_to_ForgetPassFragment"
+            app:destination="@id/ForgetPassFragment"
+            app:enterAnim="@anim/fade_in"
+            app:exitAnim="@anim/fade_out"
+            app:launchSingleTop="true"
+            app:popUpToInclusive="true" />
+    </fragment>
+
+    <action
+        android:id="@+id/action_LoginFragment_to_SignUpFragment"
+        app:destination="@id/SignFragment"
+        app:enterAnim="@anim/fade_in"
+        app:exitAnim="@anim/fade_out"
+        app:launchSingleTop="true"
+        app:popUpToInclusive="true" />
+
+
+    <action
+        android:id="@+id/action_SignUpFragment_to_optFragment"
+        app:destination="@id/OtpFragment"
+        app:enterAnim="@anim/fade_in"
+        app:exitAnim="@anim/fade_out"
+        app:launchSingleTop="true"
+        app:popUpToInclusive="true" />
+
+    <fragment
+        android:id="@+id/ForgetPassFragment"
+        android:name="com.antsglobe.restcommerse.ui.ForgetPassFragment"
+        android:label="@string/second_fragment_label"
+        tools:layout="@layout/fragment_forget_pass">
+
+        <action
+            android:id="@+id/action_ForgetPassFragment_to_LoginFragment"
+            app:destination="@id/LoginFragment"
+            app:enterAnim="@anim/fade_in"
+            app:exitAnim="@anim/fade_out"
+            app:launchSingleTop="true"
+            app:popUpToInclusive="true" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/SetPassword"
+        android:name="com.antsglobe.restcommerse.ui.SetPassword"
+        android:label="SetPassword"
+        tools:layout="@layout/fragment_otp" />
+
+    <action
+        android:id="@+id/action_SetPassword_to_LoginFragment"
+        app:destination="@id/LoginFragment"
+        app:enterAnim="@anim/fade_in"
+        app:exitAnim="@anim/fade_out"
+        app:launchSingleTop="true"
+        app:popUpToInclusive="true" />
+
+
+    <fragment
+        android:id="@+id/OtpFragment"
+        android:name="com.antsglobe.restcommerse.ui.OtpFragment"
+        android:label="OtpFragment"
+        tools:layout="@layout/fragment_otp" />
+
+    <action
+        android:id="@+id/action_ForgetPassFragment_to_OtpFragment"
+        app:destination="@id/OtpFragment"
+        app:enterAnim="@anim/fade_in"
+        app:exitAnim="@anim/fade_out"
+        app:launchSingleTop="true"
+        app:popUpToInclusive="true" />
+
+    <action
+        android:id="@+id/action_OtpFragment_to_SetPassword"
+        app:destination="@id/SetPassword"
+        app:enterAnim="@anim/fade_in"
+        app:exitAnim="@anim/fade_out"
+        app:launchSingleTop="true"
+        app:popUpToInclusive="true" />
+
+    <fragment
+        android:id="@+id/SignFragment"
+        android:name="com.antsglobe.restcommerse.ui.SignFragment"
+        android:label="SignFragment"
+        tools:layout="@layout/fragment_sign"></fragment>
+
+    <action
+        android:id="@+id/action_SignFragment_to_LoginFragment"
+        app:destination="@id/LoginFragment"
+        app:enterAnim="@anim/fade_in"
+        app:exitAnim="@anim/fade_out"
+        app:launchSingleTop="true"
+        app:popUpToInclusive="true" />
+
+</navigation>

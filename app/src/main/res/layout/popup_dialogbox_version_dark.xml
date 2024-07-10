@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="250dp"
+    android:background="@color/black"
+    android:paddingHorizontal="30dp"
+    android:paddingVertical="20dp">
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:text="Update App?"
+        android:textColor="@color/white"
+        android:textSize="20dp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/version"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/title"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:text="Version "
+        android:textColor="@color/orange"
+        android:textSize="18dp" />
+
+    <TextView
+        android:id="@+id/tHeading"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/version"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+
+        android:text="A new version of Rest Commerce is available!"
+        android:textColor="@color/dark_grey" />
+
+    <TextView
+        android:id="@+id/likeToUpdate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tHeading"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="5dp"
+
+        android:text="would you like to update it now? "
+        android:textColor="@color/dark_grey" />
+
+
+    <TextView
+        android:id="@+id/laterBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="20dp"
+        android:layout_toStartOf="@+id/updateNowBtn"
+        android:background="@drawable/round_white_with_border"
+        android:backgroundTint="@color/orange"
+        android:gravity="center"
+        android:paddingHorizontal="10dp"
+        android:text="Later"
+        android:textColor="@color/white" />
+
+    <TextView
+        android:id="@+id/updateNowBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/round_white_with_border"
+        android:backgroundTint="@color/orange"
+        android:gravity="center"
+        android:paddingHorizontal="10dp"
+        android:text="Update Now"
+        android:textColor="@color/white" />
+
+</RelativeLayout>

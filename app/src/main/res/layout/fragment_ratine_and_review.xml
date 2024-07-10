@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ui.RatineAndReviewFragment">
+
+    <LinearLayout
+        android:id="@+id/BusinessSettingsTB"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/orange"
+        android:elevation="3dp"
+        android:gravity="start"
+        android:orientation="horizontal"
+        android:paddingHorizontal="10dp">
+
+        <ImageView
+            android:id="@+id/backButton"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="10dp"
+            android:src="@drawable/ic_baseline_arrow_back_24" />
+
+        <TextView
+            android:id="@+id/logoImageHome"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginEnd="30dp"
+            android:gravity="center"
+            android:text="Rating and Reviews"
+            android:textColor="@color/white"
+            android:textSize="22dp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="62dp"
+        android:orientation="horizontal"
+        android:weightSum="2"
+        android:background="#E0E0E0">
+        <LinearLayout
+            android:id="@+id/tobe"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical"
+            >
+            <TextView
+                android:id="@+id/tv1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="5dp"
+                android:textFontWeight="800"
+                android:gravity="center"
+                android:text="To be reviewed (0)"/>
+            <View
+                android:id="@+id/dashline"
+                android:layout_width="140dp"
+                android:layout_height="12dp"
+                android:background="@color/orange"/>
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/reviewed"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical"
+            >
+            <TextView
+                android:id="@+id/tv2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="5dp"
+                android:textFontWeight="800"
+                android:gravity="center"
+                android:textColor="@color/dark_grey"
+                android:text="Reviewed (0)"/>
+            <View
+                android:id="@+id/dashline2"
+                android:layout_width="140dp"
+                android:visibility="invisible"
+                android:layout_height="12dp"
+                android:background="@color/orange"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_review_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:paddingTop="15dp"
+        android:visibility="visible">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/Reviews_recycleViewList"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:listitem="@layout/reviews_recycle_view" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/emptyscreen"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:gravity="center"
+        android:layout_height="match_parent">
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/emptyreview" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_ratingList"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:paddingTop="15dp"
+        android:visibility="gone">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/ratingNReviews_recycleViewList"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:listitem="@layout/rating_n_reviews_recycle_view" />
+
+    </LinearLayout>
+
+    <!-- ______________________________________________________________________________________________________________________  -->
+
+
+    <!-- ______________________________________________________________________________________________________________________  -->
+
+    <LinearLayout
+        android:id="@+id/ll_empty_screen"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center_vertical"
+        android:gravity="center_vertical"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:src="@drawable/review_empty" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="40dp"
+            android:layout_marginBottom="10dp"
+            android:gravity="center_horizontal"
+            android:text="Oops! There are no reviews found."
+            android:textColor="@color/black"
+
+            android:textStyle="bold" />
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:gravity="center_horizontal"
+            android:text="Please try later to get any reviews \n about this product."
+            android:textColor="@color/hint"
+            android:textSize="14dp" />
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,316 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:id="@+id/linearLayout2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/nav_backgorund_theme"
+            android:orientation="horizontal"
+            android:padding="4dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:id="@+id/userProfile"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_gravity="center|start"
+                android:layout_marginHorizontal="15dp"
+                android:layout_marginVertical="30dp"
+                android:contentDescription="TODO" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/username"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="left"
+                    android:textColor="@color/black"
+                    android:textSize="14dp" />
+
+
+                <TextView
+                    android:id="@+id/userEmail"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="left"
+                    android:textColor="@color/black"
+                    android:textSize="14dp" />
+
+                <TextView
+                    android:id="@+id/userPhone"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="left"
+                    android:textColor="@color/black"
+                    android:textSize="14dp"
+                    android:visibility="visible" />
+
+                <Button
+                    android:id="@+id/EditProfile"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:layout_gravity="left"
+                    android:backgroundTint="@color/light_orange"
+                    android:text="View Profile"
+                    android:textAllCaps="false"
+                    android:textColor="@color/black"
+                    android:textSize="14dp"
+                    app:rippleColor="@color/light_orange" />
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="10dp"
+            android:orientation="vertical"
+            android:padding="5dp">
+
+            <ExpandableListView
+                android:id="@+id/expandableListView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:background="@color/white"
+                android:divider="@null"
+                android:groupIndicator="@null"
+                android:visibility="visible" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/expandableListView"
+                android:orientation="vertical">
+
+                <androidx.core.widget.NestedScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scrollbars="none"
+                    android:fillViewport="true"
+                    android:fitsSystemWindows="true">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/tv_shop_by_category"
+                            style="@style/work_sans"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="10dp"
+                            android:gravity="center_vertical"
+                            android:paddingHorizontal="10dp"
+                            android:paddingVertical="10dp"
+                            android:text="Shop By Category"
+                            android:textColor="@color/black" />
+
+
+                        <TextView
+                            android:id="@+id/tv_view_offer"
+                            style="@style/work_sans"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="10dp"
+                            android:gravity="center_vertical"
+                            android:paddingHorizontal="10dp"
+                            android:paddingVertical="10dp"
+                            android:text="View Offers"
+                            android:textColor="@color/black" />
+
+                        <TextView
+                            android:id="@+id/tv_my_address"
+                            style="@style/work_sans"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="10dp"
+                            android:gravity="center_vertical"
+                            android:paddingHorizontal="10dp"
+                            android:paddingVertical="10dp"
+                            android:text="My Address"
+                            android:textColor="@color/black"
+                            android:visibility="gone" />
+
+                        <TextView
+                            android:id="@+id/tv_rating_review"
+                            style="@style/work_sans"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="10dp"
+                            android:gravity="center_vertical"
+                            android:paddingHorizontal="10dp"
+                            android:paddingVertical="10dp"
+                            android:text="Rating and Reviews"
+                            android:textColor="@color/black" />
+
+                        <TextView
+                            android:id="@+id/tv_support"
+                            style="@style/work_sans"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="10dp"
+                            android:gravity="center_vertical"
+                            android:paddingHorizontal="10dp"
+                            android:paddingVertical="10dp"
+                            android:text="Support"
+                            android:textColor="@color/black" />
+
+                        <TextView
+                            android:id="@+id/tv_about"
+                            style="@style/work_sans"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="10dp"
+                            android:gravity="center_vertical"
+                            android:paddingHorizontal="10dp"
+                            android:paddingVertical="10dp"
+                            android:text="About"
+                            android:textColor="@color/black" />
+
+                        <TextView
+                            android:id="@+id/tv_faq"
+                            style="@style/work_sans"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="10dp"
+                            android:gravity="center_vertical"
+                            android:paddingHorizontal="10dp"
+                            android:paddingVertical="10dp"
+                            android:text="FAQs"
+                            android:textColor="@color/black" />
+
+                        <TextView
+                            android:id="@+id/tv_setting"
+                            style="@style/work_sans"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="10dp"
+                            android:gravity="center_vertical"
+                            android:paddingHorizontal="10dp"
+                            android:paddingVertical="10dp"
+                            android:text="Settings"
+                            android:textColor="@color/black" />
+
+                        <TextView
+                            android:id="@+id/tv_share_app"
+                            style="@style/work_sans"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="10dp"
+                            android:gravity="center_vertical"
+                            android:paddingHorizontal="10dp"
+                            android:paddingVertical="10dp"
+                            android:text="Share App"
+                            android:textColor="@color/black" />
+
+                        <TextView
+                            android:id="@+id/tv_logout"
+                            style="@style/work_sans"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="10dp"
+                            android:gravity="center_vertical"
+                            android:paddingHorizontal="10dp"
+                            android:paddingVertical="10dp"
+                            android:text="Logout"
+                            android:textColor="@color/black" />
+
+
+                        <TextView
+                            android:id="@+id/tv_andriod_version"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="10dp"
+                            android:gravity="center_horizontal|bottom"
+                            android:text="Version 0.0"
+                            android:textColor="@color/black"
+                            android:visibility="visible" />
+                    </LinearLayout>
+                </androidx.core.widget.NestedScrollView>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_marginHorizontal="10dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="10dp"
+                android:orientation="vertical"
+                android:visibility="visible">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone">
+
+                    <ImageView
+                        android:id="@+id/iv_whatsapp"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_alignParentStart="true"
+                        android:layout_marginStart="90dp"
+                        android:src="@drawable/whatsapp_icon" />
+
+                    <ImageView
+                        android:id="@+id/iv_instagram"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginEnd="90dp"
+                        android:src="@drawable/instagram_icon" />
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:layout_marginVertical="10dp"
+                    android:background="@color/black"
+                    android:visibility="gone" />
+
+                <ImageView
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_gravity="center"
+                    android:src="@mipmap/ic_launcher"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="10dp"
+                    android:gravity="center"
+                    android:text="Version 0.0"
+                    android:textColor="@color/black"
+                    android:visibility="gone" />
+            </LinearLayout>
+        </RelativeLayout>
+
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

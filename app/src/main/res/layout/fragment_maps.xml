@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.GoogleMaps.MapsFragment">
+
+    <fragment
+        android:id="@+id/map"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+    <!-- <include layout="@layout/activity_current_address_map_content_main" />-->
+
+
+    <androidx.appcompat.widget.SearchView
+        android:id="@+id/searchProduct"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        android:background="@color/white"
+        android:elevation="3dp"
+        android:paddingVertical="7dp"
+        android:visibility="invisible"
+        app:iconifiedByDefault="false"
+        app:layout_constraintStart_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:queryBackground="@android:color/transparent"
+        app:queryHint="Search for location"
+        app:searchIcon="@drawable/search_image_orange"
+        app:tint="@color/orange" />
+
+    <ImageView
+        android:id="@+id/ic_pin"
+        android:layout_width="36dp"
+        android:layout_height="36dp"
+        android:layout_centerInParent="true"
+        android:src="@drawable/location_pin"
+        android:translationY="-18dp"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="@+id/cv_address"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/map"
+        app:layout_constraintTop_toTopOf="parent"
+        app:tint="@color/orange" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab_find_my_location"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/cv_address"
+        android:layout_alignParentEnd="true"
+        android:layout_gravity="bottom|end"
+        android:layout_margin="16dp"
+        android:clickable="true"
+        android:src="@drawable/ic_my_location"
+        app:backgroundTint="@color/white"
+        app:layout_constraintBottom_toTopOf="@+id/cv_address"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:rippleColor="@color/orange" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cv_address"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="14dp"
+        android:layout_marginRight="14dp"
+        android:layout_marginBottom="14dp"
+        android:elevation="5dp"
+        app:cardCornerRadius="9dp"
+        app:contentPadding="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingTop="8dp">
+
+                <ImageView
+                    android:id="@+id/small_pin"
+                    android:layout_width="22dp"
+                    android:layout_height="22dp"
+                    android:src="@drawable/ic_location_"
+                    android:visibility="visible"
+                    app:tint="@color/orange" />
+
+                <ProgressBar
+                    android:id="@+id/progress_bar"
+                    android:layout_width="22dp"
+                    android:layout_height="22dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginLeft="8dp"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:id="@+id/tv_display_marker_location"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:includeFontPadding="false"
+                    android:paddingStart="5dp"
+                    android:paddingEnd="5dp"
+                    android:paddingBottom="10dp"
+                    android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"
+                    android:textColor="@android:color/primary_text_light"
+
+                    tools:text="Rehab Mall 2, Cairo Governorate, Egypt" />
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/linearLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingLeft="40dp"
+                android:paddingTop="14dp"
+                android:paddingRight="40dp"
+                app:layout_constraintTop_toBottomOf="@+id/ll_step3">
+
+                <Button
+                    android:id="@+id/submit_location_button"
+                    style="?android:attr/borderlessButtonStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginBottom="8dp"
+                    android:background="@color/orange"
+                    android:gravity="center|center_vertical"
+                    android:minHeight="0dp"
+                    android:paddingTop="6dp"
+                    android:paddingBottom="8dp"
+                    android:text="Confirm Location"
+                    android:textAllCaps="false"
+                    android:textColor="@color/background_color_white_green" />
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <!--<fragment xmlns:android="http://schemas.android.com/apk/res/android"-->
+    <!--xmlns:tools="http://schemas.android.com/tools"-->
+    <!--android:id="@+id/map"-->
+    <!--android:name="com.google.android.gms.maps.SupportMapFragment"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="match_parent"-->
+    <!--tools:context=".ui.MapsFragment" />-->

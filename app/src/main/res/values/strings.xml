@@ -1,0 +1,519 @@
+<resources>
+    <string name="app_name">Rest Commerce</string>
+    <string name="title_activity_splash">SplashActivity</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+    <string name="appversion">1.4</string>
+
+    <string name="about">We are the leading IT consulting company
+        in india having expertise in providing SAAS
+        &amp; SAAP solutions, corporate branding, UI/UX designing,
+        E-commerce and portal development, Android &amp; IOS mobile
+        apps development, and customized ERP software solutions. We
+        encourage innovation and experimentation with fresh ideas, while
+        considering the clients’ requirements at the same time.
+        \n\nWith an experience of more than a decade, we have
+        served more than 500 clients worldwide and have executed
+        more than 800 projects. We have already worked with different
+        brands &amp; served small, medium and large enterprises and empowered
+        them to reach at greater heights. We provide business solutions faster
+        than our competitors and help our clients monetize more effectively.
+        \n\nOur past work, constant feedback attitude and remarkable success
+        records has set us aside from other IT consulting corporations. We
+        offer end-to-end complete IT solutions that leverages growth of a micro,
+        mini, medium or large enterprises. We believe in empowering every sector
+        with agile digitalization and hence we collaborate with them as a strategic
+        partner and help them to achieve highest performance in their business as a
+        whole. We make sure to leave no stone unturned to ensure client satisfaction &amp;
+        serve them with the best and optimized solutions.
+
+    </string>
+    <string name="about2">
+    Contact us:<font color='#5e5bf0'>info@antsglobe.com</font>
+    </string>
+    <string name="PrivacyPolicy">This privacy policy is to inform you regarding the use of your personal information that is collected during your visit to one of our websites.
+        \n\nWe collect information about you when you visit our site, use our services, or view our online advertisements. The information that we collect and store
+        during normal use of the site is use to monitor use of the site and to help further development of our products and services. In general, you can
+        visit our website on the Internet without telling us who you are or providing data that personally identifies you. Such use does not result in any
+        personally identifiable data being collected or stored. We collect and use personal information (including name, address, telephone number and email)
+        to better provide you with the required services, or information.
+        \n\nWe may automatically collect non-personal information about you such as the type of internet browsers you use or the website from which you linked to our
+        website. We may also aggregate details that you have submitted to the site (for example, your age and the town where you live). You cannot be identified from
+        this information and it is only used to assist us in providing an effective service on this web site. We may from time to time supply third parties with this
+        non-personal or aggregated data for uses in connection with this website.
+        \n\n<font color="#000000"><b><big>Privacy Statement</big></b></font>\n
+        \nProtecting your privacy and ensuring that your personal data is held securely is very important to us. We want you to be confident that we are looking after your interests and that is why we have set out our information practices in this Privacy Statement.
+We do not share your information with third parties, unless we need to share your information to provide the product or service you have requested and we have asked for and obtained your explicit consent.
+This Privacy Statement will apply when you use our website to discover more information about us and its products. This Privacy Statement is applicable to data collected by us and other Group companies worldwide for use by these companies.
+By submitting your Personal Data through this website, you shall be consenting to it being processed in the manner described above by Antsglobe around the world and our hosting organizations around the world.
+If you have submitted Personal Data through this website and wish us to cease using it for the purposes submitted, please contact us.
+Changes to This Policy We may edit this policy from time to time. If we make any substantial changes, we may or may not notify you by posting a prominent announcement on our pages.
+
+    </string>
+    <string name="PrivacyPolicydark">This privacy policy is to inform you regarding the use of your personal information that is collected during your visit to one of our websites.
+        \n\nWe collect information about you when you visit our site, use our services, or view our online advertisements. The information that we collect and store
+        during normal use of the site is use to monitor use of the site and to help further development of our products and services. In general, you can
+        visit our website on the Internet without telling us who you are or providing data that personally identifies you. Such use does not result in any
+        personally identifiable data being collected or stored. We collect and use personal information (including name, address, telephone number and email)
+        to better provide you with the required services, or information.
+        \n\nWe may automatically collect non-personal information about you such as the type of internet browsers you use or the website from which you linked to our
+        website. We may also aggregate details that you have submitted to the site (for example, your age and the town where you live). You cannot be identified from
+        this information and it is only used to assist us in providing an effective service on this web site. We may from time to time supply third parties with this
+        non-personal or aggregated data for uses in connection with this website.
+        \n\n<font color="#ffffff"><b><big>Privacy Statement</big></b></font>\n
+        \nProtecting your privacy and ensuring that your personal data is held securely is very important to us. We want you to be confident that we are looking after your interests and that is why we have set out our information practices in this Privacy Statement.
+We do not share your information with third parties, unless we need to share your information to provide the product or service you have requested and we have asked for and obtained your explicit consent.
+This Privacy Statement will apply when you use our website to discover more information about us and its products. This Privacy Statement is applicable to data collected by us and other Group companies worldwide for use by these companies.
+By submitting your Personal Data through this website, you shall be consenting to it being processed in the manner described above by Antsglobe around the world and our hosting organizations around the world.
+If you have submitted Personal Data through this website and wish us to cease using it for the purposes submitted, please contact us.
+Changes to This Policy We may edit this policy from time to time. If we make any substantial changes, we may or may not notify you by posting a prominent announcement on our pages.
+
+    </string>
+    <string name="firstrefunddark"><font color="#ffffff"><b><medium>OUR RETURN POLICY: IT’S REALLY SIMPLE!\n</medium></b></font>
+
+    </string>
+    <string name="refund2dark">
+        (07 Days – No Questions Asked Return Policy)
+        \nThe Customer should verify the Product upon its receipt. We assure you of free replacement
+        or repairs in case of any manufacturing defect in the
+        performance of the standard products purchased from us within 07 days of receipt of material at
+        your end.
+
+    </string>
+    <string name="refund3dark"><font color="#ffffff"><b><medium>Resolution in various cases is given below:</medium></b></font>
+    </string>
+    <string name="refund4dark">
+        If the fault is on us (mixed up, faulty on arrival), we’ll of course pay for return shipping.
+        As soon as the return or
+        exchange has cleared it’s inspection, you will be notified of your exchange or credit immediately.
+    </string>
+    <string name="refund5dark"><font color="#ffffff"><b><medium>All requests for returns and order cancellation
+        stands true against the below mentioned clauses.</medium></b></font>
+
+    </string>
+    <string name="refund6dark"><font color="#ffffff"><b><medium>1.</medium></b></font>We believe in providing quality merchandise at fair price to our customers.\n
+        \n<font color="#ffffff"><b><medium>2.</medium></b></font>Exchange / Returns will made only against a valid receipt.\n
+        \n<font color="#ffffff"><b><medium>3.</medium></b></font>Products sourced exclusively on confirmed customer order will not returned / exchanged.\n
+        \n<font color="#ffffff"><b><medium>4.</medium></b></font>Warranty/Guarantee will governed by the terms &amp; conditions of the manufacturer with a valid receipt.\n
+        \n<font color="#ffffff"><b><medium>5.</medium></b></font>We issue only credit note(s) against the product(s) returned.\n
+        \n<font color="#ffffff"><b><medium>6.</medium></b></font>In case of loss of credit note(s), no duplicate will issued.\n
+        \n<font color="#ffffff"><b><medium>7.</medium></b></font>Delivery charges and additional octroi charges (if any) are not refundable.\n
+        \n<font color="#ffffff"><b><medium>8.</medium></b></font>Management reserves the right to amend terms &amp; conditions without prior notice.\n
+        \n<font color="#ffffff"><b><medium>9.</medium></b></font>All credit card transaction disputes have to settle within 48 hours from the date of transaction.\n
+        \n<font color="#ffffff"><b><medium>10.</medium></b></font>Warranty will governed by the terms &amp; conditions as mentioned on the Home Delivery challan.\n
+        \n<font color="#ffffff"><b><medium>11.</medium></b></font>In the event of any dispute, the same shall be subject to Nagpur Jurisdiction.
+
+
+    </string>
+    <string name="refund7dark"><font color="#ffffff"><b><medium>How to Return? Kindly raise a return &amp; service request within 07 days of material delivery.
+        Next Steps:</medium></b></font>
+
+    </string>
+    <string name="refund8dark"><font color="#ffffff"><b><medium>-</medium></b></font>INFORM US
+        \n<font color="#ffffff"><b><medium>-</medium></b></font>PREPARE PACKAGE
+        \n<font color="#ffffff"><b><medium>-</medium></b></font>SEND THE PACKAGE
+        \n<font color="#ffffff"><b><medium>-</medium></b></font>WE RECEIVE THE PACKAGE
+        \n<font color="#000000"><b><medium>-</medium></b></font>REPLACEMENT OR REPAIR WITHIN 7 DAYS
+
+
+    </string>
+    <string name="refund9dark">Kindly email our Customer Care team at <font color='#5e5bf0'>info@antsglobe.com</font> or call
+        our Support Number at 022-48808549, if case of any questions or queries for timely resolution.
+
+    </string>
+    <string name="firstrefund"><font color="#000000"><b><medium>OUR RETURN POLICY: IT’S REALLY SIMPLE!\n</medium></b></font>
+
+    </string>
+    <string name="refund2">
+        (07 Days – No Questions Asked Return Policy)
+        \nThe Customer should verify the Product upon its receipt. We assure you of free replacement
+        or repairs in case of any manufacturing defect in the
+        performance of the standard products purchased from us within 07 days of receipt of material at
+        your end.
+
+    </string>
+    <string name="refund3"><font color="#000000"><b><medium>Resolution in various cases is given below:</medium></b></font>
+    </string>
+    <string name="refund4">
+        If the fault is on us (mixed up, faulty on arrival), we’ll of course pay for return shipping.
+        As soon as the return or
+        exchange has cleared it’s inspection, you will be notified of your exchange or credit immediately.
+    </string>
+    <string name="refund5"><font color="#000000"><b><medium>All requests for returns and order cancellation
+        stands true against the below mentioned clauses.</medium></b></font>
+
+    </string>
+    <string name="refund6"><font color="#000000"><b><medium>1.</medium></b></font>We believe in providing quality merchandise at fair price to our customers.\n
+        \n<font color="#000000"><b><medium>2.</medium></b></font>Exchange / Returns will made only against a valid receipt.\n
+        \n<font color="#000000"><b><medium>3.</medium></b></font>Products sourced exclusively on confirmed customer order will not returned / exchanged.\n
+        \n<font color="#000000"><b><medium>4.</medium></b></font>Warranty/Guarantee will governed by the terms &amp; conditions of the manufacturer with a valid receipt.\n
+        \n<font color="#000000"><b><medium>5.</medium></b></font>We issue only credit note(s) against the product(s) returned.\n
+        \n<font color="#000000"><b><medium>6.</medium></b></font>In case of loss of credit note(s), no duplicate will issued.\n
+        \n<font color="#000000"><b><medium>7.</medium></b></font>Delivery charges and additional octroi charges (if any) are not refundable.\n
+        \n<font color="#000000"><b><medium>8.</medium></b></font>Management reserves the right to amend terms &amp; conditions without prior notice.\n
+        \n<font color="#000000"><b><medium>9.</medium></b></font>All credit card transaction disputes have to settle within 48 hours from the date of transaction.\n
+        \n<font color="#000000"><b><medium>10.</medium></b></font>Warranty will governed by the terms &amp; conditions as mentioned on the Home Delivery challan.\n
+        \n<font color="#000000"><b><medium>11.</medium></b></font>In the event of any dispute, the same shall be subject to Nagpur Jurisdiction.
+
+
+    </string>
+    <string name="refund7"><font color="#000000"><b><medium>How to Return? Kindly raise a return &amp; service request within 07 days of material delivery.
+        Next Steps:</medium></b></font>
+
+    </string>
+    <string name="refund8"><font color="#000000"><b><medium>-</medium></b></font>INFORM US
+        \n<font color="#000000"><b><medium>-</medium></b></font>PREPARE PACKAGE
+        \n<font color="#000000"><b><medium>-</medium></b></font>SEND THE PACKAGE
+        \n<font color="#000000"><b><medium>-</medium></b></font>WE RECEIVE THE PACKAGE
+        \n<font color="#000000"><b><medium>-</medium></b></font>REPLACEMENT OR REPAIR WITHIN 7 DAYS
+
+
+    </string>
+    <string name="refund9">Kindly email our Customer Care team at <font color='#5e5bf0'>info@antsglobe.com</font> or call
+        our Support Number at 022-48808549, if case of any questions or queries for timely resolution.
+
+    </string>
+    <string name="shipping1dark">
+        We aim to deliver the products you purchase as fast as possible and in the most
+        brilliant condition. Our business days are Monday through Friday; we do not process
+        orders on Saturday, Sunday, or major Indian Holidays.
+
+    </string>
+    <string name="shipping2dark"><font color="#ffffff"><b><medium>General Shipping Information</medium></b></font>
+    </string>
+    <string name="shipping3dark"><font color="#ffffff"><b><medium>1)</medium></b></font>
+        We make our best efforts to ship each item in your order within 4-5 working days of the order.
+         However, in some cases, we may take longer, up to 7-10 working days, to ship the product. Once
+         we ship the item(s), you will receive another email containing the shipping details.
+         You will also be able to view your order status and tracking numbers in your account order history.
+    </string>
+    <string name="shipping4dark"><font color="#ffffff"><b><medium>2)</medium></b></font>We process all deliveries through reputed couriers. Once your order is shipped you will be provided
+         with a tracking number that you can use to track your delivery on the logistic company’s website.
+
+    </string>
+    <string name="shipping5dark"><font color="#ffffff"><b><medium>3)</medium></b></font>
+        While it is our endeavour to ship all items in your order together; this may not always be possible
+         due to product characteristics or availability. Please be aware
+         that your order may be dispatched in separate parcels from different locations and on different dates.
+
+    </string>
+    <string name="shipping6dark"><font color="#ffffff"><b><medium>4)</medium></b></font>
+        Our courier partner makes attempts to reach you via a phone call or SMS. Please ensure that you take
+         calls from our courier partner to facilitate delivery of your package. A second attempt will automatically
+         be made within 24 hours. After the second attempt, our courier will hold on to the parcel for 3 days awaiting
+         further instructions from the recipient before returning the parcel to Antsglobe Technologies LLP.
+    </string>
+    <string name="shipping7dark"><font color="#ffffff"><b><medium>5)</medium></b></font>
+        Once the parcel has been shipped back to us by the courier partner, we will automatically cancel
+         that order.
+         The payment made by you towards the cancelled order will be refunded via the original mode of payment.
+
+    </string>
+    <string name="shipping8dark"><font color="#ffffff"><b><medium>6)</medium></b></font>
+        If when you receive your parcel you notice that it is damaged, you should refuse to accept it.
+         All parcels are guaranteed to be in perfect condition when they are dispatched from our partner centres.
+         If you refuse
+         your parcel, please contact Customer Care 9021-779-995. You can also email us at info@antsglobe.com
+
+    </string>
+    <string name="shipping9dark"><font color="#ffffff"><b><medium>7)</medium></b></font>
+        Please note, there are no extra taxes, hidden costs or additional shipping charges. The price
+         mentioned on the website is the final price. All taxes are included with the listed product prices.
+    </string>
+    <string name="shipping10dark"><font color="#ffffff"><b><medium>8)</medium></b></font>
+        If an order gets cancelled, undelivered or is lost in route to your preferred destination, we
+         will refund the whole order amount comprising of shipping charges.
+
+    </string>
+    <string name="shipping11dark"><font color="#ffffff"><b><medium>9)</medium></b></font>
+        In case you cancel a portion of your order, the shipping charges will not be refunded.
+
+    </string>
+    <string name="shipping12dark"><font color="#ffffff"><b><medium>10)</medium></b></font>
+        In case you return the delivered order, the original charges of shipping won’t be refunded.
+    </string>
+    <string name="shipping1">
+        We aim to deliver the products you purchase as fast as possible and in the most
+        brilliant condition. Our business days are Monday through Friday; we do not process
+        orders on Saturday, Sunday, or major Indian Holidays.
+
+    </string>
+    <string name="shipping2"><font color="#000000"><b><medium>General Shipping Information</medium></b></font>
+    </string>
+    <string name="shipping3"><font color="#000000"><b><medium>1)</medium></b></font>
+        We make our best efforts to ship each item in your order within 4-5 working days of the order.
+         However, in some cases, we may take longer, up to 7-10 working days, to ship the product. Once
+         we ship the item(s), you will receive another email containing the shipping details.
+         You will also be able to view your order status and tracking numbers in your account order history.
+    </string>
+    <string name="shipping4"><font color="#000000"><b><medium>2)</medium></b></font>
+        We process all deliveries through reputed couriers. Once your order is shipped you will be provided
+         with a tracking number that you can use to track your delivery on the logistic company’s website.
+
+    </string>
+    <string name="shipping5"><font color="#000000"><b><medium>3)</medium></b></font>
+        While it is our endeavour to ship all items in your order together; this may not always be possible
+         due to product characteristics or availability. Please be aware
+         that your order may be dispatched in separate parcels from different locations and on different dates.
+
+    </string>
+    <string name="shipping6"><font color="#000000"><b><medium>4)</medium></b></font>
+        Our courier partner makes attempts to reach you via a phone call or SMS. Please ensure that you take
+         calls from our courier partner to facilitate delivery of your package. A second attempt will automatically
+         be made within 24 hours. After the second attempt, our courier will hold on to the parcel for 3 days awaiting
+         further instructions from the recipient before returning the parcel to Antsglobe Technologies LLP.
+    </string>
+    <string name="shipping7"><font color="#000000"><b><medium>5)</medium></b></font>
+        Once the parcel has been shipped back to us by the courier partner, we will automatically cancel
+         that order.
+         The payment made by you towards the cancelled order will be refunded via the original mode of payment.
+
+    </string>
+    <string name="shipping8"><font color="#000000"><b><medium>6)</medium></b></font>
+        If when you receive your parcel you notice that it is damaged, you should refuse to accept it.
+         All parcels are guaranteed to be in perfect condition when they are dispatched from our partner centres.
+         If you refuse
+         your parcel, please contact Customer Care 9021-779-995. You can also email us at info@antsglobe.com
+
+    </string>
+    <string name="shipping9"><font color="#000000"><b><medium>7)</medium></b></font>
+        Please note, there are no extra taxes, hidden costs or additional shipping charges. The price
+         mentioned on the website is the final price. All taxes are included with the listed product prices.
+    </string>
+    <string name="shipping10"><font color="#000000"><b><medium>8)</medium></b></font>
+        If an order gets cancelled, undelivered or is lost in route to your preferred destination, we
+         will refund the whole order amount comprising of shipping charges.
+
+    </string>
+    <string name="shipping11"><font color="#000000"><b><medium>9)</medium></b></font>
+        In case you cancel a portion of your order, the shipping charges will not be refunded.
+
+    </string>
+    <string name="shipping12"><font color="#000000"><b><medium>10)</medium></b></font>
+        In case you return the delivered order, the original charges of shipping won’t be refunded.
+    </string>
+    <string name="Tnc1dark">
+        This website is operated by Antsglobe Technologies LLP. Throughout the site, the terms “we”, “us” and “our” refer to Antsglobe.
+        Antsglobe offers this website, including all information, tools and services available from this site to you, the user, conditioned
+        upon your acceptance of all terms, conditions, policies and notices stated here. By accessing and using this Web Site you agree to
+        be bound by the following Terms of Use and all terms and conditions contained and/or referenced herein or any additional terms and
+        conditions set forth on this Web
+        Site and all such terms shall be deemed accepted by you. If you do NOT agree to all these Terms of Use, you should NOT use this Web
+        Site.
+    </string>
+    <string name="Tnc2dark">
+        These Terms of Use may be amended by Antsglobe at any time. Such amended Terms of Use shall be effective upon posting on this Web
+        Site. Please check
+        the Terms of Use published on this Web Site regularly to ensure that you are aware of all terms governing your use of this Web Site.
+    </string>
+    <string name="Tnc3dark">Also, specific terms and conditions may apply to specific content, products, materials, services or information contained on or
+        available through this Web Site (the "Content") or transactions concluded through this Web Site. Such specific terms may be in
+        addition to these Terms of Use or, where inconsistent with these Terms of Use, only to the extent the
+        content or intent of such specific terms is inconsistent with these Terms of Use, such specific terms will supersede these Terms
+        of Use.
+    </string>
+    <string name="Tnc4dark">
+        <font color="#ffffff"><b><medium>1. ONLINE STORE TERMS:</medium></b></font>
+        Antsglobe reserves the right to make changes or updates with respect to or in the Content of the Web Site or
+        the format thereof at any time without notice. You may not use our products for any illegal or unauthorized purpose nor may you, in
+        the use of the Service, violate any laws in your jurisdiction (including but not limited to copyright laws). You must not transmit
+        any worms or viruses or
+        any code of a destructive nature. A breach or violation of any of the Terms will result in an immediate termination of your Services.
+    </string>
+    <string name="Tnc5dark"><font color="#ffffff"><b><medium>2.ACCURACY, COMPLETENESS AND‎ TIMELI- NESS OF INFORMATION:</medium></b></font>
+        Although care has been taken to ensure the accuracy of the information on
+        this Web Site, Antsglobe assumes no responsibility for the same. All content is provided as is and as available Any reliance on the
+        material on this site is at your own risk. We reserve the right to modify the contents of this site at any time, but
+        we have no obligation to update any information on our site. You agree that it is your responsibility to monitor changes to our site.
+    </string>
+    <string name="Tnc6dark">
+        Under no circumstances Antsglobe or its affiliates be liable for any direct or indirect consequential, punitive or incidental damages
+        (including without limitation, damages for loss of business, contract, revenue, data or information) resulting from or arising out of
+        or in connection
+        with the use or inability to use, of this website and its contents, even if Antsglobe has been advised about the possibility of such
+        damages.
+    </string>
+    <string name="Tnc7dark"><font color="#ffffff"><b><medium>3.THIRD-PARTY LINKS:</medium></b></font>
+        This website may provide links to other web sites that are not under the control of Antsglobe. We shall not
+        in any way be responsible for the content of such other web sites. Such links are provided only as a convenience to the user of
+        this website, and the inclusion of any link to any such websites does not imply endorsement by Antsglobe of the content of such
+        websites.
+
+    </string>
+    <string name="Tnc8dark"><font color="#ffffff"><b><medium>4.COPYRIGHT DISCLAIMER:</medium></b></font>
+        Copyright and all other proprietary rights in the Content (including but not limited to software, audio,
+        video, text and photographs) rest with Antsglobe. All rights in the content not expressly granted herein are reserved. Except as
+        otherwise provided, the content published on this website may be reproduced or distributed in unmodified form for personal
+        non-commercial use only. Any other use of the content, including without limitation distribution, reproduction, modification,
+        display or transmission without the prior written consent of
+        Antsglobe is strictly prohibited. All copyright and other proprietary rights shall be retained by Antsglobe on all reproductions.
+
+    </string>
+    <string name="Tnc9dark"><font color="#ffffff"><b><medium>5.MODIFICATIONS TO THE SERVICE AND PRICES:‎ ‎ ‎ ‎</medium></b></font>Prices for our products are subject to change without notice. We reserve the right
+        at any time to modify or discontinue the Service (or any part or content thereof) without notice at any time.
+We shall not be liable to you or to any third-party for any modification, price change, suspension or discontinuance of the Service.
+
+    </string>
+    <string name="Tnc10dark"><font color="#ffffff"><b><medium>6.PRODUCTS OR SERVICES (if applicable):</medium></b></font>
+        Certain products or services may be available exclusively online through the website.
+        These products or services may have limited quantities and are subject to return or exchange only according to our Return Policy.
+        We have made every effort to display as accurately as possible the colours and images of our products that appear at the
+        store. We cannot guarantee that your computer monitor\'s display of any colour will be accurate.
+        We reserve the right, but are not obligated, to limit the sales of our products or Services to any person,
+        geographic region or jurisdiction. We may exercise this right on a case-by-case basis. We reserve the right to
+        limit the quantities of any products or services that we offer. All descriptions of products or product pricing
+        are subject to change at any time without notice, at the sole discretion of us. We reserve the right to discontinue
+        any product at any time. Any offer for any product or service made on this site is void where prohibited. We do not
+        warrant that the quality of any products, services, information, or other material purchased or obtained by you will
+        meet your expectations, or that any errors in the Service will be corrected.
+
+    </string>
+    <string name="Tnc11dark"><font color="#ffffff"><b><medium>7.GENERAL CONDITIONS:</medium></b></font>
+        We reserve the right to refuse service to anyone for any reason at any time. You understand that your
+        content (not including credit card information), may be transferred unencrypted and involve (a) transmissions over various
+        networks; and (b) changes to conform and adapt to technical requirements of connecting networks or devices. Credit card information
+        is always encrypted during transfer over networks. You agree not to reproduce, duplicate, copy, sell, resell or exploit any
+        portion of the Service, use of the Service, or access to the Service or any contact on the website through which the service
+        is provided, without express written permission
+        by us. The headings used in this agreement are included for convenience only and will not limit or otherwise affect these Terms.
+
+    </string>
+    <string name="Tnc12dark"><font color="#ffffff"><b><medium>8.PERSONAL INFORMATION:</medium></b></font>
+         Your submission of personal information through the store is governed by our Privacy Policy.
+        To view our Privacy Policy. Personal information provided or collected
+        through or in connection with this website shall only be used in accordance with the Privacy Policy adopted by Antsglobe.
+
+    </string>
+    <string name="Tnc13dark"><font color='#5e5bf0'>info@antsglobe.com</font></string>
+    <string name="Tnc14dark"><font color="#ffffff"><b><medium>9.CONTACT INFORMATION:</medium></b></font>
+    Questions about the Terms of Service Contact us at:</string>
+
+    <string name="Tnc1">
+        This website is operated by Antsglobe Technologies LLP. Throughout the site, the terms “we”, “us” and “our” refer to Antsglobe.
+        Antsglobe offers this website, including all information, tools and services available from this site to you, the user, conditioned
+        upon your acceptance of all terms, conditions, policies and notices stated here. By accessing and using this Web Site you agree to
+        be bound by the following Terms of Use and all terms and conditions contained and/or referenced herein or any additional terms and
+        conditions set forth on this Web
+        Site and all such terms shall be deemed accepted by you. If you do NOT agree to all these Terms of Use, you should NOT use this Web
+        Site.
+    </string>
+    <string name="Tnc2">
+        These Terms of Use may be amended by Antsglobe at any time. Such amended Terms of Use shall be effective upon posting on this Web
+        Site. Please check
+        the Terms of Use published on this Web Site regularly to ensure that you are aware of all terms governing your use of this Web Site.
+    </string>
+    <string name="Tnc3">Also, specific terms and conditions may apply to specific content, products, materials, services or information contained on or
+        available through this Web Site (the "Content") or transactions concluded through this Web Site. Such specific terms may be in
+        addition to these Terms of Use or, where inconsistent with these Terms of Use, only to the extent the
+        content or intent of such specific terms is inconsistent with these Terms of Use, such specific terms will supersede these Terms
+        of Use.
+    </string>
+    <string name="Tnc4">
+        <font color="#000000"><b><medium>1. ONLINE STORE TERMS:</medium></b></font>
+        Antsglobe reserves the right to make changes or updates with respect to or in the Content of the Web Site or
+        the format thereof at any time without notice. You may not use our products for any illegal or unauthorized purpose nor may you, in
+        the use of the Service, violate any laws in your jurisdiction (including but not limited to copyright laws). You must not transmit
+        any worms or viruses or
+        any code of a destructive nature. A breach or violation of any of the Terms will result in an immediate termination of your Services.
+    </string>
+    <string name="Tnc5"><font color="#000000"><b><medium>2.ACCURACY, COMPLETENESS AND‎ TIMELI- NESS OF INFORMATION:</medium></b></font>
+        Although care has been taken to ensure the accuracy of the information on
+        this Web Site, Antsglobe assumes no responsibility for the same. All content is provided as is and as available Any reliance on the
+        material on this site is at your own risk. We reserve the right to modify the contents of this site at any time, but
+        we have no obligation to update any information on our site. You agree that it is your responsibility to monitor changes to our site.
+    </string>
+    <string name="Tnc6">
+        Under no circumstances Antsglobe or its affiliates be liable for any direct or indirect consequential, punitive or incidental damages
+        (including without limitation, damages for loss of business, contract, revenue, data or information) resulting from or arising out of
+        or in connection
+        with the use or inability to use, of this website and its contents, even if Antsglobe has been advised about the possibility of such
+        damages.
+    </string>
+    <string name="Tnc7"><font color="#000000"><b><medium>3.THIRD-PARTY LINKS:</medium></b></font>
+        This website may provide links to other web sites that are not under the control of Antsglobe. We shall not
+        in any way be responsible for the content of such other web sites. Such links are provided only as a convenience to the user of
+        this website, and the inclusion of any link to any such websites does not imply endorsement by Antsglobe of the content of such
+        websites.
+
+    </string>
+    <string name="Tnc8"><font color="#000000"><b><medium>4.COPYRIGHT DISCLAIMER:</medium></b></font>
+        Copyright and all other proprietary rights in the Content (including but not limited to software, audio,
+        video, text and photographs) rest with Antsglobe. All rights in the content not expressly granted herein are reserved. Except as
+        otherwise provided, the content published on this website may be reproduced or distributed in unmodified form for personal
+        non-commercial use only. Any other use of the content, including without limitation distribution, reproduction, modification,
+        display or transmission without the prior written consent of
+        Antsglobe is strictly prohibited. All copyright and other proprietary rights shall be retained by Antsglobe on all reproductions.
+
+    </string>
+    <string name="Tnc9"><font color="#000000"><b><medium>5.MODIFICATIONS TO THE SERVICE AND PRICES:‎ ‎ ‎ ‎</medium></b></font>Prices for our products are subject to change without notice. We reserve the right
+        at any time to modify or discontinue the Service (or any part or content thereof) without notice at any time.
+We shall not be liable to you or to any third-party for any modification, price change, suspension or discontinuance of the Service.
+
+    </string>
+    <string name="Tnc10"><font color="#000000"><b><medium>6.PRODUCTS OR SERVICES (if applicable):</medium></b></font>
+        Certain products or services may be available exclusively online through the website.
+        These products or services may have limited quantities and are subject to return or exchange only according to our Return Policy.
+        We have made every effort to display as accurately as possible the colours and images of our products that appear at the
+        store. We cannot guarantee that your computer monitor\'s display of any colour will be accurate.
+        We reserve the right, but are not obligated, to limit the sales of our products or Services to any person,
+        geographic region or jurisdiction. We may exercise this right on a case-by-case basis. We reserve the right to
+        limit the quantities of any products or services that we offer. All descriptions of products or product pricing
+        are subject to change at any time without notice, at the sole discretion of us. We reserve the right to discontinue
+        any product at any time. Any offer for any product or service made on this site is void where prohibited. We do not
+        warrant that the quality of any products, services, information, or other material purchased or obtained by you will
+        meet your expectations, or that any errors in the Service will be corrected.
+
+    </string>
+    <string name="Tnc11"><font color="#000000"><b><medium>7.GENERAL CONDITIONS:</medium></b></font>
+        We reserve the right to refuse service to anyone for any reason at any time. You understand that your
+        content (not including credit card information), may be transferred unencrypted and involve (a) transmissions over various
+        networks; and (b) changes to conform and adapt to technical requirements of connecting networks or devices. Credit card information
+        is always encrypted during transfer over networks. You agree not to reproduce, duplicate, copy, sell, resell or exploit any
+        portion of the Service, use of the Service, or access to the Service or any contact on the website through which the service
+        is provided, without express written permission
+        by us. The headings used in this agreement are included for convenience only and will not limit or otherwise affect these Terms.
+
+    </string>
+    <string name="Tnc12"><font color="#000000"><b><medium>8.PERSONAL INFORMATION:</medium></b></font>
+         Your submission of personal information through the store is governed by our Privacy Policy.
+        To view our Privacy Policy. Personal information provided or collected
+        through or in connection with this website shall only be used in accordance with the Privacy Policy adopted by Antsglobe.
+
+    </string>
+    <string name="Tnc13"><font color='#5e5bf0'>info@antsglobe.com</font></string>
+    <string name="Tnc14"><font color="#000000"><b><medium>9.CONTACT INFORMATION:</medium></b></font>
+    Questions about the Terms of Service Contact us at:</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_activity_home">homeActivity</string>
+    <!-- <string name="navigation_drawer_open" translatable="false">open</string>
+     <string name="navigation_drawer_close" translatable="false">close</string>-->
+
+    <string name="navigation_drawer_open">Open</string>
+    <string name="navigation_drawer_close">Close</string>
+    <string name="notificationMsg">Hi, your order containing veg burger has\nbeen delivered a few minutes ago...</string>
+    <string name="default_web_client_id">496038786801-12nkgs3bajkvp1br1jb28at3me5vdj7g.apps.googleusercontent.com</string>
+    <string name="Setting">Setting</string>
+    <string name="dark_mode">Dark Mode</string>
+    <string name="policies">Policies</string>
+    <string name="about_us">About Us</string>z
+    <string name="language">Select Language</string>
+    <string name="str_customer_reviews">Customer Reviews</string>
+    <string name="give_add_review">Give a rating and review</string>
+    <string name="payment_done_sentence">Your order has been placed successfully. Please \nsee below the order details.</string>
+    <string name="payment_done_sentence_1">If the order hasn’t initiated from your side. Please \ncontact support immediately for further process. </string>
+    <string name="add_review_content">Help other shoppers make an informed purchase decision Please write а review only if you\' ve purchased and used our product, and write only about your personal experience.</string>
+    <string name="service_not_available">Service not available.. check network connection.</string>
+
+
+    <string-array name="spinnerItems">
+        <item>select</item>
+        <item>male</item>
+        <item>female</item>
+        <item>other</item>
+    </string-array>
+</resources>

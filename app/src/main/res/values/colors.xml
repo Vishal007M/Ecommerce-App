@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="blackfordark">#FF000000</color>
+
+    <color name="white">#FFFFFFFF</color>
+    <color name="whitefordark">#FFFFFFFF</color>
+    <color name="dark_grey">#808080</color>
+    <color name="light_grey">#E0E0E0</color>
+    <color name="wish">#1F201D</color>
+
+    <color name="hint">#656565</color>
+    <color name="background_product">#EEEEED</color>
+    <color name="orange">#FF9800</color>
+    <color name="background_wishlist">#FB8501</color>
+    <color name="background_card">#F4F5F2</color>
+    <color name="navigation_highlight">#FFF0E1</color>
+
+    <color name="transparent">#00FFFFFF</color>
+    <color name="transparent_blur">#D4515151</color>
+    <color name="transparent_no_stock">#E9C5C5C5</color>
+
+    <color name="red">#FE0000</color>
+    <color name="light_orange">#FEEFE0</color>
+    <color name="theme">#FFFB8501</color>
+    <color name="nav_backgorund_theme">#C9FFA928</color>
+    <color name="wishlist_card_background">#EDEEEC</color>
+    <color name="product_text_color">#FB8501</color>
+    <color name="product_text_color_1">#A7A4A4</color>
+    <color name="rating_background_color">#FFF0E1</color>
+    <color name="navigation_background">#EDEEEC</color>
+
+    <!--Progress bar color -->
+    <color name="progress_white">#FFFFFF</color>
+    <color name="progress_five_star">#02AD27</color>
+    <color name="progress_four_star">#4DDD6C</color>
+    <color name="progress_three_star">#FB8501</color>
+    <color name="progress_two_star">#E69E4E</color>
+    <color name="progress_one_star">#FF0000</color>
+    <color name="active_star">#FFC700</color>
+    <color name="deactive_star">#202020</color>
+    <color name="review_text_color">#4C4C4E</color>
+
+    <!--Dailog Box-->
+    <color name="colorGreenButton">#4CAF50</color>
+    <color name="colorDefaultTextView">#808080</color>
+    <color name="errorColor">#D50000</color>
+
+
+    <color name="address_sreach_background">#F4F5F2</color>
+    <color name="address_background">#FFF0E1</color>
+    <!--    <color name="white">#FFFFFFFF</color>-->
+    <!--    <color name="white">#FFFFFFFF</color>-->
+    <!--    <color name="white">#FFFFFFFF</color>-->
+</resources>

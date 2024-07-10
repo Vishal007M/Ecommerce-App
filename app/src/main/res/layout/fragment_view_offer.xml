@@ -1,0 +1,310 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:id="@+id/fullscreen"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ui.ViewOfferFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/BusinessSettingsTB"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/orange"
+        android:elevation="3dp"
+        android:gravity="start"
+        android:orientation="horizontal"
+        android:paddingHorizontal="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/backButton"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:src="@drawable/ic_baseline_arrow_back_24"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/logoImageHome"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Offers And Coupons"
+            android:textColor="@color/white"
+            android:textSize="22dp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_tab_change"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="10dp"
+        android:layout_marginHorizontal="4dp"
+        android:layout_below="@+id/BusinessSettingsTB"
+        android:weightSum="2">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+            <RadioButton
+                android:id="@+id/rb_offer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:checked="true"
+                />
+            <TextView
+                android:id="@+id/tv_offer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/dark_grey"
+                android:layout_weight="1"
+                android:text="Offers"
+                android:layout_marginEnd="4dp"
+                android:gravity="center"
+                android:padding="10dp"
+                android:textColor="@color/white"
+                android:textSize="16dp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+            <RadioButton
+                android:id="@+id/rb_coupon"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:id="@+id/tv_coupon"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/light_grey"
+                android:layout_weight="1"
+                android:text="Coupons"
+                android:layout_marginEnd="4dp"
+                android:gravity="center"
+                android:padding="10dp"
+                android:textColor="@color/white"
+                android:textSize="16dp" />
+
+        </RelativeLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_offer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_marginTop="20dp"
+        android:visibility="visible"
+        android:layout_below="@+id/ll_tab_change"> <!-- visible Offer -->
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:scrollbars="none"
+            android:layout_height="match_parent">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/todaysoffer"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingHorizontal="10dp"
+                    android:background="@color/transparent"
+                    android:text="Category offers"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"
+                    android:textSize="18dp"/>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="148dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginBottom="5dp"
+                    app:cardCornerRadius="30dp"
+                    android:layout_marginHorizontal="10dp">
+
+                    <com.denzcoskun.imageslider.ImageSlider
+                        android:id="@+id/image_slider2"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        app:iss_auto_cycle="true"
+                        app:iss_delay="10000"
+                        app:iss_period="1000"
+                        app:iss_selected_dot="@drawable/slider_indicators"
+                        app:iss_text_align="CENTER"
+                        app:iss_unselected_dot="@drawable/default_unselected_dot" />
+
+                </androidx.cardview.widget.CardView>
+
+                <TextView
+                    android:id="@+id/ucoffers"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/transparent"
+                    android:text="Product Offers"
+                    android:layout_marginTop="20dp"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"
+                    android:layout_marginHorizontal="10dp"
+                    android:textSize="18dp"/>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rv_offer_list"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginStart="10dp"
+                    app:spanCount="2"
+                    app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+                    tools:listitem="@layout/offer_recycler_view_item" />
+            </LinearLayout>
+
+        </androidx.core.widget.NestedScrollView>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_coupon"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_marginTop="20dp"
+        android:paddingHorizontal="8dp"
+        android:visibility="gone"
+        android:layout_below="@+id/ll_tab_change"> <!-- visible Offer -->
+
+        <LinearLayout
+            android:id="@+id/ll_valid"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginStart="2dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginHorizontal="4dp"
+            android:background="@drawable/round_corner_border2_coupon"
+            android:layout_below="@+id/BusinessSettingsTB"
+            android:weightSum="3">
+
+            <RelativeLayout
+                android:id="@+id/rl_valid"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginEnd="4dp"
+                android:layout_marginStart="4dp"
+                android:layout_weight="1">
+                <RadioButton
+                    android:id="@+id/rb_valid"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="visible"
+                    android:checked="true"
+                    />
+                <TextView
+                    android:id="@+id/tv_valid"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Valid"
+                    android:layout_marginVertical="4dp"
+                    android:background="@drawable/round_corner_border2_selected_coupon"
+                    android:gravity="center"
+                    android:padding="10dp"
+                    android:textColor="@color/white"
+                    android:textSize="16dp" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl_redeem"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginEnd="4dp"
+                android:layout_weight="1">
+                <RadioButton
+                    android:id="@+id/rb_redeem"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="visible"/>
+                <TextView
+                    android:id="@+id/tv_redeem"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginVertical="4dp"
+                    android:text="Redeemed"
+                    android:gravity="center"
+                    android:padding="10dp"
+                    android:background="@color/white"
+                    android:textColor="@color/hint"
+                    android:textSize="16dp" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl_invalid"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginEnd="4dp"
+                android:layout_weight="1">
+                <RadioButton
+                    android:id="@+id/rb_invalid"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="visible" />
+                <TextView
+                    android:id="@+id/tv_invalid"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginVertical="4dp"
+                    android:background="@color/white"
+                    android:text="Expired"
+                    android:gravity="center"
+                    android:padding="10dp"
+                    android:textColor="@color/hint"
+                    android:textSize="16dp" />
+
+            </RelativeLayout>
+        </LinearLayout>
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_coupon_list"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp" />
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/ll_empty_screen"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center_vertical"
+        android:gravity="center_vertical"
+        android:orientation="vertical"
+        android:visibility="gone"
+        android:layout_below="@+id/BusinessSettingsTB">
+
+        <ImageView
+            android:id="@+id/emptyicon"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="50dp"
+            android:src="@drawable/emptycoupon" />
+    </LinearLayout>
+</RelativeLayout>

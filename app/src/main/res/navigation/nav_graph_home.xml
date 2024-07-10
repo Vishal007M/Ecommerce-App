@@ -1,0 +1,505 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph2"
+    app:startDestination="@id/HomeFragment">
+
+    <fragment
+        android:id="@+id/HomeFragment"
+        android:name="com.antsglobe.restcommerse.ui.HomeFragment"
+        android:label="HomeFragment"
+        tools:layout="@layout/fragment_home">
+        <action
+            android:id="@+id/action_HomeFragment_to_Product"
+            app:destination="@id/Product" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/searchProductFragment"
+        android:name="com.antsglobe.restcommerse.ui.SearchProductsFragment"
+        android:label="SearchProductsFragment"
+        tools:layout="@layout/fragment_search_products">
+        <action
+            android:id="@+id/action_SearchProductsFragment_to_Product"
+            app:destination="@id/Product" />
+
+        <action
+            android:id="@+id/action_SearchProductsFragment_to_ProductListFragment"
+            app:destination="@id/ProductListFragment" />
+    </fragment>
+
+    <action
+        android:id="@+id/HomeFragment_to_SearchProductsFragment"
+        app:destination="@id/searchProductFragment"
+        app:enterAnim="@anim/fade_in"
+        app:exitAnim="@anim/fade_out"
+        app:launchSingleTop="true"
+        app:popUpToInclusive="true" />
+
+    <fragment
+        android:id="@+id/bottom_menu_my_cart"
+        android:name="com.antsglobe.restcommerse.ui.MyCartFragment"
+        android:label="My Cart"
+        tools:layout="@layout/fragment_my_cart">
+        <action
+            android:id="@+id/action_bottom_menu_my_cart_to_HomeFragment"
+            app:destination="@id/HomeFragment" />
+    </fragment>
+
+    <action
+        android:id="@+id/action_bottom_menu_my_cart_to_Product"
+        app:destination="@id/Product"
+        app:enterAnim="@anim/fade_in"
+        app:exitAnim="@anim/fade_out"
+        app:launchSingleTop="true"
+        app:popUpToInclusive="true" />
+
+    <action
+        android:id="@+id/shipping_to_My_cart"
+        app:destination="@id/bottom_menu_my_cart"
+        app:enterAnim="@anim/fade_in"
+        app:exitAnim="@anim/fade_out"
+        app:launchSingleTop="true"
+        app:popUpToInclusive="true" />
+
+    <fragment
+        android:id="@+id/bottom_menu_profile"
+        android:name="com.antsglobe.restcommerse.ui.MyProfileFragment"
+        android:label="My Profile"
+        tools:layout="@layout/fragment_my_profile" />
+
+    <fragment
+        android:id="@+id/notification"
+        android:name="com.antsglobe.restcommerse.ui.NotificationFragment"
+        android:label="My Notification"
+        tools:layout="@layout/fragment_notification" />
+
+    <fragment
+        android:id="@+id/pay_now"
+        android:name="com.antsglobe.restcommerse.ui.PayNowFragment"
+        android:label="Pay Now"
+        tools:layout="@layout/fragment_pay_now" />
+
+    <fragment
+        android:id="@+id/shop_by_category"
+        android:name="com.antsglobe.restcommerse.ui.ShopByCategoryFragment"
+        android:label="Shop By Category"
+        tools:layout="@layout/fragment_shop_by_category" />
+
+    <fragment
+        android:id="@+id/my_order"
+        android:name="com.antsglobe.restcommerse.ui.MyOrderFragment"
+        android:label="My Order"
+        tools:layout="@layout/fragment_my_order" />
+
+    <fragment
+        android:id="@+id/AddressListFragment"
+        android:name="com.antsglobe.restcommerse.ui.AddressListFragment"
+        android:label="Address List"
+        tools:layout="@layout/fragment_address_list">
+
+        <action
+            android:id="@+id/action_AddressListFragment_to_maps_fragment"
+            app:destination="@id/maps_fragment"
+            app:enterAnim="@anim/fade_in"
+            app:exitAnim="@anim/fade_out"
+            app:launchSingleTop="true"
+            app:popUpToInclusive="true" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/AllCategoryFragment"
+        android:name="com.antsglobe.restcommerse.ui.AllCategoryFragment"
+        android:label="AllCategoryFragment"
+        tools:layout="@layout/fragment_all_category"/>
+
+    <fragment
+        android:id="@+id/menu_legal_policies"
+        android:name="com.antsglobe.restcommerse.ui.LegalPoliciesFragment"
+        android:label="Legel policies"
+        tools:layout="@layout/fragment_legal_policies">
+        <action
+            android:id="@+id/action_legal_policies_to_RefundPolicy"
+            app:destination="@id/RefundPolicy" />
+        <action
+            android:id="@+id/action_legal_policies_to_PrivacyPolicy"
+            app:destination="@id/PrivacyPolicy" />
+        <action
+            android:id="@+id/action_legal_policies_to_Tnc"
+            app:destination="@id/Tnc" />
+        <action
+            android:id="@+id/action_legal_policies_to_ShippingPolicy"
+            app:destination="@id/ShippingPolicy" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/ViewOfferFragment"
+        android:name="com.antsglobe.restcommerse.ui.ViewOfferFragment"
+        android:label="View Offer"
+        tools:layout="@layout/fragment_view_offer" />
+
+    <action
+        android:id="@+id/action_ViewOfferFragment_to_ProductListFragment"
+        app:destination="@id/ProductListFragment"
+        app:enterAnim="@anim/fade_in"
+        app:exitAnim="@anim/fade_out"
+        app:launchSingleTop="true"
+        app:popUpToInclusive="true" />
+
+    <fragment
+        android:id="@+id/Setting"
+        android:name="com.antsglobe.restcommerse.ui.SettingFragment"
+        android:label="Setting"
+        tools:layout="@layout/fragment_setting">
+        <action
+            android:id="@+id/action_Setting_to_menu_legal_policies2"
+            app:destination="@id/menu_legal_policies" />
+        <action
+            android:id="@+id/action_Setting_to_aboutUs"
+            app:destination="@id/aboutUs" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/MostPopular"
+        android:name="com.antsglobe.restcommerse.ui.AllMostPopularFragment"
+        android:label="MostPopular"
+        tools:layout="@layout/fragment_all_most_popular">
+        <action
+            android:id="@+id/action_MostPopular_to_Product"
+            app:destination="@id/Product" />
+    </fragment>
+
+    <action
+        android:id="@+id/action_HomeFragment_to_AllMostPopularFragment"
+        app:destination="@id/MostPopular"
+        app:enterAnim="@anim/fade_in"
+        app:exitAnim="@anim/fade_out"
+        app:launchSingleTop="true"
+        app:popUpToInclusive="true" />
+
+    <fragment
+        android:id="@+id/EditProfileFragment"
+        android:name="com.antsglobe.restcommerse.ui.EditProfileFragment"
+        android:label="EditProfileFragment"
+        tools:layout="@layout/fragment_edit_profile" />
+
+    <action
+        android:id="@+id/action_MyProfileFragment_to_EditProfileFragment"
+        app:destination="@id/EditProfileFragment"
+        app:enterAnim="@anim/fade_in"
+        app:exitAnim="@anim/fade_out"
+        app:launchSingleTop="true"
+        app:popUpToInclusive="true" />
+
+    <action
+        android:id="@+id/action_HomeFragment_to_bottom_menu_my_cart"
+        app:destination="@id/bottom_menu_my_cart"
+        app:enterAnim="@anim/fade_in"
+        app:exitAnim="@anim/fade_out"
+        app:launchSingleTop="true"
+        app:popUpToInclusive="true" />
+
+    <fragment
+        android:id="@+id/Tnc"
+        android:name="com.antsglobe.restcommerse.ui.Tnc"
+        android:label="Tnc"
+        tools:layout="@layout/fragment_tnc">
+
+
+        <action
+            android:id="@+id/action_Tnc_to_legal_policies"
+            app:destination="@id/menu_legal_policies" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/PrivacyPolicy"
+        android:name="com.antsglobe.restcommerse.ui.PrivacyPolicy"
+        android:label="Privacy Policy"
+        tools:layout="@layout/fragment_privacy_policy">
+
+
+        <action
+            android:id="@+id/action_PrivacyPolicy_to_legal_policies"
+            app:destination="@id/menu_legal_policies" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/RefundPolicy"
+        android:name="com.antsglobe.restcommerse.ui.RefundPolicy"
+        android:label="Refund Policy"
+        tools:layout="@layout/fragment_refund_policy">
+
+        <action
+            android:id="@+id/action_RefundPolicy_to_legal_policies"
+            app:destination="@id/menu_legal_policies" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/ShippingPolicy"
+        android:name="com.antsglobe.restcommerse.ui.Shipping"
+        android:label="Shipping Policy"
+        tools:layout="@layout/fragment_shipping">
+
+        <action
+            android:id="@+id/action_ShippingPolicy_to_legal_policies"
+            app:destination="@id/menu_legal_policies" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/Product"
+        android:name="com.antsglobe.restcommerse.ui.Product"
+        android:label="product_fragment_label"
+        tools:layout="@layout/fragment_product">
+
+        <action
+            android:id="@+id/action_Product_to_HomeFragment"
+            app:destination="@id/HomeFragment" />
+    </fragment>
+
+    <action
+        android:id="@+id/action_HomeFragment_to_AllCategoryFragment"
+        app:destination="@id/AllCategoryFragment"
+        app:enterAnim="@anim/fade_in"
+        app:exitAnim="@anim/fade_out"
+        app:launchSingleTop="true"
+        app:popUpToInclusive="true" />
+
+    <action
+        android:id="@+id/action_Setting_to_menu_legal_policies"
+        app:destination="@id/menu_legal_policies"
+        app:enterAnim="@anim/fade_in"
+        app:exitAnim="@anim/fade_out"
+        app:launchSingleTop="true"
+        app:popUpToInclusive="true" />
+
+    <fragment
+        android:id="@+id/ProductListFragment"
+        android:name="com.antsglobe.restcommerse.ui.ProductListFragment"
+        android:label="ProductList"
+        tools:layout="@layout/fragment_product_list">
+
+        <action
+            android:id="@+id/action_ProductListFragment_to_Product"
+            app:destination="@id/Product" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/ProductDetailsFragment"
+        android:name="com.antsglobe.restcommerse.ui.Product"
+        android:label="ProductDetails"
+        tools:layout="@layout/fragment_product" />
+
+    <action
+        android:id="@+id/action_ProductDetailsFragment_to_bottom_menu_my_cart"
+        app:destination="@id/bottom_menu_my_cart"
+        app:enterAnim="@anim/fade_in"
+        app:exitAnim="@anim/fade_out"
+        app:launchSingleTop="true"
+        app:popUpToInclusive="true" />
+
+    <action
+        android:id="@+id/action_Product_to_Product"
+        app:destination="@id/Product"
+        app:enterAnim="@anim/fade_in"
+        app:exitAnim="@anim/fade_out"
+        app:launchSingleTop="true"
+        app:popUpToInclusive="true" />
+
+    <fragment
+        android:id="@+id/MyWishListFragment"
+        android:name="com.antsglobe.restcommerse.ui.WishListFragment"
+        android:label="My Wishlist"
+        tools:layout="@layout/fragment_wish_list">
+
+        <action
+            android:id="@+id/action_MyWishListFragment_to_Product"
+            app:destination="@id/Product" />
+
+        <action
+            android:id="@+id/action_MyWishListFragment_to_bottom_menu_my_cart"
+            app:destination="@id/bottom_menu_my_cart" />
+    </fragment>
+
+    <action
+        android:id="@+id/action_AllCategoryFragment_to_ProductListFragment"
+        app:destination="@id/ProductListFragment"
+        app:enterAnim="@anim/fade_in"
+        app:exitAnim="@anim/fade_out"
+        app:launchSingleTop="true"
+        app:popUpToInclusive="true" />
+
+    <action
+        android:id="@+id/action_ProductListFragment_to_ProductDetailsFragment"
+        app:destination="@id/ProductDetailsFragment"
+        app:enterAnim="@anim/fade_in"
+        app:exitAnim="@anim/fade_out"
+        app:launchSingleTop="true"
+        app:popUpToInclusive="true" />
+
+    <action
+        android:id="@+id/action_HomeFragment_to_EditProfileFragment"
+        app:destination="@id/EditProfileFragment"
+        app:enterAnim="@anim/fade_in"
+        app:exitAnim="@anim/fade_out"
+        app:launchSingleTop="true"
+        app:popUpToInclusive="true" />
+
+    <fragment
+        android:id="@+id/aboutUs"
+        android:name="com.antsglobe.restcommerse.ui.AboutUs"
+        android:label="fragment_about_us"
+        tools:layout="@layout/fragment_about_us" />
+
+    <fragment
+        android:id="@+id/ViewReviewDetails"
+        android:name="com.antsglobe.restcommerse.ui.ViewReviewaFragment"
+        android:label="fragment_about_us"
+        tools:layout="@layout/fragment_view_reviewa" />
+
+    <fragment
+        android:id="@+id/AddReview"
+        android:name="com.antsglobe.restcommerse.ui.AddReviewFragment"
+        android:label="fragment_add_review"
+        tools:layout="@layout/fragment_add_review" />
+
+    <action
+        android:id="@+id/action_my_profile_to_Setting"
+        app:destination="@id/Setting"
+        app:enterAnim="@anim/fade_in"
+        app:exitAnim="@anim/fade_out"
+        app:launchSingleTop="true"
+        app:popUpToInclusive="true" />
+
+    <action
+        android:id="@+id/action_my_profile_to_MyWishListFragment"
+        app:destination="@id/MyWishListFragment"
+        app:enterAnim="@anim/fade_in"
+        app:exitAnim="@anim/fade_out"
+        app:launchSingleTop="true"
+        app:popUpToInclusive="true" />
+    <action
+        android:id="@+id/action_my_profile_to_MyOrderFragment"
+        app:destination="@id/my_order"
+        app:enterAnim="@anim/fade_in"
+        app:exitAnim="@anim/fade_out"
+        app:launchSingleTop="true"
+        app:popUpToInclusive="true" />
+
+    <action
+        android:id="@+id/action_product_details_to_ViewReviewDetails"
+        app:destination="@id/ViewReviewDetails"
+        app:enterAnim="@anim/fade_in"
+        app:exitAnim="@anim/fade_out"
+        app:launchSingleTop="true"
+        app:popUpToInclusive="true" />
+
+    <action
+        android:id="@+id/action_product_details_to_AddReview"
+        app:destination="@id/AddReview"
+        app:enterAnim="@anim/fade_in"
+        app:exitAnim="@anim/fade_out"
+        app:launchSingleTop="true"
+        app:popUpToInclusive="true" />
+
+    <action
+        android:id="@+id/action_ViewReviewDetails_to_AddReview"
+        app:destination="@id/AddReview"
+        app:enterAnim="@anim/fade_in"
+        app:exitAnim="@anim/fade_out"
+        app:launchSingleTop="true"
+        app:popUpToInclusive="true" />
+
+
+    <action
+        android:id="@+id/action_homeFragment_to_AddressListFragment"
+        app:destination="@id/AddressListFragment"
+        app:enterAnim="@anim/fade_in"
+        app:exitAnim="@anim/fade_out"
+        app:launchSingleTop="true"
+        app:popUpToInclusive="true" />
+
+    <fragment
+        android:id="@+id/ratingAndReview"
+        android:name="com.antsglobe.restcommerse.ui.RatineAndReviewFragment"
+        android:label="rating_and_review"
+        tools:layout="@layout/fragment_ratine_and_review" />
+
+    <fragment
+        android:id="@+id/fragment_support"
+        android:name="com.antsglobe.restcommerse.ui.SupportFragment"
+        android:label="fragment_support"
+        tools:layout="@layout/fragment_support" />
+
+    <fragment
+        android:id="@+id/faqs_fragment"
+        android:name="com.antsglobe.restcommerse.ui.FAQFragment"
+        android:label="FAQs fragment"
+        tools:layout="@layout/fragment_f_a_q" />
+
+    <fragment
+        android:id="@+id/maps_fragment"
+        android:name="com.antsglobe.restcommerse.ui.GoogleMaps.MapsFragment"
+        android:label="Maps fragment"
+        tools:layout="@layout/fragment_maps" />
+
+    <action
+        android:id="@+id/action_maps_fragment_to_AddressListFragment"
+        app:destination="@id/AddressListFragment"
+        app:enterAnim="@anim/fade_in"
+        app:exitAnim="@anim/fade_out"
+        app:launchSingleTop="true"
+        app:popUpToInclusive="true" />
+
+
+    <fragment
+        android:id="@+id/order_fragment"
+        android:name="com.antsglobe.restcommerse.ui.OrderDetailsFragment"
+        android:label="Order fragment"
+        tools:layout="@layout/fragment_order_details" />
+
+    <!-- Inside nav_graph.xml -->
+    <fragment
+        android:id="@+id/done_payment_DD"
+        android:name="com.antsglobe.restcommerse.ui.donepayment"
+        android:label="done_payment_DD"
+        tools:layout="@layout/fragment_donepayment">
+        <action
+            android:id="@+id/action_done_payment_DD_to_order_fragment"
+            app:destination="@id/order_fragment" />
+    </fragment>
+
+
+
+    <action
+        android:id="@+id/action_maps_fragment_to_HomeFragment"
+        app:destination="@id/HomeFragment"
+        app:enterAnim="@anim/fade_in"
+        app:exitAnim="@anim/fade_out"
+        app:launchSingleTop="true"
+        app:popUpTo="@id/HomeFragment"
+        app:popUpToInclusive="true" />
+
+    <action
+        android:id="@+id/action_my_order_to_order_fragment"
+        app:destination="@id/order_fragment"
+        app:enterAnim="@anim/fade_in"
+        app:exitAnim="@anim/fade_out"
+        app:launchSingleTop="true"
+        app:popUpToInclusive="true" />
+
+    <action
+        android:id="@+id/action_order_fragment_to_bottom_menu_my_cart"
+        app:destination="@id/bottom_menu_my_cart"
+        app:enterAnim="@anim/fade_in"
+        app:exitAnim="@anim/fade_out"
+        app:launchSingleTop="true"
+        app:popUpToInclusive="true" />
+
+    <action
+        android:id="@+id/action_HomeFragment_to_maps_fragment"
+        app:destination="@id/maps_fragment"
+        app:enterAnim="@anim/fade_in"
+        app:exitAnim="@anim/fade_out" />
+
+</navigation>
