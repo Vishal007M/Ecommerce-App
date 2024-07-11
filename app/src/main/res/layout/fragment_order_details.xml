@@ -30,9 +30,9 @@
             android:layout_centerVertical="true"
             android:layout_marginStart="140dp"
             android:text="Orders Details"
-            android:textStyle="bold"
             android:textColor="@color/white"
-            android:textSize="22dp" />
+            android:textSize="22dp"
+            android:textStyle="bold" />
     </RelativeLayout>
 
     <LinearLayout
@@ -136,9 +136,9 @@
                                 android:paddingHorizontal="6dp"
                                 android:paddingVertical="4dp"
                                 android:text="Delivered"
-                                android:textStyle="bold"
                                 android:textColor="@color/colorGreenButton"
-                                android:textSize="14dp" />
+                                android:textSize="14dp"
+                                android:textStyle="bold" />
 
                         </LinearLayout>
                     </LinearLayout>
@@ -316,8 +316,8 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center_vertical"
-                            android:gravity="center_vertical"
                             android:layout_marginStart="3dp"
+                            android:gravity="center_vertical"
                             android:paddingVertical="2dp"
                             android:text="Payment - Online"
                             android:textColor="@color/black"
@@ -329,8 +329,8 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_alignParentEnd="true"
-                            android:layout_marginEnd="6dp"
                             android:layout_marginStart="3dp"
+                            android:layout_marginEnd="6dp"
                             android:layout_marginBottom="4dp"
                             android:paddingVertical="4dp"
                             android:text="Transcation Id: 1234567891"
@@ -368,13 +368,13 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center_vertical"
+                        android:layout_marginStart="3dp"
                         android:gravity="center_vertical"
                         android:paddingVertical="2dp"
-                        android:layout_marginStart="3dp"
                         android:text="Delivery Date and Time: "
                         android:textColor="@color/black"
-                        android:textStyle="bold"
-                        android:textSize="14dp" />
+                        android:textSize="14dp"
+                        android:textStyle="bold" />
 
                     <TextView
                         android:id="@+id/tv_expected_date"
@@ -405,9 +405,9 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center_vertical"
+                        android:layout_marginStart="4dp"
                         android:gravity="center_vertical"
                         android:paddingVertical="2dp"
-                        android:layout_marginStart="4dp"
                         android:text="Order Details"
                         android:textColor="@color/black"
                         android:textStyle="bold" />
@@ -422,10 +422,10 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center_vertical"
+                            android:layout_marginStart="5dp"
                             android:layout_weight="0.65"
                             android:gravity="center_vertical"
                             android:paddingVertical="4dp"
-                            android:layout_marginStart="5dp"
                             android:text="Name of the Product/Item"
                             android:textColor="@color/orange"
                             android:textSize="14dp"
@@ -476,9 +476,9 @@
                             android:layout_height="wrap_content"
                             android:layout_gravity="center_vertical"
                             android:layout_marginStart="8dp"
+                            android:layout_marginEnd="20dp"
                             android:layout_toStartOf="@+id/tv_total_amount"
                             android:gravity="end"
-                            android:layout_marginEnd="20dp"
                             android:paddingVertical="4dp"
                             android:text="Total"
                             android:textColor="@color/black"
@@ -491,8 +491,8 @@
                             android:layout_height="wrap_content"
                             android:layout_alignParentEnd="true"
                             android:layout_gravity="center_vertical"
-                            android:layout_marginEnd="30dp"
                             android:layout_marginStart="8dp"
+                            android:layout_marginEnd="30dp"
                             android:gravity="center"
                             android:paddingVertical="4dp"
                             android:paddingStart="10dp"

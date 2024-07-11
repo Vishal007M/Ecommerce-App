@@ -38,7 +38,7 @@ class CategoryAdapter(val items: List<CategoriesList>, val context: Context) :
                 val categoryId = list.cid.toString()
                 val categoryName = list.catname.toString()
                 Log.e("TAG", "categoryId: $categoryId")
-                categoryClickListener?.onCategoryIdClick(categoryId!!.toString(), categoryName )
+                categoryClickListener?.onCategoryIdClick(categoryId!!.toString(), categoryName)
             }
         }
 

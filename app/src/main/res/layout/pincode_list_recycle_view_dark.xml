@@ -4,9 +4,9 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_marginTop="5dp"
+    android:background="@drawable/profile_round_corner_bg_addresses_dark"
     android:clickable="true"
     android:focusable="true"
-    android:background="@drawable/profile_round_corner_bg_addresses_dark"
     android:foreground="?attr/selectableItemBackground"
     android:paddingVertical="10dp">
 
@@ -46,8 +46,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:singleLine="true"
-                android:textColor="@color/whitefordark"
                 android:text="pincode Address"
+                android:textColor="@color/whitefordark"
                 android:textSize="14dp" />
 
             <TextView
@@ -62,8 +62,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:singleLine="true"
-                android:textColor="@color/whitefordark"
                 android:text="pincode state"
+                android:textColor="@color/whitefordark"
                 android:textSize="14dp" />
 
         </LinearLayout>

@@ -17,15 +17,15 @@ import java.util.Locale
 
 
 class CouponListAdaptor(val items: List<Coupon?>) :
-    RecyclerView.Adapter<CouponListAdaptor.MainViewHolder>()  {
+    RecyclerView.Adapter<CouponListAdaptor.MainViewHolder>() {
 
 
-    private val currentdate=getCurrentDateTime()
+    private val currentdate = getCurrentDateTime()
+
     inner class MainViewHolder(val itemsBinding: CouponRecyclerViewItemBinding) :
         RecyclerView.ViewHolder(itemsBinding.root) {
         @RequiresApi(Build.VERSION_CODES.O)
         fun bindItem(list: Coupon) {
-
 
 
             val inputFormatter = DateTimeFormatter.ofPattern("yyyy-MM-dd'T'HH:mm:ss")
@@ -37,15 +37,15 @@ class CouponListAdaptor(val items: List<Coupon?>) :
             val dateOnly = dateTime.format(outputFormatter)
             val dateOnly2 = dateTime2.format(outputFormatter)
 
-            val result=compareDates(list.valid_to.toString(),currentdate)
-            if (result<0) {
-                itemsBinding.background.layoutParams.height=0
-                itemsBinding.background.visibility= View.GONE
+            val result = compareDates(list.valid_to.toString(), currentdate)
+            if (result < 0) {
+                itemsBinding.background.layoutParams.height = 0
+                itemsBinding.background.visibility = View.GONE
 
 
             }
             itemsBinding.tvCouponName.text = list.coupon_name
-            itemsBinding.tvTiilDate.text = "valid until:-"+dateOnly2
+            itemsBinding.tvTiilDate.text = "valid until:-" + dateOnly2
 
 
         }
@@ -76,6 +76,7 @@ class CouponListAdaptor(val items: List<Coupon?>) :
 
         return dateTime1.compareTo(dateTime2)
     }
+
     fun getCurrentDateTime(): String {
         val format = SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss", Locale.getDefault())
         return format.format(Date())

@@ -653,7 +653,7 @@ class MapsFragment : Fragment(), OnMapReadyCallback {
         dialog.requestWindowFeature(Window.FEATURE_NO_TITLE)
         dialog.setCancelable(true)
         dialog.setContentView(R.layout.pin_custom_layout)
-        if (sharedPreferences.getMode() == true){
+        if (sharedPreferences.getMode() == true) {
             dialog.setContentView(R.layout.pin_custom_layout_dark)
         }
 

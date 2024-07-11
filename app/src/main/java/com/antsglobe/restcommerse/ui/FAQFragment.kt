@@ -15,7 +15,7 @@ class FAQFragment : Fragment() {
     private var binding: FragmentFAQBinding? = null
 
 
-    private lateinit var sharedPreferences:PreferenceManager
+    private lateinit var sharedPreferences: PreferenceManager
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         arguments?.let {
@@ -39,8 +39,8 @@ class FAQFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        sharedPreferences= PreferenceManager(requireContext())
-        if (sharedPreferences.getMode() == true){
+        sharedPreferences = PreferenceManager(requireContext())
+        if (sharedPreferences.getMode() == true) {
             binding!!.logoImageHome.setTextColor(Color.BLACK)
             binding!!.tv1.setTextColor(Color.WHITE)
             binding!!.tv2.setTextColor(Color.WHITE)

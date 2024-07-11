@@ -1,26 +1,26 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:paddingVertical="10dp"
-    android:paddingHorizontal="15dp"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
     android:background="@drawable/profile_round_corner_bg_dark_wish"
     android:orientation="vertical"
-    android:layout_height="match_parent">
+    android:paddingHorizontal="15dp"
+    android:paddingVertical="10dp">
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Filter By"
-        android:textSize="20dp"
         android:textColor="@color/white"
-        android:textStyle="bold"/>
+        android:textSize="20dp"
+        android:textStyle="bold" />
 
     <RadioGroup
         android:id="@+id/genderRB"
-        android:layout_marginTop="10dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
         android:orientation="vertical">
 
         <com.google.android.material.radiobutton.MaterialRadioButton
@@ -35,9 +35,9 @@
         <com.google.android.material.radiobutton.MaterialRadioButton
             android:id="@+id/vegOnly"
             android:layout_width="250dp"
-            android:checked="true"
             android:layout_height="45dp"
             android:buttonTint="@color/orange"
+            android:checked="true"
             android:text="Veg Only"
             android:textColor="@color/whitefordark" />
 
@@ -51,33 +51,32 @@
             app:useMaterialThemeColors="true" />
 
 
-<!--        <com.google.android.material.radiobutton.MaterialRadioButton-->
-<!--            android:id="@+id/popularity"-->
-<!--            android:layout_width="250dp"-->
-<!--            android:layout_height="45dp"-->
-<!--            android:buttonTint="@color/orange"-->
-<!--            android:text="Popularity"-->
-<!--            android:textColor="@color/black"-->
-<!--            app:useMaterialThemeColors="true" />-->
+        <!--        <com.google.android.material.radiobutton.MaterialRadioButton-->
+        <!--            android:id="@+id/popularity"-->
+        <!--            android:layout_width="250dp"-->
+        <!--            android:layout_height="45dp"-->
+        <!--            android:buttonTint="@color/orange"-->
+        <!--            android:text="Popularity"-->
+        <!--            android:textColor="@color/black"-->
+        <!--            app:useMaterialThemeColors="true" />-->
 
-<!--        <com.google.android.material.radiobutton.MaterialRadioButton-->
-<!--            android:id="@+id/AtoZ"-->
-<!--            android:layout_width="250dp"-->
-<!--            android:layout_height="45dp"-->
-<!--            android:buttonTint="@color/orange"-->
-<!--            android:text="A to Z"-->
-<!--            android:textColor="@color/black"-->
-<!--            app:useMaterialThemeColors="true" />-->
+        <!--        <com.google.android.material.radiobutton.MaterialRadioButton-->
+        <!--            android:id="@+id/AtoZ"-->
+        <!--            android:layout_width="250dp"-->
+        <!--            android:layout_height="45dp"-->
+        <!--            android:buttonTint="@color/orange"-->
+        <!--            android:text="A to Z"-->
+        <!--            android:textColor="@color/black"-->
+        <!--            app:useMaterialThemeColors="true" />-->
 
-<!--        <com.google.android.material.radiobutton.MaterialRadioButton-->
-<!--            android:id="@+id/ZtoA"-->
-<!--            android:layout_width="250dp"-->
-<!--            android:layout_height="45dp"-->
-<!--            android:buttonTint="@color/orange"-->
-<!--            android:text="Z to A"-->
-<!--            android:textColor="@color/black"-->
-<!--            app:useMaterialThemeColors="true" />-->
-
+        <!--        <com.google.android.material.radiobutton.MaterialRadioButton-->
+        <!--            android:id="@+id/ZtoA"-->
+        <!--            android:layout_width="250dp"-->
+        <!--            android:layout_height="45dp"-->
+        <!--            android:buttonTint="@color/orange"-->
+        <!--            android:text="Z to A"-->
+        <!--            android:textColor="@color/black"-->
+        <!--            app:useMaterialThemeColors="true" />-->
 
 
     </RadioGroup>

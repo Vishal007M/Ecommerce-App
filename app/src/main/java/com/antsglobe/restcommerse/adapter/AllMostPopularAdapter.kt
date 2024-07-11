@@ -6,7 +6,6 @@ import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.RecyclerView
 import com.antsglobe.restcommerse.R
 import com.antsglobe.restcommerse.Utils.PreferenceManager
@@ -66,20 +65,19 @@ class AllMostPopularAdapter(val items: List<MostPopularData?>, val context: Cont
             itemsBinding.tvRatingOffer.text = rating
 
 
-            if (list.prod_availability.toString() == "Out of Stock"){
+            if (list.prod_availability.toString() == "Out of Stock") {
 //                itemsBinding.stockChecking.visibility = View.VISIBLE
 //                itemsBinding.productUrl.setColorFilter(ContextCompat.getColor(context, R.color.transparent_no_stock))
 
                 itemsBinding.showPrice.visibility = View.GONE
                 itemsBinding.showStock.visibility = View.VISIBLE
                 itemsBinding.OOS.visibility = View.VISIBLE
-            }else{
+            } else {
 //                itemsBinding.productUrl.setColorFilter(ContextCompat.getColor(context, R.color.transparent))
                 itemsBinding.showPrice.visibility = View.VISIBLE
                 itemsBinding.showStock.visibility = View.GONE
                 itemsBinding.OOS.visibility = View.GONE
             }
-
 
             var wishstatus = list.wishlist_status
             if (wishstatus) {

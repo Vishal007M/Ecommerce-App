@@ -14,26 +14,26 @@ class OrderItemAdaptor(val items: List<OrderDetail?>) :
         RecyclerView.ViewHolder(itemsBinding.root) {
         fun bindItem(list: OrderDetail) {
 
-            if (list.size.isNullOrEmpty()){
+            if (list.size.isNullOrEmpty()) {
                 itemsBinding.tvProductName.text = "${list.productname}"
-            }else{
+            } else {
                 itemsBinding.tvProductName.text = "${list.productname} ${list.size}"
             }
 
             val txtRating = String.format("%.0f", list.quantity?.toDouble())
             itemsBinding.tvProductQuantity.text = txtRating
 
-           // itemsBinding.tvProductPrice.text = "₹" + list.original_price.toString()
+            // itemsBinding.tvProductPrice.text = "₹" + list.original_price.toString()
 //            itemsBinding.tvProductPrice.text = "₹" + list.dis_price.toString()
 
             try {
-                if (list.dis_price == null){
+                if (list.dis_price == null) {
                     itemsBinding.tvProductPrice.text = "₹" + list.original_price.toString()
-                }else{
+                } else {
                     itemsBinding.tvProductPrice.text = "₹" + list.dis_price.toString()
                 }
-            }catch (e: Exception){
-                println("catch the error "+e.message)
+            } catch (e: Exception) {
+                println("catch the error " + e.message)
             }
 
         }

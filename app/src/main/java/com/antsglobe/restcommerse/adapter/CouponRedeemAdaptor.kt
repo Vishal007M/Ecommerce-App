@@ -29,7 +29,7 @@ class CouponRedeemAdaptor(val items: List<Coupon?>) :
             val dateOnly2 = dateTime2.format(outputFormatter)
 
             itemsBinding.tvCouponName.text = list.coupon_name
-            itemsBinding.tvTiilDate.text = "valid until:-"+dateOnly2
+            itemsBinding.tvTiilDate.text = "valid until:-" + dateOnly2
 
         }
     }

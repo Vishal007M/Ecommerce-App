@@ -76,16 +76,16 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_gravity="center_horizontal"
-        android:visibility="visible"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        android:visibility="visible">
 
         <LinearLayout
             android:id="@+id/linearLayout7"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            app:layout_constraintEnd_toEndOf="parent"
             android:paddingHorizontal="10dp"
             android:paddingVertical="10dp"
+            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent">
 
@@ -93,68 +93,68 @@
             <LinearLayout
                 android:id="@+id/sortProduct"
                 android:layout_width="wrap_content"
-                android:paddingHorizontal="10dp"
-                android:paddingVertical="5dp"
-                android:gravity="center_vertical"
+                android:layout_height="35dp"
                 android:background="@drawable/round_corner_border"
-                android:layout_height="35dp">
+                android:gravity="center_vertical"
+                android:paddingHorizontal="10dp"
+                android:paddingVertical="5dp">
 
                 <ImageView
                     android:layout_width="15dp"
                     android:layout_height="15dp"
                     android:src="@drawable/news"
-                    app:tint="@color/orange"/>
+                    app:tint="@color/orange" />
 
                 <TextView
                     android:id="@+id/shortByData"
-                    android:layout_marginStart="5dp"
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
+                    android:layout_marginStart="5dp"
                     android:gravity="center"
                     android:text="Sort by" />
 
                 <ImageView
                     android:id="@+id/sorticon"
-                    android:layout_marginStart="10dp"
-                    android:layout_marginTop="1dp"
                     android:layout_width="15dp"
                     android:layout_height="15dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="1dp"
                     android:rotation="90"
-                    android:src="@drawable/arrow_back"/>
+                    android:src="@drawable/arrow_back" />
             </LinearLayout>
 
             <LinearLayout
                 android:id="@+id/filterProduct"
                 android:layout_width="wrap_content"
-                android:paddingHorizontal="10dp"
+                android:layout_height="35dp"
                 android:layout_marginStart="10dp"
-                android:paddingVertical="5dp"
-                android:gravity="center_vertical"
                 android:background="@drawable/round_corner_border"
-                android:layout_height="35dp">
+                android:gravity="center_vertical"
+                android:paddingHorizontal="10dp"
+                android:paddingVertical="5dp">
 
                 <ImageView
                     android:layout_width="15dp"
                     android:layout_height="15dp"
                     android:src="@drawable/news"
-                    app:tint="@color/orange"/>
+                    app:tint="@color/orange" />
 
                 <TextView
                     android:id="@+id/filterByData"
-                    android:layout_marginStart="5dp"
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
+                    android:layout_marginStart="5dp"
                     android:gravity="center"
                     android:text="Filter" />
 
                 <ImageView
                     android:id="@+id/filtericon"
-                    android:layout_marginStart="10dp"
-                    android:layout_marginTop="1dp"
                     android:layout_width="15dp"
                     android:layout_height="15dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="1dp"
                     android:rotation="90"
-                    android:src="@drawable/arrow_back"/>
+                    android:src="@drawable/arrow_back" />
             </LinearLayout>
 
         </LinearLayout>
@@ -195,9 +195,9 @@
                 android:layout_gravity="center_horizontal"
                 android:layout_marginTop="10dp"
                 android:gravity="center_horizontal"
+                android:text="No Products Available."
                 android:textSize="22dp"
-                android:textStyle="bold"
-                android:text="No Products Available." />
+                android:textStyle="bold" />
 
             <!--        <TextView-->
             <!--            android:layout_width="match_parent"-->
@@ -249,6 +249,7 @@
         android:orientation="vertical"
         android:visibility="gone">
         z
+
         <ImageView
             android:id="@+id/emptyicon"
             android:layout_width="match_parent"
@@ -263,9 +264,9 @@
             android:layout_gravity="center_horizontal"
             android:layout_marginTop="10dp"
             android:gravity="center_horizontal"
+            android:text="No Products Available."
             android:textSize="22dp"
-            android:textStyle="bold"
-            android:text="No Products Available." />
+            android:textStyle="bold" />
 
         <!--        <TextView-->
         <!--            android:layout_width="match_parent"-->

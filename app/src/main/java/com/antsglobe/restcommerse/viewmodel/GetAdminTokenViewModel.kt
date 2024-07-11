@@ -39,7 +39,7 @@ class GetAdminTokenViewModel(private val apiService: ApiService) : ViewModel() {
 //        }
 //    }
 
-    fun GetAdminTokenApiVM() = viewModelScope.launch{
+    fun GetAdminTokenApiVM() = viewModelScope.launch {
 //        if (!NetworkUtils.isNetworkConnected()) {
 //            NetworkUtils.showToast()
 //            return

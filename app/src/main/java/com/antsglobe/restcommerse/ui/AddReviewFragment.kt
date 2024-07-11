@@ -112,9 +112,9 @@ class AddReviewFragment : Fragment() {
             }
         })
 
-            binding.deleteImageReview.setOnClickListener {
-                binding.reviewImagesLL.visibility = View.GONE
-            }
+        binding.deleteImageReview.setOnClickListener {
+            binding.reviewImagesLL.visibility = View.GONE
+        }
 
         binding.btnAddReviewImage.setOnClickListener {
             openGalleryForImage()

@@ -34,8 +34,8 @@ class SimilarProductAdapter(
                 itemsBinding.productPrice.paintFlags or Paint.STRIKE_THRU_TEXT_FLAG
             itemsBinding.productPrice.text = "₹${list.product_price.toString()}"
 
-            sharedPreferences= PreferenceManager(context)
-            if (sharedPreferences.getMode() == true){
+            sharedPreferences = PreferenceManager(context)
+            if (sharedPreferences.getMode() == true) {
                 itemsBinding.background.setBackgroundResource(R.drawable.profile_round_corner_bg_dark_wish)
 //                itemsBinding.wishcard.setBackgroundResource(R.drawable.profile_round_corner_bg_dark_wishcard)
                 itemsBinding.productname.setTextColor(context.resources.getColor(R.color.whitefordark))
@@ -46,21 +46,21 @@ class SimilarProductAdapter(
 //            itemsBinding.saved.text = "YOU SAVE ₹" + list.Off_Price?.toInt()
 
 //            itemsBinding.tvPeopleCustomer.text = "(${list.totalreview.toString()})"
-            val rating : String
-            if (list.rating == null){
-                 rating = "0.0"
-            }else{
-                 rating = String.format("%.1f", list.rating)
+            val rating: String
+            if (list.rating == null) {
+                rating = "0.0"
+            } else {
+                rating = String.format("%.1f", list.rating)
             }
 
-            if (list.prod_availability.toString() == "Out of Stock"){
+            if (list.prod_availability.toString() == "Out of Stock") {
 //                itemsBinding.stockChecking.visibility = View.VISIBLE
 //                itemsBinding.productUrl.setColorFilter(ContextCompat.getColor(context, R.color.transparent_no_stock))
 
                 itemsBinding.showPrice.visibility = View.GONE
                 itemsBinding.showStock.visibility = View.VISIBLE
                 itemsBinding.OOS.visibility = View.VISIBLE
-            }else{
+            } else {
 //                itemsBinding.productUrl.setColorFilter(ContextCompat.getColor(context, R.color.transparent))
 
                 itemsBinding.showPrice.visibility = View.VISIBLE

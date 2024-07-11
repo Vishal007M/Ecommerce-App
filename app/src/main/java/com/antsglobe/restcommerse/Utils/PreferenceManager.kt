@@ -67,8 +67,6 @@ class PreferenceManager(context: Context) {
     }
 
 
-
-
     fun clearAllData() {
         sharedPreferences.edit().clear().apply()
     }
@@ -142,7 +140,7 @@ class PreferenceManager(context: Context) {
         sharedPreferences.edit().putString(NOTIFICATION_COUNT, insCode).apply()
     }
 
-    fun       getNotificationCount(): String? {
+    fun getNotificationCount(): String? {
         return sharedPreferences.getString(NOTIFICATION_COUNT, null)
     }
 
@@ -238,7 +236,8 @@ class PreferenceManager(context: Context) {
     }
 
     fun setShipPrice(ship: String?) {
-        sharedPreferences.edit().putString(SHIP_PRICE, ship).apply()}
+        sharedPreferences.edit().putString(SHIP_PRICE, ship).apply()
+    }
 
     fun getShipPrice(): String? {
         return sharedPreferences.getString(SHIP_PRICE, "")
@@ -299,7 +298,7 @@ class PreferenceManager(context: Context) {
     }
 
     fun getSingleProductBuy(): Boolean? {
-        return sharedPreferences.getBoolean(  SINGLE_PRODUCT, false)
+        return sharedPreferences.getBoolean(SINGLE_PRODUCT, false)
     }
 
     fun setProductId(productId: String?) {

@@ -45,9 +45,9 @@
         android:orientation="vertical">
 
         <ScrollView
-            android:scrollbars="none"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:scrollbars="none">
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -87,7 +87,6 @@
                 <TextView
 
                     android:id="@+id/t3"
-                    android:textAllCaps="true"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_gravity="start"
@@ -96,6 +95,7 @@
                     android:gravity="left"
                     android:justificationMode="inter_word"
                     android:text="@string/refund3"
+                    android:textAllCaps="true"
                     android:textColor="@color/black" />
 
                 <TextView
@@ -114,7 +114,6 @@
                 <TextView
 
                     android:id="@+id/t5"
-                    android:textAllCaps="true"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_gravity="start"
@@ -123,6 +122,7 @@
                     android:gravity="left"
                     android:justificationMode="inter_word"
                     android:text="@string/refund5"
+                    android:textAllCaps="true"
                     android:textColor="@color/black" />
 
                 <TextView
@@ -141,7 +141,6 @@
                 <TextView
 
                     android:id="@+id/t7"
-                    android:textAllCaps="true"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_gravity="start"
@@ -150,6 +149,7 @@
                     android:gravity="left"
                     android:justificationMode="inter_word"
                     android:text="@string/refund7"
+                    android:textAllCaps="true"
                     android:textColor="@color/black" />
 
                 <TextView

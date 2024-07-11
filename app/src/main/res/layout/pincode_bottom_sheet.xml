@@ -64,13 +64,13 @@
     <RelativeLayout
         android:id="@+id/ll_goggle_map"
         android:layout_width="180dp"
-        android:visibility="visible"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
         android:background="@drawable/address_location_broder"
         android:gravity="center_vertical"
         android:paddingHorizontal="6dp"
-        android:paddingVertical="4dp">
+        android:paddingVertical="4dp"
+        android:visibility="visible">
 
         <TextView
             android:id="@+id/usemy"
@@ -87,8 +87,8 @@
             android:layout_alignParentEnd="true"
             android:layout_centerVertical="true"
             android:layout_marginStart="8dp"
-            app:tint="@color/orange"
-            android:src="@drawable/ic_my_location" />
+            android:src="@drawable/ic_my_location"
+            app:tint="@color/orange" />
 
     </RelativeLayout>
 

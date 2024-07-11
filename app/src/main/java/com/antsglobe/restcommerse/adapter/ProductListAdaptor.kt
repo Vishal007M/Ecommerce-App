@@ -90,7 +90,7 @@ class ProductListAdaptor(
             itemsBinding.tvRatingOffer.text = rating
 
             var addedtocart = false
-            Log.d("checking",cartlist.toString())
+            Log.d("checking", cartlist.toString())
             cartlist?.forEach {
                 if (list.PID == it?.product_id) {
                     addedtocart = true
@@ -100,10 +100,9 @@ class ProductListAdaptor(
             var quantity = "1"
             itemsBinding.addtocart.setOnClickListener {
                 if (addedtocart) {
-                    if (sharedPreferences.getMode() == true){
+                    if (sharedPreferences.getMode() == true) {
                         itemsBinding.addtocart.setImageResource(R.drawable.add_to_cart_dark)
-                    }
-                    else{
+                    } else {
                         itemsBinding.addtocart.setImageResource(R.drawable.add_to_cart)
                     }
 
@@ -178,6 +177,7 @@ class ProductListAdaptor(
         this.items = data!!
         notifyDataSetChanged()
     }
+
     fun updateCartList(data: List<CartListData?>?) {
         this.cartlist = data!!
         notifyDataSetChanged()

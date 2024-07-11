@@ -2,8 +2,8 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
     android:id="@+id/background"
+    android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".ui.ShippingCheckout">
 
@@ -52,9 +52,9 @@
             <androidx.core.widget.NestedScrollView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:scrollbars="none"
                 android:fillViewport="true"
-                android:fitsSystemWindows="true">
+                android:fitsSystemWindows="true"
+                android:scrollbars="none">
 
                 <androidx.recyclerview.widget.RecyclerView
                     android:id="@+id/rv_addresslist"

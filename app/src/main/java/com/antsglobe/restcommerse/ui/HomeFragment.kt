@@ -163,7 +163,7 @@ class HomeFragment : Fragment(), TopMostPopularAdapter.OnClickProductListener,
 
     private fun pincodeBottomSheet() {
         var dialogView = layoutInflater.inflate(R.layout.pincode_bottom_sheet, null)
-        if (sharedPreferences.getMode() == true){
+        if (sharedPreferences.getMode() == true) {
             dialogView = layoutInflater.inflate(R.layout.pincode_bottom_sheet_dark, null)
         }
 
@@ -515,7 +515,7 @@ class HomeFragment : Fragment(), TopMostPopularAdapter.OnClickProductListener,
         viewModelCategory.getHomeCategoryItem.observe(viewLifecycleOwner) { homeCategoryResp ->
             Log.e("homeCategoryResp", "onCreateView: $homeCategoryResp")
 
-            var list= homeCategoryResp?.filter { it.is_active }
+            var list = homeCategoryResp?.filter { it.is_active }
 //            val sortedNotificationList = notificationResp.sortedByDescending { it.create_date }
             homeCategoryAdapter = HomeCategoryAdapter(list!!, requireContext())
 
@@ -689,7 +689,7 @@ class HomeFragment : Fragment(), TopMostPopularAdapter.OnClickProductListener,
         _binding = null
     }
 
-    override fun onCategoryIdClick(categoryId: String, categoryName : String) {
+    override fun onCategoryIdClick(categoryId: String, categoryName: String) {
         val bundle = Bundle()
         bundle.putString("categoryId", categoryId)
         bundle.putString("categoryName", categoryName)

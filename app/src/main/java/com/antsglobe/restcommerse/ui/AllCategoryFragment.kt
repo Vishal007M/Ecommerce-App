@@ -66,20 +66,20 @@ class AllCategoryFragment : Fragment(), CategoryAdapter.OnClickCategoryListener 
     }
 
 
-    override fun onCategoryIdClick(categoryId: String, catergroyNAme : String) {
+    override fun onCategoryIdClick(categoryId: String, catergroyNAme: String) {
         val bundle = Bundle()
         bundle.putString("categoryId", categoryId)
         bundle.putString("categoryName", catergroyNAme)
         findNavController().navigate(R.id.action_AllCategoryFragment_to_ProductListFragment, bundle)
     }
 
-    private fun initObervserResponse(){
+    private fun initObervserResponse() {
         viewmodel.getAllCategoryListResponse.observe(viewLifecycleOwner) { CategoryResp ->
             Log.e("CategoryResp", "onCreateView: $CategoryResp")
             swipeRefreshLayout?.isRefreshing = false
             binding.llMainScreen.visibility = View.VISIBLE
             binding.llLoadingScreen.visibility = View.GONE
-            var list= CategoryResp?.filter { it.is_active=="true" }
+            var list = CategoryResp?.filter { it.is_active == "true" }
             categoryAdapter = CategoryAdapter(list!!, requireContext())
             binding.rvCategoryList.layoutManager = GridLayoutManager(context, 3)
             categoryAdapter.setOnClickCategoryListener(this)

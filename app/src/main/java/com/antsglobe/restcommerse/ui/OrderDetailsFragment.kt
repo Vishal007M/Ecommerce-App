@@ -188,7 +188,8 @@ class OrderDetailsFragment : Fragment() {
             binding!!.tvOrderDate.text = formattedDateTime
 
             binding!!.tvOrderId.text = "Order Id - $orderId"
-            binding!!.tvTransactionId.text = "Transcation Id: ${getOrderDetailsResponse?.orderMaster?.transaction_id}"
+            binding!!.tvTransactionId.text =
+                "Transcation Id: ${getOrderDetailsResponse?.orderMaster?.transaction_id}"
 
             when (getOrderDetailsResponse?.orderMaster?.delivery_status) {
                 "Pending" -> {

@@ -36,11 +36,11 @@
                 android:id="@+id/OOS"
                 android:layout_width="60dp"
                 android:layout_height="52dp"
-                android:visibility="visible"
                 android:layout_centerInParent="true"
                 android:src="@drawable/out_of_stock"
+                android:visibility="visible"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"/>
+                app:layout_constraintTop_toTopOf="parent" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -64,16 +64,16 @@
                 android:id="@+id/foodtype"
                 android:layout_width="20dp"
                 android:layout_height="20dp"
-                android:src="@drawable/veg_icon"
+                android:layout_gravity="bottom"
                 android:layout_marginBottom="2dp"
-                android:layout_gravity="bottom"/>
+                android:src="@drawable/veg_icon" />
 
             <TextView
                 android:id="@+id/tv_rating_offer"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="5dp"
                 android:layout_gravity="start"
+                android:layout_marginStart="5dp"
                 android:text="5.0"
                 android:textColor="@color/black"
                 android:textSize="14dp" />
@@ -106,10 +106,10 @@
 
         <RelativeLayout
             android:id="@+id/showPrice"
-            android:visibility="visible"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="10dp">
+            android:layout_marginTop="10dp"
+            android:visibility="visible">
 
             <TextView
                 android:id="@+id/product_price"
@@ -134,10 +134,10 @@
 
         <RelativeLayout
             android:id="@+id/showStock"
-            android:visibility="gone"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="10dp">
+            android:layout_marginTop="10dp"
+            android:visibility="gone">
 
             <TextView
                 android:layout_width="wrap_content"

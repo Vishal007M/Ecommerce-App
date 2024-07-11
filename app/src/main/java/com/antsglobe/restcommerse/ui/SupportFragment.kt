@@ -1,6 +1,5 @@
 package com.antsglobe.restcommerse.ui
 
-import android.content.SharedPreferences
 import android.graphics.Color
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -40,8 +39,8 @@ class SupportFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        sharedPreferences= PreferenceManager(requireContext())
-        if (sharedPreferences.getMode() == true){
+        sharedPreferences = PreferenceManager(requireContext())
+        if (sharedPreferences.getMode() == true) {
             binding!!.backButton.setImageResource(R.drawable.ic_baseline_arrow_back_24_dark)
             binding!!.logoImageHome.setTextColor(Color.BLACK)
             binding!!.coming.setTextColor(Color.WHITE)

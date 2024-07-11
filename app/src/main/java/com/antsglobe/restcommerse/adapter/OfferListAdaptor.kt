@@ -4,7 +4,6 @@ import android.content.Context
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import com.antsglobe.aeroquiz.CartListAdapter
 import com.antsglobe.restcommerse.R
 import com.antsglobe.restcommerse.Utils.PreferenceManager
 import com.antsglobe.restcommerse.databinding.OfferRecyclerViewItemBinding

@@ -31,7 +31,6 @@ data class OrderMaster(
 )
 
 
-
 data class OrderDetail(
     val camnt: Int?,
     val dis_price: Int?,

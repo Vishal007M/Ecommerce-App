@@ -3,7 +3,6 @@ package com.antsglobe.restcommerse.ui
 import android.content.Context
 import android.graphics.Color
 import android.os.Bundle
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -14,7 +13,6 @@ import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.antsglobe.aeroquiz.TopMostPopularAdapter
 import com.antsglobe.restcommerse.R
 import com.antsglobe.restcommerse.Utils.PreferenceManager
 import com.antsglobe.restcommerse.adapter.MyOrdersAdapter
@@ -104,7 +102,7 @@ class MyOrderFragment : Fragment(), MyOrdersAdapter.OnClickOrderListener {
         toast.show()
     }
 
-    override fun onOrderIdClick(orderId: String, transactionId : String) {
+    override fun onOrderIdClick(orderId: String, transactionId: String) {
         val bundle = Bundle()
         bundle.putString("orderId", orderId)
         bundle.putString("transactionId", transactionId)

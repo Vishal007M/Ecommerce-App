@@ -14,7 +14,11 @@ import java.text.ParseException
 import java.text.SimpleDateFormat
 import java.util.Locale
 
-class NotificationAdapter(val items: List<NotificationList>, val dark: Boolean, private val context: Context) :
+class NotificationAdapter(
+    val items: List<NotificationList>,
+    val dark: Boolean,
+    private val context: Context
+) :
     RecyclerView.Adapter<NotificationAdapter.MainViewHolder>() {
 
     private lateinit var sharedPreferences: PreferenceManager

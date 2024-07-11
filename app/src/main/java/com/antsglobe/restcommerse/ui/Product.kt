@@ -465,11 +465,11 @@ class Product : Fragment(), VariantsAdapter.OnVariantClickListner,
 //                        customToast(requireContext(), "No Reviews Available", R.drawable.ic_info)
 //
 //                    } else {
-                        val bundle = Bundle()
-                        bundle.putString("productId", productId)
-                        findNavController().navigate(
-                            R.id.action_product_details_to_ViewReviewDetails, bundle
-                        )
+                    val bundle = Bundle()
+                    bundle.putString("productId", productId)
+                    findNavController().navigate(
+                        R.id.action_product_details_to_ViewReviewDetails, bundle
+                    )
 //                    }
                 }
 

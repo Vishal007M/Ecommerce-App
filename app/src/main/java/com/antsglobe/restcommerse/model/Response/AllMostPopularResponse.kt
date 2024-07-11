@@ -35,6 +35,6 @@ data class MostPopularData(
     val wishlist_status: Boolean,
     val Off_Price: Double? = null,
     val is_variant: Boolean,
-    val totalquantity: Double? = null ,
+    val totalquantity: Double? = null,
 
-)
+    )

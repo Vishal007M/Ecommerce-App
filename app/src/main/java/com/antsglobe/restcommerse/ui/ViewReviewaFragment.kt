@@ -10,7 +10,6 @@ import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.antsglobe.aeroquiz.ToBeReviewedAdapter
 import com.antsglobe.restcommerse.R
 import com.antsglobe.restcommerse.Utils.PreferenceManager
 import com.antsglobe.restcommerse.adapter.ReviewListAdaptor
@@ -151,8 +150,8 @@ class ViewReviewaFragment : Fragment() {
         ToBeReviewedVM.getToBeReviewItem.observe(viewLifecycleOwner) { toBeReviewResp ->
             Log.e("toBeReviewResp", "onCreateView: $toBeReviewResp")
 
-            for (loop in toBeReviewResp){
-                if (loop.product_id == Integer.parseInt(productId)){
+            for (loop in toBeReviewResp) {
+                if (loop.product_id == Integer.parseInt(productId)) {
                     binding.addreviews.visibility = View.VISIBLE
                 }
             }

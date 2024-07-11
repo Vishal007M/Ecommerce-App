@@ -55,8 +55,6 @@ class AddressListAdaptor(private val context: Context, var items: List<AddressLi
                 )
             }
 
-
-
             when (list.address_type) {
                 "Home" -> {
                     itemsBinding.addressImage.setImageResource(R.drawable.home)
@@ -123,7 +121,6 @@ class AddressListAdaptor(private val context: Context, var items: List<AddressLi
                 itemsBinding.rbDefault.setClickable(true)
                 itemsBinding.rbDefault.setChecked(false)
             }
-
 
             itemsBinding.rbDefault.setOnClickListener {
                 if (list.id != null) {

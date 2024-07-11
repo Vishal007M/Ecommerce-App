@@ -83,7 +83,7 @@ class AllMostPopularFragment : Fragment(), AllMostPopularAdapter.OnClickProductL
             binding.cartcount.setBackgroundColor(resources.getColor(R.color.blackfordark))
             binding.cart.setImageDrawable(resources.getDrawable(R.drawable.add_to_cart_dark))
 
-        }  else{
+        } else {
             binding.carticonlayout.setBackgroundColor(resources.getColor(R.color.whitefordark))
             binding.cartcount.setBackgroundColor(resources.getColor(R.color.blackfordark))
             binding.cart.setImageDrawable(resources.getDrawable(R.drawable.add_to_cart))
@@ -108,7 +108,7 @@ class AllMostPopularFragment : Fragment(), AllMostPopularAdapter.OnClickProductL
 
     }
 
-    override fun onProductIdClick(pId: String, ) {
+    override fun onProductIdClick(pId: String) {
         val bundle = Bundle()
         bundle.putString("pid", pId)
         findNavController().navigate(R.id.action_MostPopular_to_Product, bundle)

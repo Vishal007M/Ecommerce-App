@@ -50,7 +50,7 @@ class HomeCategoryAdapter(val items: List<HomeCategoryData>, val context: Contex
     }
 
     interface OnClickCategoryListener {
-        fun onCategoryIdClick(categoryId: String, categoryName : String)
+        fun onCategoryIdClick(categoryId: String, categoryName: String)
     }
 
     fun setOnClickCategoryListener(listener: OnClickCategoryListener) {

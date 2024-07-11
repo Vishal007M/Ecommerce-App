@@ -45,6 +45,7 @@ class ProductViewModel(private val apiService: ApiService) : ViewModel() {
 
                         }
                     }
+
                     override fun onFailure(call: Call<MostPopularResponse>, t: Throwable) {
                         Log.d("product", t.toString())
                     }
@@ -66,6 +67,7 @@ class ProductViewModel(private val apiService: ApiService) : ViewModel() {
                             _variationdata.value = response.body()?.content
                         }
                     }
+
                     override fun onFailure(call: Call<ProductVariationResponse>, t: Throwable) {
                         Log.d("failed", t.toString())
                     }

@@ -73,7 +73,11 @@ class NotificationFragment : Fragment() {
 
             val sortedNotificationList = notificationResp.reversed()
             notificationAdapter =
-                NotificationAdapter(sortedNotificationList, sharedPreferences.getMode() == true, requireContext())
+                NotificationAdapter(
+                    sortedNotificationList,
+                    sharedPreferences.getMode() == true,
+                    requireContext()
+                )
 
             binding.notificationRecyclerView.layoutManager = LinearLayoutManager(requireContext())
             binding.notificationRecyclerView.adapter = notificationAdapter

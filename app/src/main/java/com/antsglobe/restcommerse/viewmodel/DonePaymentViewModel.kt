@@ -17,10 +17,12 @@ class DonePaymentViewModel(private val apiservice: ApiService) : ViewModel() {
     private val _orderDetailsList: MutableLiveData<List<OrderDetail?>?> = MutableLiveData()
     val orderDetailsList: MutableLiveData<List<OrderDetail?>?> get() = _orderDetailsList
 
-    private val _apiGetOrderDetailsResponse: MutableLiveData<GetOrderDetailsResponse?> = MutableLiveData()
+    private val _apiGetOrderDetailsResponse: MutableLiveData<GetOrderDetailsResponse?> =
+        MutableLiveData()
     val getGetOrderDetailsResponse: MutableLiveData<GetOrderDetailsResponse?> get() = _apiGetOrderDetailsResponse
 
-    private val _apiGetOrderRepeatResponse: MutableLiveData<GetRepeatOrderResponse?> = MutableLiveData()
+    private val _apiGetOrderRepeatResponse: MutableLiveData<GetRepeatOrderResponse?> =
+        MutableLiveData()
     val getOrderRepeatResponse: MutableLiveData<GetRepeatOrderResponse?> get() = _apiGetOrderRepeatResponse
 
 

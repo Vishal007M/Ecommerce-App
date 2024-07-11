@@ -9,9 +9,9 @@
     app:cardCornerRadius="10dp">
 
     <RelativeLayout
+        android:id="@+id/fullscreen"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/fullscreen"
         android:layout_gravity="center"
         android:background="@drawable/round_corner_border_address"
         android:orientation="vertical"
@@ -35,8 +35,8 @@
             android:layout_width="wrap_content"
             android:layout_height="40dp"
             android:layout_toEndOf="@+id/rb_default"
-            android:maxLength="35"
             android:gravity="center_vertical"
+            android:maxLength="35"
             android:text="Home"
             android:textColor="@color/black"
             android:textStyle="bold" />
@@ -133,9 +133,9 @@
             android:layout_height="wrap_content"
             android:layout_below="@+id/ll_main"
             android:layout_marginTop="5dp"
-            android:text="knlakdcvnadv"
             android:layout_marginBottom="5dp"
             android:paddingHorizontal="10dp"
+            android:text="knlakdcvnadv"
             android:textColor="@color/black" />
 
     </RelativeLayout>

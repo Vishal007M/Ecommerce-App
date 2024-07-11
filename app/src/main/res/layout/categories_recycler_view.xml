@@ -18,9 +18,9 @@
         <LinearLayout
             android:id="@+id/background"
             android:layout_width="90dp"
-            android:gravity="center"
             android:layout_height="90dp"
             android:background="@drawable/background_circle"
+            android:gravity="center"
             android:orientation="horizontal">
 
             <ImageView

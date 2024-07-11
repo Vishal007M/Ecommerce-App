@@ -91,7 +91,15 @@ class CartListViewModel(private val apiService: ApiService) : ViewModel() {
     ) {
 
         viewModelScope.launch {
-            apiService.addToCartApi(email, productid, orignal_price, dis_price, quantity, total, variation_id)
+            apiService.addToCartApi(
+                email,
+                productid,
+                orignal_price,
+                dis_price,
+                quantity,
+                total,
+                variation_id
+            )
                 .enqueue(object : Callback<AddToCartResponse> {
                     override fun onResponse(
                         call: Call<AddToCartResponse>,

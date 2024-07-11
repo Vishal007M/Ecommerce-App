@@ -1,6 +1,5 @@
 package com.antsglobe.restcommerse.ui
 
-import android.Manifest
 import android.annotation.SuppressLint
 import android.app.Dialog
 import android.app.NotificationChannel
@@ -10,7 +9,6 @@ import android.content.ActivityNotFoundException
 import android.content.ContentValues.TAG
 import android.content.Context
 import android.content.Intent
-import android.content.pm.PackageManager
 import android.net.Uri
 import android.os.Build
 import android.os.Bundle
@@ -25,7 +23,6 @@ import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.ActionBarDrawerToggle
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.app.ActivityCompat
 import androidx.core.app.NotificationCompat
 import androidx.core.app.NotificationManagerCompat
 import androidx.core.content.ContextCompat
@@ -375,10 +372,10 @@ class HomeActivity : AppCompatActivity(), WishListFragment.OnWishlistBadgeChange
     }
 
     private fun adminTokeninitobserver() {
-        adminTokenViewModel.getAdminToken.observe(this){ response ->
+        adminTokenViewModel.getAdminToken.observe(this) { response ->
 
             response?.content?.get(0)?.token
-            Log.d("tokens",response?.content?.get(0)?.token.toString())
+            Log.d("tokens", response?.content?.get(0)?.token.toString())
 //            Toast.makeText(this@HomeActivity, "adminTokenViewModel ${response?.content?.get(0)?.token}", Toast.LENGTH_SHORT).show()
 
             sharedPreferences.setAdminToken(response?.content?.get(0)?.token)
@@ -573,7 +570,6 @@ class HomeActivity : AppCompatActivity(), WishListFragment.OnWishlistBadgeChange
         }
         context.startActivity(intent)
     }
-
 
 
     @SuppressLint("MissingInflatedId")

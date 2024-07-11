@@ -6,9 +6,7 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.antsglobe.restcommerse.Utils.PreferenceManager
 import com.antsglobe.restcommerse.databinding.RatingNReviewsRecycleViewBinding
-import com.antsglobe.restcommerse.databinding.ReviewsRecycleViewBinding
 import com.antsglobe.restcommerse.model.Response.ReviewedList
-import com.antsglobe.restcommerse.model.Response.TobeReviewedList
 import com.bumptech.glide.Glide
 import java.text.DateFormat
 import java.text.ParseException
@@ -72,7 +70,7 @@ class ReviewedAdapter(
                 e.printStackTrace()
             }
 
-            itemsBinding.reviewedText.text =  list.cust_review.toString()
+            itemsBinding.reviewedText.text = list.cust_review.toString()
 
             if (dark) {
 //                itemsBinding.fullscreen.setBackgroundColor(Color.parseColor("#1F201D"))

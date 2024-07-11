@@ -2,8 +2,8 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
     android:id="@+id/fullscreen"
+    android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".ui.donepayment">
 
@@ -15,8 +15,8 @@
 
         <androidx.core.widget.NestedScrollView
             android:layout_width="match_parent"
-            android:scrollbars="none"
-            android:layout_height="match_parent">
+            android:layout_height="match_parent"
+            android:scrollbars="none">
 
             <RelativeLayout
                 android:layout_width="match_parent"
@@ -289,6 +289,7 @@
                                     android:textColor="@color/orange"
                                     android:textSize="14dp" />
                             </RelativeLayout>
+
                             <RelativeLayout
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
@@ -313,8 +314,8 @@
                                     android:layout_height="wrap_content"
                                     android:layout_marginStart="5dp"
                                     android:layout_toStartOf="@+id/Perc"
-                                    android:paddingStart="6dp"
                                     android:paddingVertical="4dp"
+                                    android:paddingStart="6dp"
                                     android:text="18"
                                     android:textColor="@color/black"
                                     android:textSize="14dp" />
@@ -342,6 +343,7 @@
                                     android:textColor="@color/orange"
                                     android:textSize="14dp" />
                             </RelativeLayout>
+
                             <RelativeLayout
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"

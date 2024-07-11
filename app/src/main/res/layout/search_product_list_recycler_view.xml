@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/fullscreen"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_gravity="center_horizontal"
     android:layout_marginHorizontal="12dp"
-    android:id="@+id/fullscreen"
     android:layout_marginBottom="12dp"
     android:background="@drawable/round_corner_bg"
     android:orientation="vertical"
@@ -20,8 +20,8 @@
         android:background="@drawable/round_corner_bg"
         android:gravity="center_vertical"
         android:orientation="horizontal"
-        android:paddingVertical="15dp"
-        android:paddingHorizontal="15dp">
+        android:paddingHorizontal="15dp"
+        android:paddingVertical="15dp">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="100dp"
@@ -44,18 +44,18 @@
                     android:layout_width="90dp"
                     android:layout_height="90dp"
                     android:layout_centerInParent="true"
-                    android:src="@drawable/burger_img"/>
+                    android:src="@drawable/burger_img" />
             </LinearLayout>
 
             <ImageView
                 android:id="@+id/OOS"
                 android:layout_width="60dp"
                 android:layout_height="52dp"
-                android:visibility="visible"
                 android:layout_centerInParent="true"
                 android:src="@drawable/out_of_stock"
+                android:visibility="visible"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"/>
+                app:layout_constraintTop_toTopOf="parent" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -129,8 +129,8 @@
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:layout_alignParentStart="true"
-                    android:gravity="start"
                     android:layout_centerVertical="true"
+                    android:gravity="start"
                     android:orientation="vertical">
 
                     <LinearLayout
@@ -175,12 +175,12 @@
                     android:id="@+id/addtocart"
                     android:layout_width="32dp"
                     android:layout_height="32dp"
-                    android:layout_marginEnd="20dp"
                     android:layout_alignParentEnd="true"
                     android:layout_centerVertical="true"
-                    android:visibility="visible"
                     android:layout_marginTop="-2dp"
-                    android:src="@drawable/add_to_cart" />
+                    android:layout_marginEnd="20dp"
+                    android:src="@drawable/add_to_cart"
+                    android:visibility="visible" />
 
 
                 <TextView

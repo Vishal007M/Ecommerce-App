@@ -28,4 +28,4 @@ data class BuySingleProductResponse(
     val taxamt: Int?,
     val taxper: Int?,
 
-)
+    )

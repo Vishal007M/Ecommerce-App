@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -41,54 +40,58 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="62dp"
+        android:background="#E0E0E0"
         android:orientation="horizontal"
-        android:weightSum="2"
-        android:background="#E0E0E0">
+        android:weightSum="2">
+
         <LinearLayout
             android:id="@+id/tobe"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:gravity="center"
-            android:orientation="vertical"
-            >
+            android:orientation="vertical">
+
             <TextView
                 android:id="@+id/tv1"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_marginTop="5dp"
-                android:textFontWeight="800"
                 android:gravity="center"
-                android:text="To be reviewed (0)"/>
+                android:text="To be reviewed (0)"
+                android:textFontWeight="800" />
+
             <View
                 android:id="@+id/dashline"
                 android:layout_width="140dp"
                 android:layout_height="12dp"
-                android:background="@color/orange"/>
+                android:background="@color/orange" />
         </LinearLayout>
+
         <LinearLayout
             android:id="@+id/reviewed"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:gravity="center"
-            android:orientation="vertical"
-            >
+            android:orientation="vertical">
+
             <TextView
                 android:id="@+id/tv2"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_marginTop="5dp"
-                android:textFontWeight="800"
                 android:gravity="center"
+                android:text="Reviewed (0)"
                 android:textColor="@color/dark_grey"
-                android:text="Reviewed (0)"/>
+                android:textFontWeight="800" />
+
             <View
                 android:id="@+id/dashline2"
                 android:layout_width="140dp"
-                android:visibility="invisible"
                 android:layout_height="12dp"
-                android:background="@color/orange"/>
+                android:background="@color/orange"
+                android:visibility="invisible" />
         </LinearLayout>
     </LinearLayout>
 
@@ -110,10 +113,11 @@
 
     <LinearLayout
         android:id="@+id/emptyscreen"
-        android:visibility="gone"
         android:layout_width="match_parent"
+        android:layout_height="match_parent"
         android:gravity="center"
-        android:layout_height="match_parent">
+        android:visibility="gone">
+
         <ImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"

@@ -12,4 +12,4 @@ data class TobeReviewedList(
     val product_url: String? = null,
     val orderdate: String? = null,
 
-)
+    )

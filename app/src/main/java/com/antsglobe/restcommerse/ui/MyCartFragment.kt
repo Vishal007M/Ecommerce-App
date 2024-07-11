@@ -107,7 +107,7 @@ class MyCartFragment : Fragment(), CartListAdapter.OnClickDeleteListener,
 
             val Discount = cartValueAmount.toInt() * (couponValueAmount / 100)
 
-            taxAmountViewModel.TaxResponseVM(email,cartValueAmount,Discount.toString(),"0", "0")
+            taxAmountViewModel.TaxResponseVM(email, cartValueAmount, Discount.toString(), "0", "0")
             cartTaxListInitObserver()
         }
         binding.tohomepage.setOnClickListener {
@@ -116,7 +116,7 @@ class MyCartFragment : Fragment(), CartListAdapter.OnClickDeleteListener,
     }
 
     private fun cartTaxListInitObserver() {
-        taxAmountViewModel.getTaxResponse.observe(viewLifecycleOwner){ taxResp ->
+        taxAmountViewModel.getTaxResponse.observe(viewLifecycleOwner) { taxResp ->
 
             val total_price = taxResp?.total_price
             val promodisc = taxResp?.promodisc.toString()

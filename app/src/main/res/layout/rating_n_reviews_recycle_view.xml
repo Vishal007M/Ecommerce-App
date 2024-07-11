@@ -13,8 +13,8 @@
         android:layout_height="match_parent"
         android:layout_gravity="center"
         android:background="@drawable/round_corner_bg"
-        android:paddingVertical="10dp"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        android:paddingVertical="10dp">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -70,8 +70,8 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:visibility="gone"
-                    android:layout_alignParentTop="true">
+                    android:layout_alignParentTop="true"
+                    android:visibility="gone">
 
                     <ImageView
                         android:id="@+id/foodtype"
@@ -106,10 +106,10 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_alignParentTop="true"
-                        android:text="(0)"
                         android:layout_marginStart="5dp"
-                        android:textSize="11dp"
-                        android:layout_toEndOf="@+id/rating_bar_indicator" />
+                        android:layout_toEndOf="@+id/rating_bar_indicator"
+                        android:text="(0)"
+                        android:textSize="11dp" />
 
                     <RatingBar
                         android:id="@+id/rating_bar_indicator"
@@ -155,8 +155,8 @@
                 android:maxLines="2"
                 android:text="It taste good and can feel the flavour by its look. So soft and yummy. Must try food. "
                 android:textColor="@color/hint"
-                android:textStyle="bold"
-                android:textSize="14dp" />
+                android:textSize="14dp"
+                android:textStyle="bold" />
 
         </LinearLayout>
 

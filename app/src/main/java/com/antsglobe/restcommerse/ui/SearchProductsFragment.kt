@@ -255,6 +255,7 @@ class SearchProductsFragment : Fragment(), AllProductListAdaptor.OnClickProductL
         }
 
     }
+
     private fun capitalizeFirstWord(query: String): String {
         if (query.isEmpty()) return query
 

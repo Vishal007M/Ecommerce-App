@@ -15,7 +15,6 @@ import androidx.activity.OnBackPressedCallback
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.NavController
-import androidx.navigation.findNavController
 import androidx.navigation.fragment.findNavController
 import com.antsglobe.restcommerse.R
 import com.antsglobe.restcommerse.Utils.PreferenceManager
@@ -90,15 +89,15 @@ class PaymentCheckout : Fragment() {
 
         binding!!.tvDeliverPin.text = defaultPin
 
-        Log.e("TAG", "shippingChanger: $shippingChanger", )
-        if (shippingChanger == "0"){
+        Log.e("TAG", "shippingChanger: $shippingChanger")
+        if (shippingChanger == "0") {
             binding?.tvDevilery?.text = "FREE"
-        }else{
+        } else {
             binding?.tvDevilery?.text = shippingChanger
         }
 
-        binding?.tvTotalPrice?.text = cartValueAmount+".00"
-        binding?.tvDiscountPrice?.text = "-"+couponValueAmount.toString()+".00"
+        binding?.tvTotalPrice?.text = cartValueAmount + ".00"
+        binding?.tvDiscountPrice?.text = "-" + couponValueAmount.toString() + ".00"
         binding?.tvTaxPerc?.text = taxPerc
         binding?.tvTaxPrice?.text = taxAmpunt
         binding?.tvPayableAmount?.text = grandTotal
@@ -106,7 +105,7 @@ class PaymentCheckout : Fragment() {
         binding!!.ivCross.setOnClickListener {
             binding!!.rlAppliedCoupon.visibility = View.GONE
         }
-        if (sharedPreferences.getMode() == true){
+        if (sharedPreferences.getMode() == true) {
             binding!!.llPriceView.setBackgroundResource(R.drawable.profile_round_corner_bg_addresses_dark)
             binding!!.tvcartvalue.setTextColor(resources.getColor(R.color.whitefordark))
             binding!!.tvcoupondisc.setTextColor(resources.getColor(R.color.whitefordark))
@@ -190,9 +189,9 @@ class PaymentCheckout : Fragment() {
 
         genderRadioGroup?.setOnCheckedChangeListener { _, checkedId ->
             val radioButton = view?.findViewById<RadioButton>(checkedId)
-                val editor = prefs.edit()
-                editor.putInt(PREF_SELECTED_RADIO_BUTTON, checkedId)
-                editor.apply()
+            val editor = prefs.edit()
+            editor.putInt(PREF_SELECTED_RADIO_BUTTON, checkedId)
+            editor.apply()
 
             when (radioButton?.id) {
                 R.id.online -> {
@@ -212,13 +211,13 @@ class PaymentCheckout : Fragment() {
 
         binding!!.next.setOnClickListener {
 
-            if (binding!!.online.isChecked){
+            if (binding!!.online.isChecked) {
                 val checkoutActivity = activity as? CheckoutActivity
                 checkoutActivity?.startPayment(totalPrice, "1024")
             }
-            if (binding!!.cashOnDelivery.isChecked){
+            if (binding!!.cashOnDelivery.isChecked) {
                 val checkoutActivity = activity as? CheckoutActivity
-                checkoutActivity?.onPaymentSuccess("",)
+                checkoutActivity?.onPaymentSuccess("")
                 sharedPreferences.setPaymentMethod("COD")
 //                onCODPurchase()
             }
@@ -235,7 +234,11 @@ class PaymentCheckout : Fragment() {
 //            LoadingDialog.dismissProgressDialog()
             if (SinglePaymentApiResp?.is_success == true) {
                 Log.e("paymentApiResp", "SinglepaymentApiResp $SinglePaymentApiResp")
-                customToast(requireContext(), "isSingle Successful! ", R.drawable.success_toast_icon)
+                customToast(
+                    requireContext(),
+                    "isSingle Successful! ",
+                    R.drawable.success_toast_icon
+                )
 
                 sharedPreferences.setSingleProductBuy(false)
 
@@ -252,7 +255,11 @@ class PaymentCheckout : Fragment() {
 //                )
             } else {
                 sharedPreferences.setSingleProductBuy(false)
-                customToast(requireContext(), "${SinglePaymentApiResp?.message}", R.drawable.ic_info)
+                customToast(
+                    requireContext(),
+                    "${SinglePaymentApiResp?.message}",
+                    R.drawable.ic_info
+                )
             }
         }
     }
@@ -278,7 +285,11 @@ class PaymentCheckout : Fragment() {
 //                )
 
             } else {
-                customToast(requireContext(), " Unsuccessful - ${paymentApiResp?.message}", R.drawable.ic_info)
+                customToast(
+                    requireContext(),
+                    " Unsuccessful - ${paymentApiResp?.message}",
+                    R.drawable.ic_info
+                )
             }
         }
     }

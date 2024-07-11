@@ -55,14 +55,14 @@ class TopMostPopularAdapter(val items: List<TopMostPopularData>, val context: Co
             var imageUrl = list.product_url
             Picasso.get().load(imageUrl).into(itemsBinding.productUrl)
 
-            if (list.prod_availability.toString() == "Out of Stock"){
+            if (list.prod_availability.toString() == "Out of Stock") {
 //                itemsBinding.stockChecking.visibility = View.VISIBLE
 //                itemsBinding.productUrl.setColorFilter(ContextCompat.getColor(context, R.color.transparent_no_stock))
 
                 itemsBinding.showPrice.visibility = View.GONE
                 itemsBinding.showStock.visibility = View.VISIBLE
                 itemsBinding.OOS.visibility = View.VISIBLE
-            }else{
+            } else {
 //                itemsBinding.productUrl.setColorFilter(ContextCompat.getColor(context, R.color.transparent))
 
                 itemsBinding.showPrice.visibility = View.VISIBLE

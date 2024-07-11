@@ -38,8 +38,8 @@
         layout="@layout/intro_screen_viewer"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:visibility="gone"
-        android:layout_below="@+id/linearLayout8" />
+        android:layout_below="@+id/linearLayout8"
+        android:visibility="gone" />
 
     <LinearLayout
         android:id="@+id/llnext"

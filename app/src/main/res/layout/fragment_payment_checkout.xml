@@ -151,11 +151,11 @@
                 android:layout_alignParentEnd="true"
                 android:layout_centerVertical="true"
                 android:layout_marginStart="5dp"
-                android:visibility="gone"
                 android:layout_marginEnd="10dp"
                 android:text="Clear"
                 android:textColor="@color/hint"
-                android:textSize="14dp" />
+                android:textSize="14dp"
+                android:visibility="gone" />
 
         </RelativeLayout>
 
@@ -243,6 +243,7 @@
                         android:textColor="@color/orange"
                         android:textSize="14dp" />
                 </RelativeLayout>
+
                 <RelativeLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -267,8 +268,8 @@
                         android:layout_height="wrap_content"
                         android:layout_marginStart="5dp"
                         android:layout_toStartOf="@+id/Perc"
-                        android:paddingStart="6dp"
                         android:paddingVertical="4dp"
+                        android:paddingStart="6dp"
                         android:text="18"
                         android:textColor="@color/black"
                         android:textSize="14dp" />
@@ -379,8 +380,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@+id/ll_price_view"
-            android:layout_marginTop="20dp"
             android:layout_marginHorizontal="16dp"
+            android:layout_marginTop="20dp"
             android:elevation="4dp"
             app:cardCornerRadius="10dp"
             app:cardUseCompatPadding="true">
@@ -392,25 +393,23 @@
                 android:orientation="vertical"
                 android:paddingVertical="4dp">
 
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center_vertical"
-                        android:layout_marginStart="12dp"
-                        android:layout_marginTop="10dp"
-                        android:gravity="center_vertical"
-                        android:paddingVertical="4dp"
-                        android:text="Payment Method"
-                        android:textColor="@color/black"
-                        android:textStyle="bold" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginStart="12dp"
+                    android:layout_marginTop="10dp"
+                    android:gravity="center_vertical"
+                    android:paddingVertical="4dp"
+                    android:text="Payment Method"
+                    android:textColor="@color/black"
+                    android:textStyle="bold" />
 
                 <RelativeLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="6dp"
                     android:paddingHorizontal="10dp">
-
-
 
 
                     <RadioGroup
@@ -442,8 +441,8 @@
                             android:layout_height="45dp"
                             android:buttonTint="@color/orange"
                             android:text="Self Pickup"
-                            android:visibility="gone"
                             android:textColor="@color/black"
+                            android:visibility="gone"
                             app:useMaterialThemeColors="true" />
 
                     </RadioGroup>

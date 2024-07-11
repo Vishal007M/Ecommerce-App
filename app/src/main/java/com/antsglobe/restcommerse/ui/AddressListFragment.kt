@@ -82,7 +82,10 @@ class AddressListFragment : Fragment(), AddressListAdaptor.OnClickDeleteAddressL
     ): View {
 
         binding = FragmentAddressListBinding.inflate(inflater, container, false)
-        viewmodel = ViewModelProvider(this, ViewModelFactory(RetrofitClient.apiService))[AddressListViewModel::class.java]
+        viewmodel = ViewModelProvider(
+            this,
+            ViewModelFactory(RetrofitClient.apiService)
+        )[AddressListViewModel::class.java]
         sharedPreferences = PreferenceManager(requireContext())
         viewmodel.getAddressResponse(sharedPreferences.getEmail()!!)
 
@@ -112,7 +115,7 @@ class AddressListFragment : Fragment(), AddressListAdaptor.OnClickDeleteAddressL
              bottomSheetFragment.arguments = bundle
              bottomSheetFragment.show(childFragmentManager, bottomSheetFragment.tag)*/
         }
-        if(sharedPreferences.getMode() == true){
+        if (sharedPreferences.getMode() == true) {
             binding!!.logoImageHome.setTextColor(resources.getColor(R.color.blackfordark))
             binding!!.searchtv.setTextColor(resources.getColor(R.color.whitefordark))
             //binding!!.searchProduct.setHintTextColor(Color.GRAY)
@@ -201,10 +204,13 @@ class AddressListFragment : Fragment(), AddressListAdaptor.OnClickDeleteAddressL
 //            binding?.rvAddresslist?.adapter = addressListAdapter
 //            addressListAdapter.notifyDataSetChanged()
 
-            for (addressListResp in AddressListResp){
-                if (AddressListResp.size == 1){
-                    if (addressListResp.is_default == false){
-                        viewmodel.DefaultAddressResponse(sharedPreferences.getEmail()!!, addressListResp.id.toString())
+            for (addressListResp in AddressListResp) {
+                if (AddressListResp.size == 1) {
+                    if (addressListResp.is_default == false) {
+                        viewmodel.DefaultAddressResponse(
+                            sharedPreferences.getEmail()!!,
+                            addressListResp.id.toString()
+                        )
                         defaultResponse()
                     }
                 }
@@ -237,10 +243,18 @@ class AddressListFragment : Fragment(), AddressListAdaptor.OnClickDeleteAddressL
 
                 if (pinLowerCase != null && cityLowerCase != null
                     && stateLowerCase != null && cNameLowerCase != null
-                    && cNoLowerCase != null && addTypeLowerCase != null) {
-                    if (pinLowerCase.contains(lowerCaseQuery) || cityLowerCase.contains(lowerCaseQuery)
-                        || stateLowerCase.contains(lowerCaseQuery) || cNameLowerCase.contains(lowerCaseQuery)
-                        || cNoLowerCase.contains(lowerCaseQuery) || addTypeLowerCase.contains(lowerCaseQuery)) {
+                    && cNoLowerCase != null && addTypeLowerCase != null
+                ) {
+                    if (pinLowerCase.contains(lowerCaseQuery) || cityLowerCase.contains(
+                            lowerCaseQuery
+                        )
+                        || stateLowerCase.contains(lowerCaseQuery) || cNameLowerCase.contains(
+                            lowerCaseQuery
+                        )
+                        || cNoLowerCase.contains(lowerCaseQuery) || addTypeLowerCase.contains(
+                            lowerCaseQuery
+                        )
+                    ) {
                         filteredList.add(i)
                     }
                 }
@@ -290,7 +304,8 @@ class AddressListFragment : Fragment(), AddressListAdaptor.OnClickDeleteAddressL
         if (isDefault == true) {
             customToast(
                 requireContext(), "You cannot delete this address. Please change your" +
-                        " default address & try it delete!", R.drawable.ic_info)
+                        " default address & try it delete!", R.drawable.ic_info
+            )
         } else {
             onDeleteDialog("Do you really want to delete this Address?", addressId)
         }
@@ -302,7 +317,11 @@ class AddressListFragment : Fragment(), AddressListAdaptor.OnClickDeleteAddressL
             if (deleteAddressResp?.is_success == true) {
                 Log.e("deleteAddressResp", "deleteAddressResp $deleteAddressResp")
                 viewmodel.getAddressResponse(sharedPreferences.getEmail()!!)
-                customToast(requireContext(), "Address has been deleted successfully", R.drawable.success_toast_icon)
+                customToast(
+                    requireContext(),
+                    "Address has been deleted successfully",
+                    R.drawable.success_toast_icon
+                )
             } else {
                 customToast(requireContext(), "${deleteAddressResp?.message}", R.drawable.ic_info)
             }
@@ -315,10 +334,9 @@ class AddressListFragment : Fragment(), AddressListAdaptor.OnClickDeleteAddressL
         dialog.requestWindowFeature(Window.FEATURE_NO_TITLE)
         dialog.setCancelable(true)
 
-        if (sharedPreferences.getMode() == true){
+        if (sharedPreferences.getMode() == true) {
             dialog.setContentView(R.layout.address_custom_layout_dark)
-        }
-        else{
+        } else {
             dialog.setContentView(R.layout.address_custom_layout)
         }
 
@@ -410,9 +428,13 @@ class AddressListFragment : Fragment(), AddressListAdaptor.OnClickDeleteAddressL
         toast.show()
     }
 
-    override fun onRequestPermissionsResult(requestCode: Int, permissions: Array<out String>, grantResults: IntArray) {
+    override fun onRequestPermissionsResult(
+        requestCode: Int,
+        permissions: Array<out String>,
+        grantResults: IntArray
+    ) {
         super.onRequestPermissionsResult(requestCode, permissions, grantResults)
-         when (requestCode) {
+        when (requestCode) {
             1000 -> if (grantResults.size > 0 && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
                 fetchCurrentLocation()
             }
@@ -420,13 +442,20 @@ class AddressListFragment : Fragment(), AddressListAdaptor.OnClickDeleteAddressL
     }
 
     private fun fetchCurrentLocation() {
-        if (ActivityCompat.checkSelfPermission(requireContext(),
-                android.Manifest.permission.ACCESS_FINE_LOCATION)
-            != PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission(requireContext(),
-                android.Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
+        if (ActivityCompat.checkSelfPermission(
+                requireContext(),
+                android.Manifest.permission.ACCESS_FINE_LOCATION
+            )
+            != PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission(
+                requireContext(),
+                android.Manifest.permission.ACCESS_COARSE_LOCATION
+            ) != PackageManager.PERMISSION_GRANTED
+        ) {
 
-            ActivityCompat.requestPermissions(requireActivity(),
-                arrayOf(android.Manifest.permission.ACCESS_FINE_LOCATION), 1000)
+            ActivityCompat.requestPermissions(
+                requireActivity(),
+                arrayOf(android.Manifest.permission.ACCESS_FINE_LOCATION), 1000
+            )
             return
         }
         //  Toast.makeText(context, "permission granted", Toast.LENGTH_SHORT).show()

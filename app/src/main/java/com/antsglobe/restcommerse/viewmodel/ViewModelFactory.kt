@@ -11,7 +11,9 @@ class ViewModelFactory(private val apiService: ApiService) :
         return when {
             modelClass.isAssignableFrom(SignUpViewModel::class.java) -> SignUpViewModel(apiService) as T
             modelClass.isAssignableFrom(TokenViewModel::class.java) -> TokenViewModel(apiService) as T
-            modelClass.isAssignableFrom(GetAdminTokenViewModel::class.java) -> GetAdminTokenViewModel(apiService) as T
+            modelClass.isAssignableFrom(GetAdminTokenViewModel::class.java) -> GetAdminTokenViewModel(
+                apiService
+            ) as T
 
             modelClass.isAssignableFrom(LoginViewModel::class.java) -> LoginViewModel(apiService) as T
             modelClass.isAssignableFrom(OtpViewModel::class.java) -> OtpViewModel(apiService) as T
@@ -76,8 +78,14 @@ class ViewModelFactory(private val apiService: ApiService) :
             ) as T
 
             modelClass.isAssignableFrom(MyOrderViewModel::class.java) -> MyOrderViewModel(apiService) as T
-            modelClass.isAssignableFrom(ToBeReviewedViewModel::class.java) -> ToBeReviewedViewModel(apiService) as T
-            modelClass.isAssignableFrom(ReviewedViewModel::class.java) -> ReviewedViewModel(apiService) as T
+            modelClass.isAssignableFrom(ToBeReviewedViewModel::class.java) -> ToBeReviewedViewModel(
+                apiService
+            ) as T
+
+            modelClass.isAssignableFrom(ReviewedViewModel::class.java) -> ReviewedViewModel(
+                apiService
+            ) as T
+
             modelClass.isAssignableFrom(SearchListViewModel::class.java) -> SearchListViewModel(
                 apiService
             ) as T

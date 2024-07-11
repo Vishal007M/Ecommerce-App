@@ -71,7 +71,7 @@ class AddressDetailsBottomSheet : BottomSheetDialogFragment() {
             binding?.tvheadline?.text = "Add New Address"
             binding?.btnAddAddress?.text = "Add Address"
         }
-        if(sharedPreferences.getMode() == true){
+        if (sharedPreferences.getMode() == true) {
             binding!!.fullscreen.setBackgroundColor(resources.getColor(R.color.blackfordark))
             binding!!.t1.setTextColor(resources.getColor(R.color.whitefordark))
             binding!!.t2.setTextColor(resources.getColor(R.color.whitefordark))

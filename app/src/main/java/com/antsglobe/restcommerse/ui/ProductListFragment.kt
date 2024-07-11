@@ -24,7 +24,6 @@ import com.antsglobe.restcommerse.viewmodel.ProductListViewModel
 import com.antsglobe.restcommerse.viewmodel.ViewModelFactory
 import com.antsglobe.restcommerse.viewmodel.WishlistViewmodel
 import com.google.android.material.bottomsheet.BottomSheetDialog
-import java.lang.Integer.parseInt
 
 
 class ProductListFragment : Fragment(), ProductListAdaptor.OnClickProductListListener {
@@ -94,9 +93,9 @@ class ProductListFragment : Fragment(), ProductListAdaptor.OnClickProductListLis
         )[WishlistViewmodel::class.java]
         wishViewmodel.getcartlist(sharedPreferences.getEmail().toString())
 
-        if (categoryName.isNullOrEmpty()){
+        if (categoryName.isNullOrEmpty()) {
             binding!!.logoImageHome.text = "All Product"
-        }else{
+        } else {
             binding!!.logoImageHome.text = categoryName
 
         }
@@ -106,8 +105,8 @@ class ProductListFragment : Fragment(), ProductListAdaptor.OnClickProductListLis
             binding.backButton.setImageResource(R.drawable.ic_baseline_arrow_back_24_dark)
             binding.logoImageHome.setTextColor(resources.getColor(R.color.blackfordark))
             binding.emptytext.setTextColor(resources.getColor(R.color.whitefordark))
-            binding.sorticon.imageTintList= ColorStateList.valueOf(Color.WHITE)
-            binding.filtericon.imageTintList= ColorStateList.valueOf(Color.WHITE)
+            binding.sorticon.imageTintList = ColorStateList.valueOf(Color.WHITE)
+            binding.filtericon.imageTintList = ColorStateList.valueOf(Color.WHITE)
             binding.filterByData.setTextColor(Color.WHITE)
             binding.shortByData.setTextColor(Color.WHITE)
             binding.cartcount.setBackgroundColor(resources.getColor(R.color.blackfordark))
@@ -115,7 +114,7 @@ class ProductListFragment : Fragment(), ProductListAdaptor.OnClickProductListLis
             binding.cart.setImageDrawable(resources.getDrawable(R.drawable.add_to_cart_dark))
 
 
-        }else{
+        } else {
             binding.cartcount.setBackgroundColor(resources.getColor(R.color.whitefordark))
             binding.carticonlayout.setBackgroundColor(resources.getColor(R.color.whitefordark))
 
@@ -184,7 +183,7 @@ class ProductListFragment : Fragment(), ProductListAdaptor.OnClickProductListLis
     private fun filterBottomSheet() {
 
         var dialogView = layoutInflater.inflate(R.layout.filter_product_bottom_sheet, null)
-        if (sharedPreferences.getMode() == true){
+        if (sharedPreferences.getMode() == true) {
             dialogView = layoutInflater.inflate(R.layout.filter_product_bottom_sheet_dark, null)
         }
 
@@ -257,6 +256,7 @@ class ProductListFragment : Fragment(), ProductListAdaptor.OnClickProductListLis
             productAdapter.updateStudentList(filteredList)
         }
     }
+
     private fun filterNonVegOnlyList(query: String?) {
         val filteredList = mList.filter { it?.prod_type == query }
         if (filteredList.isEmpty()) {
@@ -278,7 +278,7 @@ class ProductListFragment : Fragment(), ProductListAdaptor.OnClickProductListLis
     private fun shortingBottomSheet() {
 
         var dialogView = layoutInflater.inflate(R.layout.short_product_bottom_sheet, null)
-        if (sharedPreferences.getMode() == true){
+        if (sharedPreferences.getMode() == true) {
             dialogView = layoutInflater.inflate(R.layout.short_product_bottom_sheet_dark, null)
         }
         shortBydialog = BottomSheetDialog(requireActivity(), R.style.AppBottomSheetDialogTheme)

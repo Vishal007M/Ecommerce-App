@@ -1,32 +1,32 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:paddingVertical="10dp"
-    android:paddingHorizontal="15dp"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
     android:orientation="vertical"
-    android:layout_height="match_parent">
-    
+    android:paddingHorizontal="15dp"
+    android:paddingVertical="10dp">
+
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Sort By"
         android:textSize="20dp"
-        android:textStyle="bold"/>
+        android:textStyle="bold" />
 
     <RadioGroup
         android:id="@+id/genderRB"
-        android:layout_marginTop="10dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
         android:orientation="vertical">
 
         <com.google.android.material.radiobutton.MaterialRadioButton
             android:id="@+id/relevant"
             android:layout_width="250dp"
-            android:checked="true"
             android:layout_height="45dp"
             android:buttonTint="@color/orange"
+            android:checked="true"
             android:text="Relevant (Default)"
             android:textColor="@color/black" />
 
@@ -74,7 +74,6 @@
             android:text="Z to A"
             android:textColor="@color/black"
             app:useMaterialThemeColors="true" />
-
 
 
     </RadioGroup>

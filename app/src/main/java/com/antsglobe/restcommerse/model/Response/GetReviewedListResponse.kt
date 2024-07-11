@@ -16,4 +16,4 @@ data class ReviewedList(
     val cust_rating: Double,
     val review_date: String? = null,
     val review_time: String? = null,
-    )
+)

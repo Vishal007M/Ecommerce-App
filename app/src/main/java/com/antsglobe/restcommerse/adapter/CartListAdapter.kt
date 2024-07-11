@@ -55,8 +55,8 @@ class CartListAdapter(val items: List<CartListData>, val context: Context) :
                     ColorStateList.valueOf(Color.parseColor("#2C2C2C"))
             }
 
-            var vname :String = ""
-            if (list.size != null){
+            var vname: String = ""
+            if (list.size != null) {
                 vname = "- ${list.size}"
             }
 
@@ -146,7 +146,7 @@ class CartListAdapter(val items: List<CartListData>, val context: Context) :
                     discPrice.toString(),
                     variation.toString(),
 
-                )
+                    )
             }
 
             itemsBinding.rlMoveToWishlist.setOnClickListener {

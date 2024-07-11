@@ -112,7 +112,7 @@
         android:id="@+id/AllCategoryFragment"
         android:name="com.antsglobe.restcommerse.ui.AllCategoryFragment"
         android:label="AllCategoryFragment"
-        tools:layout="@layout/fragment_all_category"/>
+        tools:layout="@layout/fragment_all_category" />
 
     <fragment
         android:id="@+id/menu_legal_policies"
@@ -468,7 +468,6 @@
             android:id="@+id/action_done_payment_DD_to_order_fragment"
             app:destination="@id/order_fragment" />
     </fragment>
-
 
 
     <action

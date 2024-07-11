@@ -1,9 +1,7 @@
 package com.antsglobe.restcommerse.ui.bottomSheet
 
-import android.graphics.Color
 import android.os.Build
 import android.os.Bundle
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -40,8 +38,8 @@ class ViewCouponDialogFragment : BottomSheetDialogFragment() {
     // onDestroyView.
     private val binding get() = _binding!!
 
-    private var expired=0
-    private val currentdate=getCurrentDateTime()
+    private var expired = 0
+    private val currentdate = getCurrentDateTime()
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -76,9 +74,9 @@ class ViewCouponDialogFragment : BottomSheetDialogFragment() {
             viewModel.couponlist.observe(viewLifecycleOwner) { couponList ->
                 if (couponList != null) {
                     couponList.forEach {
-                        val result=compareDates(it.valid_to.toString(),currentdate)
-                        if (result<0) {
-                            expired+=1
+                        val result = compareDates(it.valid_to.toString(), currentdate)
+                        if (result < 0) {
+                            expired += 1
                         }
 
                     }
@@ -88,7 +86,7 @@ class ViewCouponDialogFragment : BottomSheetDialogFragment() {
                     visibility = View.VISIBLE
                     binding.llLoadingScreen.visibility = View.GONE
                     if (couponList != null) {
-                        if (couponList.isEmpty() && couponList.size >= 0 ||couponList.size==expired) {
+                        if (couponList.isEmpty() && couponList.size >= 0 || couponList.size == expired) {
                             visibility = View.GONE
                             binding.llEmptyScreen.visibility = View.VISIBLE
                         } else {
@@ -99,7 +97,7 @@ class ViewCouponDialogFragment : BottomSheetDialogFragment() {
                     layoutManager = LinearLayoutManager(requireContext())
                     adapter = ItemAdapter(couponList!!)
                 }
-                expired=0
+                expired = 0
             }
         }
 
@@ -135,15 +133,15 @@ class ViewCouponDialogFragment : BottomSheetDialogFragment() {
             binding.to.text = "to:-" + dateOnly2
 
 
-            val result=compareDates(item.valid_to.toString(),currentdate)
-            if (result<0) {
-                binding.background.layoutParams.height=0
-                binding.background.visibility=View.GONE
+            val result = compareDates(item.valid_to.toString(), currentdate)
+            if (result < 0) {
+                binding.background.layoutParams.height = 0
+                binding.background.visibility = View.GONE
 
 
             }
             binding.tap.setOnClickListener {
-                if (result>0) {
+                if (result > 0) {
                     val discount = item.disc_percent
                     val couponName = item.coupon_code
                     discountListener?.onDiscountApplied(discount, couponName)
@@ -153,6 +151,7 @@ class ViewCouponDialogFragment : BottomSheetDialogFragment() {
         }
 
     }
+
     fun compareDates(date1: String, date2: String): Int {
         val format = SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss", Locale.getDefault())
         val dateTime1 = format.parse(date1)
@@ -160,6 +159,7 @@ class ViewCouponDialogFragment : BottomSheetDialogFragment() {
 
         return dateTime1.compareTo(dateTime2)
     }
+
     fun getCurrentDateTime(): String {
         val format = SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss", Locale.getDefault())
         return format.format(Date())

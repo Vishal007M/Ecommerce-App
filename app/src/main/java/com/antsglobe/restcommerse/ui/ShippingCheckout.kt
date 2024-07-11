@@ -124,11 +124,11 @@ class ShippingCheckout : Fragment(), AddressListAdaptor.OnClickDeleteAddressList
             startActivity(intent)
         }
 
-        if (sharedPreferences.getMode() == true){
+        if (sharedPreferences.getMode() == true) {
             binding!!.background.setBackgroundColor(resources.getColor(R.color.blackfordark))
             binding!!.newadd.setTextColor(resources.getColor(R.color.whitefordark))
             binding!!.back.setBackgroundResource(R.drawable.profile_round_corner_bg_dark_wish)
-            binding!!.back.backgroundTintList= ColorStateList.valueOf(Color.parseColor("#1F201D"))
+            binding!!.back.backgroundTintList = ColorStateList.valueOf(Color.parseColor("#1F201D"))
             binding!!.next.setTextColor(Color.BLACK)
 
         }

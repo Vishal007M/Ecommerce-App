@@ -20,7 +20,7 @@ class AllProductListViewModel(private val apiService: ApiService) : ViewModel() 
     private val _allProductItems: MutableLiveData<List<AllProductsList>> = MutableLiveData()
     val allProductItems: MutableLiveData<List<AllProductsList>> get() = _allProductItems
 
-//    private val _cartlistresponse: MutableLiveData<List<CartListData>> = MutableLiveData()
+    //    private val _cartlistresponse: MutableLiveData<List<CartListData>> = MutableLiveData()
 //
 //    val cartListResponse: MutableLiveData<List<CartListData>> get() = _cartlistresponse
 //

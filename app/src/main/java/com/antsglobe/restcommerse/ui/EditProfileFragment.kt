@@ -45,7 +45,7 @@ class EditProfileFragment : Fragment() {
     var avtarImage: Int = 0
 
     private lateinit var dateSetListener: DatePickerDialog.OnDateSetListener
-    private lateinit var sdf1 : SimpleDateFormat
+    private lateinit var sdf1: SimpleDateFormat
     private var cal = Calendar.getInstance()
 
 
@@ -223,7 +223,7 @@ class EditProfileFragment : Fragment() {
                 updateProfileViewModel.UpdateProfileVM(
                     email,
                     name,
-                    outputDateStr ,
+                    outputDateStr,
                     "",
                     phone,
                     gender,

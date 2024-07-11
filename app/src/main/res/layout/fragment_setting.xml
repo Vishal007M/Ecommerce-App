@@ -52,11 +52,11 @@
         <androidx.core.widget.NestedScrollView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:scrollbars="none"
             android:layout_below="@+id/BusinessSettingsTB"
             android:layout_marginTop="40dp"
             android:fillViewport="true"
-            android:fitsSystemWindows="true">
+            android:fitsSystemWindows="true"
+            android:scrollbars="none">
 
 
             <LinearLayout

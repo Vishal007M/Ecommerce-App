@@ -167,7 +167,12 @@ class WishListFragment : Fragment(), WishlistAdapter.OnClickDeleteListener {
         viewmodel.addtocart(currentuseremail, pId, price, discountPrice, "1", price, "0")
     }
 
-    override fun onDeleteCartClick(pId: String, price: String, discountPrice: String, variation: String) {
+    override fun onDeleteCartClick(
+        pId: String,
+        price: String,
+        discountPrice: String,
+        variation: String
+    ) {
         val currentuseremail = sharedpreference.getEmail()
         viewmodel.deletefromcart(currentuseremail, pId, "")
     }

@@ -116,7 +116,7 @@ class VariantsAdapter(
                         )
                     }
                 }
-            }else{
+            } else {
                 itemsbinding.variantlayout.setOnClickListener {
                     itemsbinding.variantlayout.isClickable = false
                 }

@@ -40,7 +40,7 @@ class MyOrdersAdapter(val orderlist: List<OrderResponse>, val context: Context) 
                 val pId = order.order_no
                 val transactionId = order.transaction_id
                 orderClickListener?.onOrderIdClick(
-                    pId.toString(),transactionId!!
+                    pId.toString(), transactionId!!
                 )
             }
 
@@ -50,7 +50,7 @@ class MyOrdersAdapter(val orderlist: List<OrderResponse>, val context: Context) 
     interface OnClickOrderListener {
         fun onOrderIdClick(
             orderId: String,
-            transactionId : String
+            transactionId: String
         )
     }
 

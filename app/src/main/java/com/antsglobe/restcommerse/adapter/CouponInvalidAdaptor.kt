@@ -15,7 +15,7 @@ import java.time.format.DateTimeFormatter
 
 
 class CouponInvalidAdaptor(var items: List<Coupon?>) :
-    RecyclerView.Adapter<CouponInvalidAdaptor.MainViewHolder>()  {
+    RecyclerView.Adapter<CouponInvalidAdaptor.MainViewHolder>() {
 
     inner class MainViewHolder(val itemsBinding: CouponInvalidRecyclerViewBinding) :
         RecyclerView.ViewHolder(itemsBinding.root) {
@@ -31,10 +31,10 @@ class CouponInvalidAdaptor(var items: List<Coupon?>) :
             val dateOnly2 = dateTime2.format(outputFormatter)
 
             itemsBinding.tvCouponName.text = list.coupon_name
-            itemsBinding.tvTiilDate.text = "valid until:-"+dateOnly2
+            itemsBinding.tvTiilDate.text = "valid until:-" + dateOnly2
         }
     }
-    
+
     @RequiresApi(Build.VERSION_CODES.O)
     override fun onBindViewHolder(holder: MainViewHolder, position: Int) {
         val item = items[position]

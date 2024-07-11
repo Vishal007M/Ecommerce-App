@@ -6,12 +6,10 @@ import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.antsglobe.aeroquiz.NotificationAdapter
 import com.antsglobe.aeroquiz.ReviewedAdapter
 import com.antsglobe.aeroquiz.ToBeReviewedAdapter
 import com.antsglobe.restcommerse.R
@@ -79,29 +77,27 @@ class RatineAndReviewFragment : Fragment(), ToBeReviewedAdapter.OnClickProductLi
         reviewedInitObserver()
 
         binding?.tobe?.setOnClickListener {
-            binding!!.dashline.visibility=View.VISIBLE
-            binding!!.dashline2.visibility=View.INVISIBLE
+            binding!!.dashline.visibility = View.VISIBLE
+            binding!!.dashline2.visibility = View.INVISIBLE
 //            binding!!.emptyscreen.visibility=View.GONE
             binding!!.tv2.setTextColor(resources.getColor(R.color.dark_grey))
             binding!!.tv1.setTextColor(resources.getColor(R.color.black))
 
-            binding!!.llReviewList.visibility=View.VISIBLE
-            binding!!.llRatingList.visibility=View.GONE
-
-
+            binding!!.llReviewList.visibility = View.VISIBLE
+            binding!!.llRatingList.visibility = View.GONE
 
 
         }
 
         binding?.reviewed?.setOnClickListener {
-            binding!!.dashline.visibility=View.INVISIBLE
-            binding!!.dashline2.visibility=View.VISIBLE
+            binding!!.dashline.visibility = View.INVISIBLE
+            binding!!.dashline2.visibility = View.VISIBLE
 //            binding!!.emptyscreen.visibility=View.VISIBLE
             binding!!.tv2.setTextColor(Color.BLACK)
             binding!!.tv1.setTextColor(resources.getColor(R.color.dark_grey))
 
-            binding!!.llReviewList.visibility=View.GONE
-            binding!!.llRatingList.visibility=View.VISIBLE
+            binding!!.llReviewList.visibility = View.GONE
+            binding!!.llRatingList.visibility = View.VISIBLE
         }
     }
 
@@ -119,16 +115,22 @@ class RatineAndReviewFragment : Fragment(), ToBeReviewedAdapter.OnClickProductLi
             }
 
             val sortedNotificationList = reviewResp.reversed()
-            reviewedAdapter = ReviewedAdapter(sortedNotificationList, sharedPreferences.getMode() == true, requireContext())
+            reviewedAdapter = ReviewedAdapter(
+                sortedNotificationList,
+                sharedPreferences.getMode() == true,
+                requireContext()
+            )
 
             binding!!.tv2.text = "Reviewed (${reviewResp.size.toString()})"
-            binding!!.ratingNReviewsRecycleViewList.layoutManager = LinearLayoutManager(requireContext())
+            binding!!.ratingNReviewsRecycleViewList.layoutManager =
+                LinearLayoutManager(requireContext())
             binding!!.ratingNReviewsRecycleViewList.adapter = reviewedAdapter
 
             sharedPreferences.setNotificationBlinkCount(reviewResp.size.toString())
 
 
-        }    }
+        }
+    }
 
     private fun tobeReviewedInitObserver() {
         ToBeReviewedVM.getToBeReviewItem.observe(viewLifecycleOwner) { toBeReviewResp ->
@@ -144,7 +146,11 @@ class RatineAndReviewFragment : Fragment(), ToBeReviewedAdapter.OnClickProductLi
             }
 
             val sortedNotificationList = toBeReviewResp.reversed()
-            toBeReviewedAdapter = ToBeReviewedAdapter(sortedNotificationList, sharedPreferences.getMode() == true, requireContext())
+            toBeReviewedAdapter = ToBeReviewedAdapter(
+                sortedNotificationList,
+                sharedPreferences.getMode() == true,
+                requireContext()
+            )
 
             binding!!.tv1.text = "To be reviewed (${toBeReviewResp.size.toString()})"
             binding!!.ReviewsRecycleViewList.layoutManager = LinearLayoutManager(requireContext())

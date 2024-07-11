@@ -16,7 +16,8 @@ class PaymentViewModel(private val apiService: ApiService) : ViewModel() {
     private val _getPaymentResponse: MutableLiveData<GetPaymentApi?> = MutableLiveData()
     val getPaymentResponse: MutableLiveData<GetPaymentApi?> get() = _getPaymentResponse
 
-    private val _getSinglePaymentResponse: MutableLiveData<BuySingleProductResponse?> = MutableLiveData()
+    private val _getSinglePaymentResponse: MutableLiveData<BuySingleProductResponse?> =
+        MutableLiveData()
     val getSinglePaymentResponse: MutableLiveData<BuySingleProductResponse?> get() = _getSinglePaymentResponse
 
     fun GetPaymentResponse(
@@ -42,7 +43,7 @@ class PaymentViewModel(private val apiService: ApiService) : ViewModel() {
         apiService.getPaymentApi(
             email, transactionId, totalPrice, paymentMethod, paymentStatus,
             addressId, discountAmount, promoCode, promodisc, shipCharge, otherDisc,
-             taxPer, taxAmount,grandTotal
+            taxPer, taxAmount, grandTotal
 
         ).enqueue(object :
             Callback<GetPaymentApi> {
@@ -99,7 +100,7 @@ class PaymentViewModel(private val apiService: ApiService) : ViewModel() {
         apiService.getSinglePaymentApi(
             email, transactionId, totalPrice, paymentMethod, paymentStatus,
             addressId, discountAmount, promoCode, promodisc, shipCharge, otherDisc, productId,
-            quantity, price, discountPrice, variationId ,grandTotal, taxPer,taxamt
+            quantity, price, discountPrice, variationId, grandTotal, taxPer, taxamt
         ).enqueue(object :
             Callback<BuySingleProductResponse> {
             override fun onResponse(

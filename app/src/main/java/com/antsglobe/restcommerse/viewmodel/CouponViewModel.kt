@@ -20,7 +20,7 @@ class CouponViewModel(private val apiservice: ApiService) : ViewModel() {
 
     fun getcouponlist(email: String, couponCategory: String) {
         viewModelScope.launch {
-            apiservice.couponlist(email,couponCategory).enqueue(object :
+            apiservice.couponlist(email, couponCategory).enqueue(object :
                 Callback<CouponListResponse> {
                 override fun onResponse(
                     call: Call<CouponListResponse>,

@@ -17,17 +17,14 @@ import com.antsglobe.restcommerse.adapter.CouponInvalidAdaptor
 import com.antsglobe.restcommerse.adapter.CouponListAdaptor
 import com.antsglobe.restcommerse.adapter.CouponRedeemAdaptor
 import com.antsglobe.restcommerse.adapter.OfferListAdaptor
-import com.antsglobe.restcommerse.adapter.PopularSearchAdapter
 import com.antsglobe.restcommerse.databinding.FragmentViewOfferBinding
 import com.antsglobe.restcommerse.model.OfferItemList
-import com.antsglobe.restcommerse.model.Response.AddressList
 import com.antsglobe.restcommerse.model.Response.Coupon
 import com.antsglobe.restcommerse.network.RetrofitClient
-import com.antsglobe.restcommerse.viewmodel.CouponViewModel
-import com.antsglobe.restcommerse.viewmodel.ViewModelFactory
-import com.antsglobe.restcommerse.viewmodel.AddressListViewModel
 import com.antsglobe.restcommerse.viewmodel.AllProductListViewModel
+import com.antsglobe.restcommerse.viewmodel.CouponViewModel
 import com.antsglobe.restcommerse.viewmodel.TopMostPopularViewModel
+import com.antsglobe.restcommerse.viewmodel.ViewModelFactory
 import com.denzcoskun.imageslider.constants.ScaleTypes
 import com.denzcoskun.imageslider.interfaces.ItemClickListener
 import com.denzcoskun.imageslider.models.SlideModel
@@ -49,7 +46,7 @@ class ViewOfferFragment : Fragment(), OfferListAdaptor.OnClickProductListener {
     private var mList = ArrayList<Coupon>()
     private var mList2 = ArrayList<Coupon>()
 
-    private lateinit var couponlist:List<Coupon>
+    private lateinit var couponlist: List<Coupon>
 
     private lateinit var topMostPopularViewModel: TopMostPopularViewModel
     private lateinit var sharedPreferences: PreferenceManager
@@ -57,8 +54,8 @@ class ViewOfferFragment : Fragment(), OfferListAdaptor.OnClickProductListener {
     private lateinit var productListViewModel: AllProductListViewModel
 //    private lateinit var productAdapter: AllProductListAdaptor
 
-    private var expired=0
-    private val currentdate=getCurrentDateTime()
+    private var expired = 0
+    private val currentdate = getCurrentDateTime()
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -91,7 +88,7 @@ class ViewOfferFragment : Fragment(), OfferListAdaptor.OnClickProductListener {
         getproductListInitObserver()
 
 
-        if (sharedPreferences.getMode() == true){
+        if (sharedPreferences.getMode() == true) {
             binding!!.fullscreen.setBackgroundColor(Color.BLACK)
             binding!!.tvOffer.setBackgroundColor(Color.parseColor("#1F201D"))
             binding!!.tvCoupon.setBackgroundColor(resources.getColor(R.color.dark_grey))
@@ -111,7 +108,7 @@ class ViewOfferFragment : Fragment(), OfferListAdaptor.OnClickProductListener {
         }
 
 
-        if (binding!!.rbOffer.isChecked){
+        if (binding!!.rbOffer.isChecked) {
             binding!!.llOffer.visibility = View.VISIBLE
             setOfferData()
         }
@@ -122,11 +119,11 @@ class ViewOfferFragment : Fragment(), OfferListAdaptor.OnClickProductListener {
             // Set background color from resource
             binding!!.tvCoupon.setBackgroundColor(resources.getColor(R.color.light_grey))
             binding!!.tvOffer.setBackgroundColor(resources.getColor(R.color.dark_grey))
-            if (sharedPreferences.getMode() == true){
+            if (sharedPreferences.getMode() == true) {
                 binding!!.tvCoupon.setBackgroundColor(resources.getColor(R.color.dark_grey))
                 binding!!.tvOffer.setBackgroundColor(Color.parseColor("#1F201D"))
             }
-            binding!!.llEmptyScreen.visibility=View.GONE
+            binding!!.llEmptyScreen.visibility = View.GONE
             binding!!.llOffer.visibility = View.VISIBLE
             binding!!.llCoupon.visibility = View.GONE
             setOfferData()
@@ -138,7 +135,7 @@ class ViewOfferFragment : Fragment(), OfferListAdaptor.OnClickProductListener {
             binding!!.tvCoupon.setBackgroundColor(resources.getColor(R.color.dark_grey))
             binding!!.tvOffer.setBackgroundColor(resources.getColor(R.color.light_grey))
             binding!!.llEmptyScreen.visibility = View.GONE
-            if (sharedPreferences.getMode() == true){
+            if (sharedPreferences.getMode() == true) {
                 binding!!.tvCoupon.setBackgroundColor(Color.parseColor("#1F201D"))
                 binding!!.tvOffer.setBackgroundColor(resources.getColor(R.color.dark_grey))
             }
@@ -161,14 +158,13 @@ class ViewOfferFragment : Fragment(), OfferListAdaptor.OnClickProductListener {
 
 
             it?.forEach() {
-                if (sharedPreferences.getMode() == true){
+                if (sharedPreferences.getMode() == true) {
                     if (it?.img_type == "Dark") imageList.add(
                         SlideModel(
                             it.img_url, ScaleTypes.CENTER_CROP
                         )
                     )
-                }
-                else{
+                } else {
                     if (it?.img_type == "Light") imageList.add(
                         SlideModel(
                             it.img_url, ScaleTypes.CENTER_CROP
@@ -188,17 +184,21 @@ class ViewOfferFragment : Fragment(), OfferListAdaptor.OnClickProductListener {
                 override fun onItemSelected(position: Int) {
                     val bundle = Bundle()
                     bundle.putString("categoryId", it?.get(position)!!.Category_id.toString())
-                    findNavController().navigate(R.id.action_ViewOfferFragment_to_ProductListFragment, bundle)
+                    findNavController().navigate(
+                        R.id.action_ViewOfferFragment_to_ProductListFragment,
+                        bundle
+                    )
                 }
             })
 
-        }    }
+        }
+    }
 
     private fun setOfferData() {
 
         productListViewModel.allProductItems.observe(viewLifecycleOwner) { productList ->
-            Log.e("TAG", "setOfferData: $productList", )
-            offerListAdaptor = OfferListAdaptor(productList,requireContext())
+            Log.e("TAG", "setOfferData: $productList")
+            offerListAdaptor = OfferListAdaptor(productList, requireContext())
             offerListAdaptor.setOnClickProductViewListener(this)
             binding!!.rvOfferList.layoutManager = GridLayoutManager(context, 2)
             binding!!.rvOfferList.adapter = offerListAdaptor
@@ -238,18 +238,18 @@ class ViewOfferFragment : Fragment(), OfferListAdaptor.OnClickProductListener {
 
     private fun setCouponData() {
 
-        if (binding!!.rbValid.isChecked){
+        if (binding!!.rbValid.isChecked) {
             viewModel.getcouponlist(currentuseremail, "valid")
 
             viewModel.couponlist.observe(viewLifecycleOwner) {
                 viewModel.couponlist.observe(viewLifecycleOwner) { couponList ->
                     if (couponList != null) {
-                        couponlist=couponList
+                        couponlist = couponList
                         couponList.forEach {
-                            val result=compareDates(it.valid_to.toString(),currentdate)
-                            if (result<0) {
-                                expired+=1
-                                Log.d("expired",expired.toString())
+                            val result = compareDates(it.valid_to.toString(), currentdate)
+                            if (result < 0) {
+                                expired += 1
+                                Log.d("expired", expired.toString())
                             }
                         }
                     }
@@ -257,7 +257,7 @@ class ViewOfferFragment : Fragment(), OfferListAdaptor.OnClickProductListener {
                         visibility = View.VISIBLE
                         // binding.llLoadingScreen.visibility = View.GONE
                         if (couponList != null) {
-                            if (couponList.isEmpty() && couponList.size >= 0||couponList.size==expired) {
+                            if (couponList.isEmpty() && couponList.size >= 0 || couponList.size == expired) {
                                 visibility = View.GONE
                                 binding?.llEmptyScreen!!.visibility = View.VISIBLE
                             } else {
@@ -270,7 +270,7 @@ class ViewOfferFragment : Fragment(), OfferListAdaptor.OnClickProductListener {
                         adapter = couponListAdaptor
 
                     }
-                    expired=0
+                    expired = 0
                 }
             }
 //            couponListAdaptor = CouponListAdaptor(list!!)
@@ -289,7 +289,7 @@ class ViewOfferFragment : Fragment(), OfferListAdaptor.OnClickProductListener {
             binding!!.tvValid.setTextColor(resources.getColor(R.color.white))
             binding!!.tvRedeem.setTextColor(resources.getColor(R.color.hint))
             binding!!.tvInvalid.setTextColor(resources.getColor(R.color.hint))
-            if (sharedPreferences.getMode() == true){
+            if (sharedPreferences.getMode() == true) {
                 binding!!.tvRedeem.setTextColor(resources.getColor(R.color.white))
                 binding!!.tvInvalid.setTextColor(resources.getColor(R.color.white))
                 binding!!.tvRedeem.setBackgroundResource(R.color.blackfordark)
@@ -304,10 +304,10 @@ class ViewOfferFragment : Fragment(), OfferListAdaptor.OnClickProductListener {
                 viewModel.couponlist.observe(viewLifecycleOwner) {
                     if (couponlist != null) {
                         couponlist.forEach {
-                            val result=compareDates(it.valid_to.toString(),currentdate)
-                            if (result<0) {
-                                expired+=1
-                                Log.d("expired",expired.toString())
+                            val result = compareDates(it.valid_to.toString(), currentdate)
+                            if (result < 0) {
+                                expired += 1
+                                Log.d("expired", expired.toString())
                             }
                         }
                     }
@@ -315,7 +315,7 @@ class ViewOfferFragment : Fragment(), OfferListAdaptor.OnClickProductListener {
                         visibility = View.VISIBLE
                         // binding.llLoadingScreen.visibility = View.GONE
                         if (couponlist != null) {
-                            if (couponlist.isEmpty() && couponlist.size >= 0||couponlist.size==expired) {
+                            if (couponlist.isEmpty() && couponlist.size >= 0 || couponlist.size == expired) {
 
                                 visibility = View.GONE
                                 binding?.llEmptyScreen!!.visibility = View.VISIBLE
@@ -329,12 +329,12 @@ class ViewOfferFragment : Fragment(), OfferListAdaptor.OnClickProductListener {
                         adapter = couponListAdaptor
 
                     }
-                    expired=0
+                    expired = 0
                 }
             }
         })
 
-        binding!!.rbRedeem.setOnClickListener(View.OnClickListener  {
+        binding!!.rbRedeem.setOnClickListener(View.OnClickListener {
             binding!!.rbValid.setChecked(false)
             binding!!.rbRedeem.setChecked(true)
             binding!!.rbInvalid.setChecked(false)
@@ -345,7 +345,7 @@ class ViewOfferFragment : Fragment(), OfferListAdaptor.OnClickProductListener {
             binding!!.tvRedeem.setTextColor(resources.getColor(R.color.white))
             binding!!.tvValid.setTextColor(resources.getColor(R.color.hint))
             binding!!.tvInvalid.setTextColor(resources.getColor(R.color.hint))
-            if (sharedPreferences.getMode() == true){
+            if (sharedPreferences.getMode() == true) {
                 binding!!.tvValid.setTextColor(resources.getColor(R.color.white))
                 binding!!.tvInvalid.setTextColor(resources.getColor(R.color.white))
                 binding!!.tvValid.setBackgroundResource(R.color.blackfordark)
@@ -393,7 +393,7 @@ class ViewOfferFragment : Fragment(), OfferListAdaptor.OnClickProductListener {
             binding!!.tvInvalid.setTextColor(resources.getColor(R.color.white))
             binding!!.tvValid.setTextColor(resources.getColor(R.color.hint))
             binding!!.tvRedeem.setTextColor(resources.getColor(R.color.hint))
-            if (sharedPreferences.getMode() == true){
+            if (sharedPreferences.getMode() == true) {
                 binding!!.tvValid.setTextColor(resources.getColor(R.color.white))
                 binding!!.tvRedeem.setTextColor(resources.getColor(R.color.white))
                 binding!!.tvValid.setBackgroundResource(R.color.blackfordark)
@@ -418,7 +418,7 @@ class ViewOfferFragment : Fragment(), OfferListAdaptor.OnClickProductListener {
                                 binding?.llEmptyScreen!!.visibility = View.GONE
                             }
                         }
-                        for (items in couponList!!){
+                        for (items in couponList!!) {
                             filterList(items.valid_to)
                         }
 
@@ -441,6 +441,7 @@ class ViewOfferFragment : Fragment(), OfferListAdaptor.OnClickProductListener {
 
 
     }
+
     fun compareDates(date1: String, date2: String): Int {
         val format = SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss", Locale.getDefault())
         val dateTime1 = format.parse(date1)
@@ -461,10 +462,10 @@ class ViewOfferFragment : Fragment(), OfferListAdaptor.OnClickProductListener {
 
             for (i in mList) {
 //                i.is_default? = null
-                val currentdate=getCurrentDateTime()
-                val result=compareDates(lowerCaseQuery,currentdate)
-                if (result<0) {
-                    Log.e("TAG", "filterList: $i", )
+                val currentdate = getCurrentDateTime()
+                val result = compareDates(lowerCaseQuery, currentdate)
+                if (result < 0) {
+                    Log.e("TAG", "filterList: $i")
                     filteredList.add(i)
 
                 }
